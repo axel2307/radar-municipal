@@ -1,11 +1,11 @@
 {
-  "refreshedAt": "2026-05-07T16:14:57.978Z",
+  "refreshedAt": "2026-05-07T16:52:22.184Z",
   "runs": [
     {
       "target": "compras",
       "script": "refresh:pilar4",
       "status": "success",
-      "durationMs": 4067,
+      "durationMs": 3711,
       "municipiosConDatos": 2,
       "error": "",
       "sourceManifestPath": "auto-contrataciones-manifest.json"
@@ -14,7 +14,7 @@
       "target": "deuda",
       "script": "refresh:deuda",
       "status": "success",
-      "durationMs": 11034,
+      "durationMs": 7795,
       "municipiosConDatos": 5,
       "error": "",
       "sourceManifestPath": "auto-deuda-manifest.json"
