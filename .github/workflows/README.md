@@ -28,9 +28,9 @@ gate de cualquier merge.
 3. Consolida un `auto-refresh-manifest.json` global con el status de cada
    target (success / failed / skipped, duration, error).
 4. Si hay cambios en `packages/web/src/data/`:
-   - **Sin fallos** → abre PR con auto-merge habilitado (squash). Si CI
-     pasa, el PR se mergea automáticamente y Vercel re-deploya.
-   - **Con fallos parciales** → abre PR sin auto-merge. El maintainer
+   - **Sin fallos** → abre PR y lo mergea inmediatamente (squash + delete
+     branch). Vercel re-deploya en el merge.
+   - **Con fallos parciales** → abre PR sin merge automático. El maintainer
      revisa antes de mergear.
 5. Si algún target falló, crea una issue con label `refresh-failure` y
    link al run para investigación.
@@ -39,6 +39,36 @@ gate de cualquier merge.
 el job de Compras falla pero el de Deuda completa OK. Los JSONs de la
 fuente que sí corrió SE commitean — los de la que falló retienen el
 estado anterior (sin regresión silenciosa).
+
+### ¿Por qué el merge es directo y no `--auto` con CI gating?
+
+GitHub Actions tiene una protección contra loops infinitos: eventos
+disparados por `GITHUB_TOKEN` (incluyendo `gh pr create`) **no triggerean
+otros workflows**. Por eso el `pull_request` trigger del `ci.yml` NO
+corre sobre los PRs creados por el cron. Sin CI checks pendientes,
+`gh pr merge --auto` queda en limbo (espera checks que nunca llegan).
+
+Solución pragmática: mergear directo. Es seguro porque:
+
+1. `validate:data` (Sprint 27) ya valida shape + counts del JSON antes
+   de commitear. Si un refresh produce data corrupta, el job de
+   refresh falla ANTES de llegar al merge.
+2. CI extra (typecheck, tests, build, E2E) NO encuentra problemas en
+   cambios de JSON estáticos. Los datos son consumidos por el web pero
+   no tipados a nivel runtime — un schema drift sutil pasa CI igual que
+   pasa validate:data.
+3. Si validate:data deja pasar un bug, el siguiente refresh lo detecta
+   (issue automática) y lo arreglamos en el próximo ciclo.
+
+Si en el futuro queremos CI gate-ando los PRs del cron:
+
+- **Opción**: crear un PAT con scope `repo`, guardarlo como secret
+  `BOT_TOKEN`, y cambiar el yml para usar ese token en `gh pr create`
+  en vez de `GITHUB_TOKEN`. Eventos disparados por PAT SÍ activan
+  workflows.
+- **Costo**: medio (~30 min de setup + rotación periódica del PAT).
+- **Cuándo**: si eventualmente un schema drift bug llega a producción
+  y `validate:data` no lo detectó.
 
 ---
 

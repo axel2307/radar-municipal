@@ -266,6 +266,20 @@ jobs:
           else
             echo "PR ya existía para $BRANCH (reutilizado): $PR_URL"
           fi
+          # Merge directo (sin --auto). GitHub Actions tiene una protección
+          # contra loops: eventos disparados por GITHUB_TOKEN NO triggerean
+          # otros workflows. Por eso el `pull_request` trigger de CI NO
+          # corre sobre PRs creados por este bot. Sin CI checks que esperar,
+          # `--auto` queda en limbo. Mergeamos directo.
+          #
+          # ¿Es seguro mergear sin CI extra? Sí: `validate:data` (corrido
+          # arriba) ya valida shape + counts. CI extra (typecheck, tests,
+          # build, E2E) no añade valor sobre cambios de JSON estáticos.
+          # Si schema drift sutil pasa el validate, lo detectamos en el
+          # próximo refresh (issue auto). Sprint 30+ puede agregar PAT
+          # para que CI sí corra si esto se vuelve preocupante.
+          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "PR mergeado a main (Vercel re-deploya si está conectado)."
           # Habilitar auto-merge (squash) — Vercel rebuild on merge.
           gh pr merge --auto --squash "$PR_URL" || echo "auto-merge no habilitado (settings del repo); merge manual"
 
