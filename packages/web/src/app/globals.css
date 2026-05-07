@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1e3a5f;
+  --color-primary-light: #2a5080;
+  --color-primary-dark: #152a45;
+  --color-accent: #10654a;
+  --color-accent-light: #148f68;
+  --color-score-high: #16a34a;
+  --color-score-mid: #d97706;
+  --color-score-low: #dc2626;
+
+  --color-background: #ffffff;
+  --color-foreground: #1a1a2e;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-border: #e2e8f0;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a2e;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+.scroll-target {
+  scroll-margin-top: 7.5rem;
+}
+
+/* Hide scrollbar for horizontal nav */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

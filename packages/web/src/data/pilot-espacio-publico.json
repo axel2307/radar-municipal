@@ -1,0 +1,145 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 8.5,
+    "coberturaArbolado": 15.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 5,
+    "notas": "Espacio verde por debajo de OMS. Polo petroquímico genera incidentes. Separación parcial."
+  },
+  {
+    "municipioId": "060274",
+    "nombre": "General Pueyrredón",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 7.2,
+    "coberturaArbolado": 12.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 8,
+    "notas": "Mar del Plata: parques costeros pero déficit en barrios. Contaminación costera."
+  },
+  {
+    "municipioId": "060756",
+    "nombre": "Tandil",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 14.0,
+    "coberturaArbolado": 22.0,
+    "separacionResiduos": 1.0,
+    "incidentesAmbientales": 1,
+    "notas": "Sierras y parques. Excelente arbolado. Programa de separación consolidado."
+  },
+  {
+    "municipioId": "060840",
+    "nombre": "Vicente López",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 6.5,
+    "coberturaArbolado": 28.0,
+    "separacionResiduos": 1.0,
+    "incidentesAmbientales": 2,
+    "notas": "Bajo espacio verde por alta densidad, pero arbolado excelente. Programa ambiental modelo."
+  },
+  {
+    "municipioId": "060648",
+    "nombre": "San Isidro",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 7.0,
+    "coberturaArbolado": 25.0,
+    "separacionResiduos": 1.0,
+    "incidentesAmbientales": 1,
+    "notas": "Barrio residencial arbolado. Programa de separación consolidado."
+  },
+  {
+    "municipioId": "060412",
+    "nombre": "La Plata",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 10.0,
+    "coberturaArbolado": 20.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 6,
+    "notas": "Parque Pereyra Iraola eleva el ratio. Arbolado urbano bueno. Problemas de residuos en periferia."
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 5.0,
+    "coberturaArbolado": 10.0,
+    "separacionResiduos": 0,
+    "incidentesAmbientales": 4,
+    "notas": "Ciudad industrial con poco verde urbano. Sin programa de separación."
+  },
+  {
+    "municipioId": "060434",
+    "nombre": "Luján",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 6.0,
+    "coberturaArbolado": 12.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 3,
+    "notas": "Ribera del río Luján como espacio verde. Arbolado moderado."
+  },
+  {
+    "municipioId": "060028",
+    "nombre": "Ayacucho",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 20.0,
+    "coberturaArbolado": 8.0,
+    "separacionResiduos": 0,
+    "incidentesAmbientales": 0,
+    "notas": "Mucho espacio abierto rural. Bajo arbolado urbano. Sin separación ni incidentes."
+  },
+  {
+    "municipioId": "060427",
+    "nombre": "Lobería",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 25.0,
+    "coberturaArbolado": 5.0,
+    "separacionResiduos": 0,
+    "incidentesAmbientales": 0,
+    "notas": "Zona rural con mucho espacio abierto pero bajo arbolado urbano."
+  },
+  {
+    "municipioId": "060063",
+    "nombre": "Azul",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 12.0,
+    "coberturaArbolado": 16.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 1,
+    "notas": "Ciudad con buena proporción de espacios verdes. Arbolado razonable."
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 11.0,
+    "coberturaArbolado": 14.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 0,
+    "notas": "Ciudad chica con espacios verdes adecuados."
+  },
+  {
+    "municipioId": "060512",
+    "nombre": "Necochea",
+    "anio": 2024,
+    "fuente": "OPDS + Global Forest Watch + relevamiento municipal",
+    "espacioVerdePcapita": 15.0,
+    "coberturaArbolado": 18.0,
+    "separacionResiduos": 0.5,
+    "incidentesAmbientales": 2,
+    "notas": "Parque Lillo y costa elevan el ratio. Buen arbolado."
+  }
+]

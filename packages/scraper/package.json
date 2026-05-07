@@ -1,0 +1,43 @@
+{
+  "name": "@radar-municipal/scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "crawl": "tsx src/cli/crawl.ts",
+    "crawl:sibom": "tsx src/cli/crawl-sibom.ts",
+    "crawl:all": "tsx src/cli/crawl-all.ts",
+    "crawl:all-135": "tsx src/cli/crawl-all-135.ts",
+    "resolve:urls": "tsx src/cli/resolve-urls.ts",
+    "apply-url-patch": "tsx src/cli/apply-url-patch.ts",
+    "ingest:crawl-audit": "tsx src/cli/ingest-crawl-to-audit.ts",
+    "batch:parse-ordenanzas": "tsx src/cli/batch-parse-ordenanzas.ts",
+    "refresh:pilar4": "tsx src/cli/refresh-pilar4.ts",
+    "refresh:deuda": "tsx src/cli/refresh-pilar2-deuda.ts",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "consolidate:manifest": "tsx scripts/consolidate-manifest.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radar-municipal/core": "workspace:*",
+    "@radar-municipal/scoring": "workspace:*",
+    "cheerio": "^1.2.0",
+    "exceljs": "^4.4.0",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.58.2"
+  },
+  "devDependencies": {
+    "@types/pdf-parse": "^1.1.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

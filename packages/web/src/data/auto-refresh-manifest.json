@@ -1,0 +1,22 @@
+{
+  "refreshedAt": "2026-05-06T18:51:29.626Z",
+  "runs": [
+    {
+      "target": "compras",
+      "script": "refresh:pilar4",
+      "status": "success",
+      "durationMs": 182431,
+      "municipiosConDatos": 2,
+      "sourceManifestPath": "auto-contrataciones-manifest.json"
+    },
+    {
+      "target": "deuda",
+      "script": "refresh:deuda",
+      "status": "success",
+      "durationMs": 94120,
+      "municipiosConDatos": 5,
+      "sourceManifestPath": "auto-deuda-manifest.json"
+    }
+  ],
+  "totalMunicipiosCubiertos": 7
+}

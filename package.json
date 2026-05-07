@@ -1,0 +1,38 @@
+{
+  "name": "radar-municipal",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "type-check": "turbo run type-check",
+    "db:generate": "turbo run db:generate --filter=@radar-municipal/core",
+    "db:migrate": "turbo run db:migrate --filter=@radar-municipal/core",
+    "db:seed": "turbo run db:seed --filter=@radar-municipal/core",
+    "crawl": "pnpm --filter @radar-municipal/scraper crawl",
+    "crawl:sibom": "pnpm --filter @radar-municipal/scraper crawl:sibom",
+    "crawl:all": "pnpm --filter @radar-municipal/scraper crawl:all",
+    "crawl:all-135": "pnpm --filter @radar-municipal/scraper crawl:all-135",
+    "resolve:urls": "pnpm --filter @radar-municipal/scraper resolve:urls",
+    "db:seed-pilots": "pnpm --filter @radar-municipal/ingestion seed-pilots",
+    "ingest:national": "pnpm --filter @radar-municipal/ingestion ingest:national",
+    "ingest:crawl": "pnpm --filter @radar-municipal/ingestion crawl:db",
+    "verify:migration": "tsx scripts/verify-migration.ts",
+    "test:e2e": "pnpm --filter @radar-municipal/web build && playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:install": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "turbo": "^2.8.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.2"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

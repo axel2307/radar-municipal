@@ -1,0 +1,343 @@
+name: Monthly Data Refresh
+
+# Sprint 27 — orquestador del refresh mensual.
+#
+# Schedule: 1° del mes 04:00 UTC (= 01:00 AR). Quilmes/Carmen de Areco/etc.
+# publican esporádicamente; mensual es suficiente sin saturar upstream.
+#
+# Trigger manual via `workflow_dispatch` para correr fuera del schedule
+# (e.g. después de agregar un nuevo refresh script o para testing).
+
+on:
+  schedule:
+    - cron: "0 4 1 * *"
+  workflow_dispatch:
+    inputs:
+      assignee:
+        description: "GitHub username a asignar si la corrida falla (default: maintainer del repo)"
+        required: false
+        type: string
+
+permissions:
+  contents: write       # para crear branch + commit
+  pull-requests: write  # para abrir PR + auto-merge
+  issues: write         # para crear issue de fallo
+
+concurrency:
+  # Una corrida a la vez. Si dos triggers solapan (cron + manual), el
+  # segundo cancela el primero — evita PRs duplicados sobre el mismo branch.
+  group: monthly-refresh
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────
+  # Matrix: un job por refresh script.
+  # fail-fast: false → un fallo en compras NO aborta deuda.
+  # ─────────────────────────────────────────
+  refresh:
+    name: Refresh ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: compras
+            script: "refresh:pilar4"
+          - target: deuda
+            script: "refresh:deuda"
+
+    outputs:
+      # Cada matrix job emite: target, status, durationMs, error (si lo hay).
+      # El job consolidate los lee via needs.refresh.outputs (matrix outputs
+      # son tricky; usamos artifact-based approach abajo).
+      placeholder: noop
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run refresh script
+        id: refresh
+        run: |
+          set -e
+          START_MS=$(date +%s%N | cut -c1-13)
+          if pnpm --filter @radar-municipal/scraper ${{ matrix.script }} ; then
+            STATUS="success"
+            ERROR=""
+          else
+            STATUS="failed"
+            ERROR="refresh script exit != 0"
+          fi
+          END_MS=$(date +%s%N | cut -c1-13)
+          DURATION=$((END_MS - START_MS))
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          echo "durationMs=$DURATION" >> $GITHUB_OUTPUT
+          if [ -n "$ERROR" ]; then echo "error=$ERROR" >> $GITHUB_OUTPUT; fi
+          # Si refresh falló, el job marca failure pero seguimos para
+          # ejecutar validate (que también puede fallar pero ya tenemos
+          # el status).
+          if [ "$STATUS" = "failed" ]; then exit 1; fi
+
+      - name: Validate output JSONs
+        if: steps.refresh.outcome == 'success'
+        run: pnpm --filter @radar-municipal/scraper validate:data
+
+      - name: Persist run metadata
+        # Guardamos un .json chico que el job consolidate va a leer para
+        # construir el manifest global. Siempre corre (incluso si el
+        # refresh falló) para no perder la info de que el job se ejecutó.
+        if: always()
+        run: |
+          mkdir -p /tmp/run-meta
+          cat > /tmp/run-meta/${{ matrix.target }}.json <<EOF
+          {
+            "target": "${{ matrix.target }}",
+            "script": "${{ matrix.script }}",
+            "status": "${{ steps.refresh.outputs.status || 'failed' }}",
+            "durationMs": ${{ steps.refresh.outputs.durationMs || 0 }},
+            "error": "${{ steps.refresh.outputs.error || '' }}"
+          }
+          EOF
+
+      - name: Upload run metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-meta-${{ matrix.target }}
+          path: /tmp/run-meta/${{ matrix.target }}.json
+          retention-days: 7
+
+      - name: Upload refreshed JSONs
+        # Sólo subimos los JSONs si el refresh y la validación pasaron.
+        # Si fallaron, NO queremos commitear datos posiblemente corruptos.
+        if: steps.refresh.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-${{ matrix.target }}
+          path: |
+            packages/web/src/data/auto-*.json
+          retention-days: 7
+
+  # ─────────────────────────────────────────
+  # Consolidate: corre siempre (incluso si todos los refresh fallaron)
+  # para emitir el manifest global con status real y crear el PR (si
+  # hay cambios) o la issue (si hubo fallos).
+  # ─────────────────────────────────────────
+  consolidate:
+    name: Consolidate + open PR / issue
+    runs-on: ubuntu-latest
+    needs: refresh
+    if: always()
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download run metadata
+        uses: actions/download-artifact@v4
+        with:
+          path: /tmp/run-meta-all
+          pattern: run-meta-*
+          merge-multiple: true
+
+      - name: Download refreshed JSONs
+        uses: actions/download-artifact@v4
+        with:
+          path: packages/web/src/data
+          pattern: data-*
+          merge-multiple: true
+
+      - name: Build REFRESH_RUNS_JSON env
+        id: build_env
+        run: |
+          # Combinamos los JSONs individuales en un único array.
+          NODE_OUT=$(node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = '/tmp/run-meta-all';
+            if (!fs.existsSync(dir)) { console.log('[]'); process.exit(0); }
+            const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+            const arr = files.map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8')));
+            console.log(JSON.stringify(arr));
+          ")
+          echo "runs_json<<EOF" >> $GITHUB_OUTPUT
+          echo "$NODE_OUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Run consolidate-manifest
+        env:
+          REFRESH_RUNS_JSON: ${{ steps.build_env.outputs.runs_json }}
+        run: pnpm --filter @radar-municipal/scraper consolidate:manifest
+
+      - name: Detect changes
+        id: changes
+        run: |
+          # Cuántos archivos en packages/web/src/data/ cambiaron respecto a HEAD
+          CHANGED=$(git diff --name-only -- packages/web/src/data/ | wc -l)
+          echo "files=$CHANGED" >> $GITHUB_OUTPUT
+          # Lista de targets que fallaron (para body del PR / issue)
+          FAILED=$(node -e "
+            const arr = JSON.parse(process.env.REFRESH_RUNS_JSON || '[]');
+            console.log(arr.filter(r => r.status === 'failed').map(r => r.target).join(','));
+          ")
+          echo "failed_targets=$FAILED" >> $GITHUB_OUTPUT
+          echo "Changed files: $CHANGED"
+          echo "Failed targets: $FAILED"
+        env:
+          REFRESH_RUNS_JSON: ${{ steps.build_env.outputs.runs_json }}
+
+      # ─────────────────────────────────────────
+      # Caso 1: hay cambios + ningún fallo → abrir PR con auto-merge.
+      # ─────────────────────────────────────────
+      - name: Create PR (when changes & no failure)
+        if: steps.changes.outputs.files != '0' && steps.changes.outputs.failed_targets == ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="refresh/$DATE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add packages/web/src/data/
+          git commit -m "chore(refresh): monthly data refresh $DATE
+
+          Automated commit from .github/workflows/monthly-refresh.yml
+          Generated by Sprint 27 cron pipeline.
+          "
+          git push origin "$BRANCH"
+          PR_URL=$(gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore(refresh): monthly data refresh $DATE" \
+            --body "$(cat <<'EOF'
+          ## Monthly Data Refresh
+
+          Automated PR generated by `.github/workflows/monthly-refresh.yml`.
+
+          **All refresh jobs succeeded.** Auto-merge enabled if CI passes.
+
+          - Diff: see Files Changed tab.
+          - Manifest: `packages/web/src/data/auto-refresh-manifest.json`.
+
+          🤖 Sprint 27 cron pipeline
+          EOF
+          )")
+          echo "PR: $PR_URL"
+          # Habilitar auto-merge (squash) — Vercel rebuild on merge.
+          gh pr merge --auto --squash "$PR_URL" || echo "auto-merge no habilitado (settings del repo); merge manual"
+
+      # ─────────────────────────────────────────
+      # Caso 2: hay cambios + algún fallo parcial → abrir PR sin auto-merge.
+      # El maintainer revisa y mergea manual (o cierra si la regresión
+      # parcial preocupa).
+      # ─────────────────────────────────────────
+      - name: Create PR (partial success)
+        if: steps.changes.outputs.files != '0' && steps.changes.outputs.failed_targets != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="refresh/$DATE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add packages/web/src/data/
+          git commit -m "chore(refresh): monthly data refresh $DATE (partial)
+
+          Failed targets: ${{ steps.changes.outputs.failed_targets }}
+
+          Automated commit from .github/workflows/monthly-refresh.yml.
+          Auto-merge DISABLED — review before merging.
+          "
+          git push origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore(refresh): monthly data refresh $DATE (partial — ${{ steps.changes.outputs.failed_targets }} failed)" \
+            --body "$(cat <<EOF
+          ## Monthly Data Refresh — Partial Success
+
+          ⚠️ **Some refresh jobs FAILED**: \`${{ steps.changes.outputs.failed_targets }}\`
+
+          The targets that succeeded are included in this PR. Review
+          the diff before merging — the failed targets retain their
+          previous data (no regression to those JSONs).
+
+          See run logs: \`gh run view ${{ github.run_id }} --log\`
+
+          🤖 Sprint 27 cron pipeline
+          EOF
+          )"
+
+      # ─────────────────────────────────────────
+      # Caso 3: hubo fallos → abrir issue de tracking (independiente de
+      # si hay cambios o no).
+      # ─────────────────────────────────────────
+      - name: Create failure issue
+        if: steps.changes.outputs.failed_targets != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ASSIGNEE: ${{ inputs.assignee }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          ASSIGN_FLAG=""
+          if [ -n "$ASSIGNEE" ]; then ASSIGN_FLAG="--assignee $ASSIGNEE"; fi
+          gh issue create \
+            --title "refresh-failure-$DATE: ${{ steps.changes.outputs.failed_targets }}" \
+            --label "refresh-failure" \
+            $ASSIGN_FLAG \
+            --body "$(cat <<EOF
+          ## Monthly Refresh — Failure Report
+
+          **Date**: $DATE
+          **Failed targets**: \`${{ steps.changes.outputs.failed_targets }}\`
+          **Run**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          The refresh script exited non-zero. The JSONs in main were NOT
+          overwritten — the previous data remains intact. Inspect the run
+          logs to diagnose the upstream failure (HTTP 5xx, schema drift,
+          parser bug).
+
+          Common causes:
+          - Upstream portal down (CKAN, gobabierto, municipal sites)
+          - Schema change in source XLSX/CSV → parser needs update
+          - Network timeout (raise FETCH_TIMEOUT_MS in the refresh script)
+
+          Once fixed, trigger a manual run via the workflow dispatch button.
+
+          🤖 Sprint 27 cron pipeline
+          EOF
+          )"

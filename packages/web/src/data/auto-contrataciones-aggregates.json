@@ -1,0 +1,76 @@
+[
+  {
+    "municipioId": "060140",
+    "anio": 2025,
+    "totalContrataciones": 7,
+    "montoTotalPresupuesto": 271557794,
+    "conMontoValido": 5,
+    "medianaMonto": 46800000,
+    "porEstado": {
+      "DESIERTA": 2,
+      "ADJUDICADA": 5
+    },
+    "hhiProveedores": 3793,
+    "proveedoresUnicos": 3,
+    "fuenteUrl": "https://gobabierto.ar/carloscasares/wp-content/uploads/2025/06/Licitaciones-privadas-2025-CC.csv"
+  },
+  {
+    "municipioId": "060140",
+    "anio": 2026,
+    "totalContrataciones": 59,
+    "montoTotalPresupuesto": 218191300,
+    "conMontoValido": 10,
+    "medianaMonto": 18955650,
+    "porEstado": {
+      "ADJUDICADA": 10,
+      "ABIERTA": 49
+    },
+    "hhiProveedores": 1928,
+    "proveedoresUnicos": 7,
+    "fuenteUrl": "https://gobabierto.ar/carloscasares/wp-content/uploads/2026/03/CONCURSOS-Y-LICITACIONES-2026.xlsx-Concursos.csv"
+  },
+  {
+    "municipioId": "060638",
+    "anio": 2018,
+    "totalContrataciones": 47,
+    "montoTotalPresupuesto": 485271790.69000006,
+    "conMontoValido": 47,
+    "medianaMonto": 3125953.6,
+    "porEstado": {
+      "FINALIZADA": 47
+    },
+    "hhiProveedores": null,
+    "proveedoresUnicos": null,
+    "fuenteUrl": "http://datos.quilmes.gov.ar/dataset/b9f9cef5-391f-42cc-a811-2d2873fbbadd/resource/69018723-e3a2-4c50-997e-cf66e9af8b9d/download/licitaciones-publicas-2018.csv"
+  },
+  {
+    "municipioId": "060638",
+    "anio": 2019,
+    "totalContrataciones": 44,
+    "montoTotalPresupuesto": 347370702.08000004,
+    "conMontoValido": 42,
+    "medianaMonto": 5635167,
+    "porEstado": {
+      "FINALIZADA": 30,
+      "ABIERTA": 14
+    },
+    "hhiProveedores": null,
+    "proveedoresUnicos": null,
+    "fuenteUrl": "http://datos.quilmes.gov.ar/dataset/f1aa9f0d-1b4f-481c-803d-ad54b78a1b3a/resource/10546084-53bb-4fcd-b3b0-39d7f81e2f96/download/licitaciones-publicas-2019.csv"
+  },
+  {
+    "municipioId": "060638",
+    "anio": 2020,
+    "totalContrataciones": 86,
+    "montoTotalPresupuesto": 2349367464.8199997,
+    "conMontoValido": 86,
+    "medianaMonto": 12775400,
+    "porEstado": {
+      "FINALIZADA": 81,
+      "ABIERTA": 5
+    },
+    "hhiProveedores": null,
+    "proveedoresUnicos": null,
+    "fuenteUrl": "http://datos.quilmes.gov.ar/dataset/412f6b5b-29f5-4255-86ff-8a9436e3079b/resource/396c1468-0133-4307-9b79-21d014901b88/download/licitaciones-publicas-2020.csv"
+  }
+]

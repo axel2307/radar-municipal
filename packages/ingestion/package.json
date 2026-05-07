@@ -1,0 +1,27 @@
+{
+  "name": "@radar-municipal/ingestion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "seed-pilots": "tsx src/seed-from-json.ts",
+    "ingest:national": "tsx src/cli/ingest-national.ts",
+    "crawl:db": "tsx src/cli/crawl-to-db.ts"
+  },
+  "dependencies": {
+    "@radar-municipal/core": "workspace:*",
+    "@radar-municipal/scraper": "workspace:*",
+    "drizzle-orm": "^0.38.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# Turborepo
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Drizzle
+drizzle/
+
+# Debug
+npm-debug.log*
+pnpm-debug.log*
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Claude Code workspace state (session-specific, not project)
+.claude/
+
+# Cached upstream downloads regenerable from build script
+data/geometry/_tmp/
+

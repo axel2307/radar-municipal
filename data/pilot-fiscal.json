@@ -1,0 +1,2211 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 189500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/ejecucion/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 108015000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/ejecucion/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 22740000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/ejecucion/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 8500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/deuda/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-01"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 195200000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/ejecucion/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 5700000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/transparencia/sef/",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "SEF parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 52.3,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 125000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 14.2,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Datos extraídos del portal de datos abiertos. Gasto en pesos corrientes."
+  },
+  {
+    "municipioId": "060357",
+    "nombre": "General Pueyrredón",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 385000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 234850000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 30800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 18200000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/deuda",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 378500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": -6500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Déficit Q4 por inversiones de cierre de año",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 48.7,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 110000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 16.8,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Municipio de alta complejidad. Déficit Q4 por inversiones de cierre de año."
+  },
+  {
+    "municipioId": "060791",
+    "nombre": "Tandil",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 82000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Portal CKAN con datos estructurados",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 44280000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Portal CKAN con datos estructurados",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 13120000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Portal CKAN con datos estructurados",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 2100000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 84500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Portal CKAN con datos estructurados",
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 2500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Buen equilibrio fiscal",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 44.5,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 95000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 15.5,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Buen equilibrio fiscal. Portal CKAN con datos estructurados."
+  },
+  {
+    "municipioId": "060861",
+    "nombre": "Vicente López",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 165000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Portal Junar + presupuesto aprobado",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 85800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 33000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Alto gasto de capital relativo (20%)",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 4200000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/deuda",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 172000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 7000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "DATOS_ABIERTOS_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-12-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Superávit sostenido",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 68.2,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 185000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 11.3,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Alto gasto de capital relativo (20%). Superávit sostenido."
+  },
+  {
+    "municipioId": "060735",
+    "nombre": "San Isidro",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 142000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Datos fiscales parciales, PDF no parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 79520000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Alto % personal (56%)",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 18460000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 5800000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 140000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": -2000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Leve déficit",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 65.1,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 170000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 12.1,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Leve déficit. Alto % personal (56%). Datos fiscales parciales."
+  },
+  {
+    "municipioId": "060441",
+    "nombre": "La Plata",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 320000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Capital provincial, alta complejidad",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 204800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 25600000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 28000000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA. Deuda per cápita elevada.",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 310000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": -10000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-20"
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Déficit significativo",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 42.8,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 88000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 18.9,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Capital provincial, alta complejidad. Deuda per cápita elevada."
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 58000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Municipio ordenado fiscalmente",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 33060000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 8120000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 1800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/deuda",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 59500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 1500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-10"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Buena publicación de decretos",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 38.5,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 72000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 20.3,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Municipio ordenado fiscalmente. Buena publicación de decretos."
+  },
+  {
+    "municipioId": "060490",
+    "nombre": "Luján",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 52000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-08"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "PaísDigital con metadatos limpios",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 29120000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-08"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 7280000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-08"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 1500000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 53000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-08"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 1000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-08"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Datos actualizados trimestralmente",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 35.2,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 65000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 19.7,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Buena transparencia. Datos actualizados trimestralmente."
+  },
+  {
+    "municipioId": "060042",
+    "nombre": "Ayacucho",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 15500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "PaísDigital + transparencia fiscal",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 9300000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 2325000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Buena relación gasto capital/total (15%)",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 350000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 16000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 22.1,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": null,
+      "fuente": null,
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "Sin datos suficientes de recaudación tributaria desagregada",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 24.5,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Municipio rural chico. Buena relación gasto capital/total (15%)."
+  },
+  {
+    "municipioId": "060476",
+    "nombre": "Lobería",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 12800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Reportes trimestrales completos y claros",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 7680000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 1536000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 280000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/deuda",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-20"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 13200000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 400000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Municipio chico superavitario",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 25.8,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": null,
+      "fuente": null,
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "Sin datos suficientes de recaudación tributaria desagregada",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 22.8,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Reportes trimestrales completos y claros. Municipio chico superavitario."
+  },
+  {
+    "municipioId": "060049",
+    "nombre": "Azul",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 28000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "PDF escaneado, no parseable. Baja confianza en los montos.",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 17360000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "PDF escaneado, datos limitados",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 2800000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "PDF escaneado, datos limitados",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 900000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 27500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-15"
+      },
+      "confianza": {
+        "nivel": "BAJA",
+        "notas": "PDF escaneado",
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": -500000000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Estimación basada en presupuesto aprobado (datos limitados)",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 28.4,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 55000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 21.1,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Datos limitados, PDF escaneado. Baja confianza en los montos."
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 18500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Reportes RAFAM claros y parseables",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 10545000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 2775000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "RAFAM parseable",
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 420000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/deuda",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-01"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 19000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-10-25"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Buena calidad de datos",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 31.6,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 58000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 19.4,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Reportes RAFAM claros y parseables. Buena calidad de datos."
+  },
+  {
+    "municipioId": "060567",
+    "nombre": "Necochea",
+    "anio": 2025,
+    "trimestre": 4,
+    "gastoTotal": {
+      "valor": 42000000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Datos de buena calidad",
+        "validadoContra": null
+      }
+    },
+    "gastoPersonal": {
+      "valor": 24780000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "gastoCapital": {
+      "valor": 5460000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "deudaTotal": {
+      "valor": 1200000000,
+      "fuente": {
+        "capa": "PROVINCIAL",
+        "organismo": "CONTADURIA_GENERAL_PBA",
+        "url": "https://www.cgp.gba.gob.ar/Presupuesto/Ejecucion.aspx",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "No publica deuda a nivel municipal; dato de Contaduría PBA",
+        "validadoContra": null
+      }
+    },
+    "ingresoTotal": {
+      "valor": 43500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "resultadoFiscal": {
+      "valor": 1500000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "fechaAcceso": "2026-03-28",
+        "fechaPublicacion": "2025-11-05"
+      },
+      "confianza": {
+        "nivel": "ALTA",
+        "notas": "Ordenanza fiscal vigente publicada en SIBOM",
+        "validadoContra": null
+      }
+    },
+    "gastoPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "deudaPcapita": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctPersonal": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "pctCapital": {
+      "valor": null,
+      "fuente": null,
+      "confianza": null
+    },
+    "autonomiaFiscal": {
+      "valor": 33.9,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de ingresos propios vs total",
+        "validadoContra": null
+      }
+    },
+    "presionTributaria": {
+      "valor": 62000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de recaudación tributaria y población censo 2022",
+        "validadoContra": null
+      }
+    },
+    "eficienciaAdmin": {
+      "valor": 17.6,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "RADAR_MUNICIPAL",
+        "url": null,
+        "formato": null,
+        "fechaAcceso": "2026-04-06",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": "Estimado a partir de gasto administrativo vs gasto total",
+        "validadoContra": null
+      }
+    },
+    "notas": "Ordenanza fiscal vigente publicada en SIBOM. Datos de buena calidad."
+  }
+]

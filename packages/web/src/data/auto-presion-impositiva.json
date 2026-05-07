@@ -1,0 +1,294 @@
+[
+  {
+    "municipioId": "060287",
+    "nombre": "General Arenales",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.generalarenales.gob.ar/wp-content/uploads/2024/05/00-Ordenanza-fiscal-e-impositiva-2024.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TSG no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 5000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.generalarenales.gob.ar/wp-content/uploads/2024/05/00-Ordenanza-fiscal-e-impositiva-2024.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.generalarenales.gob.ar/wp-content/uploads/2024/05/00-Ordenanza-fiscal-e-impositiva-2024.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.generalarenales.gob.ar/wp-content/uploads/2024/05/00-Ordenanza-fiscal-e-impositiva-2024.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derecho de Construcción no detectado",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": "https://www.generalarenales.gob.ar/wp-content/uploads/2024/05/00-Ordenanza-fiscal-e-impositiva-2024.pdf",
+    "notaMetodologica": "Parser automático. Advertencias: No se encontró alícuota TSG/ABL en la ordenanza; No se encontró Tasa Vial Rural en la ordenanza."
+  },
+  {
+    "municipioId": "060294",
+    "nombre": "General Belgrano",
+    "anioFiscal": 2024,
+    "montoVivienda": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://gestion.generalbelgrano.gob.ar/gobiernoabierto/2024/Ordenanza%20Fiscal%20e%20Impositiva/Ordenanza%20Fiscal%20e%20Impositiva%20-%20parte%204.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TSG no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://gestion.generalbelgrano.gob.ar/gobiernoabierto/2024/Ordenanza%20Fiscal%20e%20Impositiva/Ordenanza%20Fiscal%20e%20Impositiva%20-%20parte%204.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TISH no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://gestion.generalbelgrano.gob.ar/gobiernoabierto/2024/Ordenanza%20Fiscal%20e%20Impositiva/Ordenanza%20Fiscal%20e%20Impositiva%20-%20parte%204.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 2000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://gestion.generalbelgrano.gob.ar/gobiernoabierto/2024/Ordenanza%20Fiscal%20e%20Impositiva/Ordenanza%20Fiscal%20e%20Impositiva%20-%20parte%204.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": "https://gestion.generalbelgrano.gob.ar/gobiernoabierto/2024/Ordenanza%20Fiscal%20e%20Impositiva/Ordenanza%20Fiscal%20e%20Impositiva%20-%20parte%204.pdf",
+    "notaMetodologica": "Parser automático. Advertencias: No se encontró alícuota TSG/ABL en la ordenanza; No se encontró alícuota TISH en la ordenanza."
+  },
+  {
+    "municipioId": "060700",
+    "nombre": "San Antonio de Areco",
+    "anioFiscal": 2025,
+    "montoVivienda": {
+      "valor": 100000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://areco.ar/wp-content/uploads/2025/01/Reg.Bajo-N%C2%B0-4830-24-Ord.Impositiva-2025.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://areco.ar/wp-content/uploads/2025/01/Reg.Bajo-N%C2%B0-4830-24-Ord.Impositiva-2025.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TISH no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://areco.ar/wp-content/uploads/2025/01/Reg.Bajo-N%C2%B0-4830-24-Ord.Impositiva-2025.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 2000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://areco.ar/wp-content/uploads/2025/01/Reg.Bajo-N%C2%B0-4830-24-Ord.Impositiva-2025.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": "https://areco.ar/wp-content/uploads/2025/01/Reg.Bajo-N%C2%B0-4830-24-Ord.Impositiva-2025.pdf",
+    "notaMetodologica": "Parser automático. Advertencias: No se encontró alícuota TISH en la ordenanza; No se encontró Tasa Vial Rural en la ordenanza."
+  },
+  {
+    "municipioId": "060742",
+    "nombre": "San Vicente",
+    "anioFiscal": 2023,
+    "montoVivienda": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanvicente.gob.ar/documentos/ordenanza5365-impositiva.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TSG no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": null,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanvicente.gob.ar/documentos/ordenanza5365-impositiva.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "TISH no detectada",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 7100,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanvicente.gob.ar/documentos/ordenanza5365-impositiva.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 6000000,
+      "fuente": {
+        "capa": "MUNICIPAL",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanvicente.gob.ar/documentos/ordenanza5365-impositiva.pdf",
+        "formato": "PDF",
+        "fechaAcceso": "2026-04-25",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "MEDIA",
+        "notas": null,
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": "https://www.sanvicente.gob.ar/documentos/ordenanza5365-impositiva.pdf",
+    "notaMetodologica": "Parser automático. Advertencias: No se encontró alícuota TSG/ABL en la ordenanza; No se encontró alícuota TISH en la ordenanza."
+  }
+]

@@ -1,0 +1,300 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 1517,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 485,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060056",
+      "tipo": "ORDENANZA",
+      "numero": "22299",
+      "anio": 2026,
+      "fecha": null,
+      "titulo": "Ordenanza Fiscal 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": "https://www.bahiablanca.gob.ar/compras/",
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 12,
+      "plataforma": "Portal propio + datos abiertos",
+      "notas": "Portal de datos abiertos con datasets de compras"
+    }
+  },
+  {
+    "municipioId": "060357",
+    "nombre": "General Pueyrredón",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 541,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 320,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": null,
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": "https://compras.mardelplata.gob.ar",
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 9,
+      "plataforma": "Portal propio",
+      "notas": "Portal de compras y transparencia fiscal"
+    }
+  },
+  {
+    "municipioId": "060791",
+    "nombre": "Tandil",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 945,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 280,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060791",
+      "tipo": "ORDENANZA",
+      "numero": "17850",
+      "anio": 2025,
+      "fecha": "2025-12-15",
+      "titulo": "Ordenanza Fiscal e Impositiva 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": "https://gobiernoabierto.tandil.gov.ar/acceso-informacion-publica/compras-y-contrataciones/",
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 15,
+      "plataforma": "Gobierno Abierto + CKAN",
+      "notas": "Datasets estructurados de compras en datos.tandil.gov.ar"
+    }
+  },
+  {
+    "municipioId": "060861",
+    "nombre": "Vicente López",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 470,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 195,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060861",
+      "tipo": "ORDENANZA",
+      "numero": "35200",
+      "anio": 2025,
+      "fecha": "2025-12-20",
+      "titulo": "Ordenanza Fiscal e Impositiva 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": "https://compras.vicentelopez.gov.ar",
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 22,
+      "plataforma": "Portal de compras Junar",
+      "notas": "Excelente portal de compras con datos abiertos"
+    }
+  },
+  {
+    "municipioId": "060735",
+    "nombre": "San Isidro",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 0,
+    "tieneBoletinSibom": false,
+    "boletinesPublicados": 0,
+    "ultimoBoletinAnio": null,
+    "ordenanzaFiscalVigente": null,
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 2,
+      "plataforma": null,
+      "notas": "Licitaciones detectadas en sección de transparencia del sitio"
+    }
+  },
+  {
+    "municipioId": "060441",
+    "nombre": "La Plata",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 1404,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 410,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": null,
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": "https://www.laplata.gob.ar/licitaciones",
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 5,
+      "plataforma": null,
+      "notas": "Publica licitaciones pero sin adjudicaciones trazables"
+    }
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 143,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 85,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060882",
+      "tipo": "ORDENANZA",
+      "numero": "6120",
+      "anio": 2025,
+      "fecha": "2025-12-18",
+      "titulo": "Ordenanza Fiscal Municipal 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 11,
+      "plataforma": null,
+      "notas": "Licitaciones y adjudicaciones vía decretos en portal de transparencia"
+    }
+  },
+  {
+    "municipioId": "060490",
+    "nombre": "Luján",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 2241,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 520,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060490",
+      "tipo": "ORDENANZA",
+      "numero": "7850",
+      "anio": 2025,
+      "fecha": "2025-12-22",
+      "titulo": "Ordenanza Fiscal e Impositiva 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 19,
+      "plataforma": "PaísDigital",
+      "notas": "Buena publicación de licitaciones y decretos de adjudicación"
+    }
+  },
+  {
+    "municipioId": "060042",
+    "nombre": "Ayacucho",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 0,
+    "tieneBoletinSibom": false,
+    "boletinesPublicados": 0,
+    "ultimoBoletinAnio": null,
+    "ordenanzaFiscalVigente": null,
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 7,
+      "plataforma": "PaísDigital",
+      "notas": "Licitaciones en sección de transparencia, sin portal específico"
+    }
+  },
+  {
+    "municipioId": "060476",
+    "nombre": "Lobería",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 910,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 240,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060476",
+      "tipo": "ORDENANZA",
+      "numero": "3890",
+      "anio": 2025,
+      "fecha": "2025-12-10",
+      "titulo": "Ordenanza Fiscal 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": false,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 0,
+      "plataforma": null,
+      "notas": "No se detectaron licitaciones publicadas en el portal"
+    }
+  },
+  {
+    "municipioId": "060049",
+    "nombre": "Azul",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 0,
+    "tieneBoletinSibom": false,
+    "boletinesPublicados": 0,
+    "ultimoBoletinAnio": null,
+    "ordenanzaFiscalVigente": null,
+    "compras": {
+      "publicaLicitaciones": false,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 0,
+      "plataforma": null,
+      "notas": "Sitio caído durante auditoría. Sin datos de compras."
+    }
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 1408,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 350,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060105",
+      "tipo": "ORDENANZA",
+      "numero": "4520",
+      "anio": 2025,
+      "fecha": "2025-12-12",
+      "titulo": "Ordenanza Fiscal e Impositiva 2026",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": false,
+      "licitacionesDetectadas": 10,
+      "plataforma": null,
+      "notas": "Licitaciones vía portal municipal"
+    }
+  },
+  {
+    "municipioId": "060567",
+    "nombre": "Necochea",
+    "fechaScrape": "2026-03-30",
+    "normasEncontradas": 22,
+    "tieneBoletinSibom": true,
+    "boletinesPublicados": 45,
+    "ultimoBoletinAnio": 2026,
+    "ordenanzaFiscalVigente": {
+      "municipioId": "060567",
+      "tipo": "ORDENANZA",
+      "numero": "12038/2025",
+      "anio": 2025,
+      "fecha": null,
+      "titulo": "Ordenanza Fiscal e Impositiva modificatoria",
+      "urlPdf": null
+    },
+    "compras": {
+      "publicaLicitaciones": true,
+      "urlPortalCompras": null,
+      "publicaAdjudicaciones": true,
+      "licitacionesDetectadas": 20,
+      "plataforma": null,
+      "notas": "Licitaciones publicadas en portal de transparencia y SIBOM (decretos)"
+    }
+  }
+]

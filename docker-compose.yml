@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: radar_municipal
+      POSTGRES_USER: radar
+      POSTGRES_PASSWORD: radar_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U radar -d radar_municipal"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      API_PORT: 3001
+      DATABASE_URL: postgresql://radar:radar_dev_password@postgres:5432/radar_municipal
+      NODE_ENV: production
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/api').then(r => process.exit(r.ok ? 0 : 1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build:
+      context: .
+      dockerfile: packages/web/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:3001
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  pgdata:

@@ -1,0 +1,937 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 420000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia. Pendiente auditoría de Ordenanza Impositiva 2026.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 280000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia para rubro minorista general.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 85000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia 100 ha zona productiva media.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 750000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bahiablanca.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m² vivienda unifamiliar categoría media.",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026. Confianza baja: pendiente parseo automatizado de la Ordenanza Impositiva."
+  },
+  {
+    "municipioId": "060357",
+    "nombre": "General Pueyrredón",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 550000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia. Pendiente auditoría de Ordenanza Impositiva 2026.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 310000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia rubro minorista.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 95000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia 100 ha.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 920000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.mardelplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m² categoría media.",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026. Confianza baja: pendiente parseo automatizado de la Ordenanza Impositiva."
+  },
+  {
+    "municipioId": "060791",
+    "nombre": "Tandil",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 380000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 240000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 70000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 680000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.tandil.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060861",
+    "nombre": "Vicente López",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 780000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia. TSG alta por valuaciones AMBA.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 420000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": null,
+      "fuente": null,
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Partido sin superficie rural efectiva.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 1100000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.vicentelopez.gov.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m² categoría media.",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026. Partido sin actividad rural."
+  },
+  {
+    "municipioId": "060735",
+    "nombre": "San Isidro",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 720000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 390000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": null,
+      "fuente": null,
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Partido sin superficie rural efectiva.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 1050000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.sanisidro.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026. Partido sin actividad rural."
+  },
+  {
+    "municipioId": "060441",
+    "nombre": "La Plata",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 460000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 290000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 78000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 810000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.laplata.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 350000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 260000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 90000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 620000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.zarate.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": true,
+    "publicaOrdenanzaImpositiva": true,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060490",
+    "nombre": "Luján",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 320000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 220000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 65000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 580000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.lujan.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060042",
+    "nombre": "Ayacucho",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 210000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 150000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 48000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 420000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.ayacucho.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060476",
+    "nombre": "Lobería",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 195000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 140000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 55000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 380000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.loberia.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060049",
+    "nombre": "Azul",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 260000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 180000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 62000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 480000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.azul.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 230000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 160000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 58000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 440000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.bragado.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  },
+  {
+    "municipioId": "060567",
+    "nombre": "Necochea",
+    "anioFiscal": 2026,
+    "montoVivienda": {
+      "valor": 310000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Valor de referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoComercio": {
+      "valor": 210000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Alícuota TISH referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoRural": {
+      "valor": 72000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Tasa Vial Rural referencia.",
+        "validadoContra": null
+      }
+    },
+    "montoConstruccion": {
+      "valor": 620000,
+      "fuente": {
+        "capa": "DERIVADA",
+        "organismo": "PORTAL_MUNICIPAL",
+        "url": "https://www.necochea.gob.ar/",
+        "formato": null,
+        "fechaAcceso": "2026-04-17",
+        "fechaPublicacion": null
+      },
+      "confianza": {
+        "nivel": "ESTIMACION",
+        "notas": "Derechos por 100 m².",
+        "validadoContra": null
+      }
+    },
+    "publicaOrdenanzaFiscal": false,
+    "publicaOrdenanzaImpositiva": false,
+    "urlOrdenanzaImpositiva": null,
+    "notaMetodologica": "Valores de referencia estimados para la vigencia fiscal 2026."
+  }
+]

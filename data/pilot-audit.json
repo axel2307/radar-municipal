@@ -1,0 +1,1107 @@
+[
+  {
+    "municipioId": "060056",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.bahiablanca.gob.ar/transparencia/",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/transparencia/presupuesto/",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-10",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Presupuesto general aprobado por HCD"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/transparencia/ejecucion/",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-20",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución presupuestaria trimestral RAFAM"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/transparencia/sef/",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-25",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Situación económico-financiera"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/transparencia/deuda/",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-12-01",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/transparencia/gasto-finalidad/",
+        "formato": "CSV",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-20",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Datos abiertos con gasto por finalidad y función"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.bahiablanca.gob.ar/digesto/ordenanza-fiscal/",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-15",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Ordenanza fiscal vigente publicada en digesto"
+      }
+    ]
+  },
+  {
+    "municipioId": "060357",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.mardelplata.gob.ar/GobiernoAbierto",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-28",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Presupuesto aprobado publicado en Gobierno Abierto"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-12-15",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución RAFAM publicada"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-09-10",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "SEF disponible pero con un trimestre de atraso"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/deuda",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-08-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/GobiernoAbierto/gasto-finalidad",
+        "formato": "XLS",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-09-10",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "Archivo Excel con desglose por finalidad"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.mardelplata.gob.ar/digesto/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060791",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.tandil.gov.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.tandil.gov.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-05",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Presupuesto aprobado con datos abiertos"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.tandil.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-12-10",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución trimestral RAFAM"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.tandil.gov.ar/transparencia/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-10-01",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró publicación de deuda pública"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.tandil.gov.ar/transparencia/gastos",
+        "formato": "CSV",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-10-01",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "Datos abiertos con formato CSV"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.tandil.gov.ar/digesto/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-10",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060861",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.vicentelopez.gov.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 1,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-01",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Portal robusto con sección dedicada"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/transparencia/ejecucion",
+        "formato": "XLS",
+        "anio": 2025,
+        "trimestre": 4,
+        "fechaPublicacion": "2026-01-20",
+        "fechaCorte": "2025-12-31",
+        "esParseable": true,
+        "notas": "Ejecución al día con formato Excel descargable"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/transparencia/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 4,
+        "fechaPublicacion": "2026-01-25",
+        "fechaCorte": "2025-12-31",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/transparencia/deuda",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 4,
+        "fechaPublicacion": "2026-01-30",
+        "fechaCorte": "2025-12-31",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/transparencia/gasto-finalidad",
+        "formato": "XLS",
+        "anio": 2025,
+        "trimestre": 4,
+        "fechaPublicacion": "2026-01-20",
+        "fechaCorte": "2025-12-31",
+        "esParseable": true,
+        "notas": "Completo en formato Excel"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.vicentelopez.gov.ar/digesto/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-10",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060735",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.sanisidro.gob.ar",
+      "portalAccesible": true,
+      "clicksDesdeHome": 4,
+      "menuTransparenciaVisible": false
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.sanisidro.gob.ar/gobierno/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-04-15",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Publicado en sección Gobierno, no en sección de transparencia dedicada"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.sanisidro.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-11-01",
+        "fechaCorte": "2025-06-30",
+        "esParseable": false,
+        "notas": "PDF escaneado, no parseable automáticamente. Rezago considerable."
+      },
+      {
+        "categoria": "SEF",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró SEF publicado"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró información de deuda"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No disponible"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.sanisidro.gob.ar/digesto",
+        "formato": "PDF",
+        "anio": 2024,
+        "trimestre": null,
+        "fechaPublicacion": "2024-12-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Año anterior, pendiente actualización"
+      }
+    ]
+  },
+  {
+    "municipioId": "060441",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.laplata.gob.ar/gobierno-abierto",
+      "portalAccesible": true,
+      "clicksDesdeHome": 3,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-04-01",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Municipio grande, publicación lenta"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-12-20",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "Rezago significativo: ~6 meses"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 1,
+        "fechaPublicacion": "2025-09-15",
+        "fechaCorte": "2025-03-31",
+        "esParseable": true,
+        "notas": "SEF con rezago de casi dos trimestres"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró publicación de deuda"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.laplata.gob.ar/gobierno-abierto/gastos",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 1,
+        "fechaPublicacion": "2025-09-15",
+        "fechaCorte": "2025-03-31",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.laplata.gob.ar/normativa/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-28",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060882",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.zarate.gob.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.zarate.gob.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.zarate.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-30",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución trimestral publicada"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró SEF"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.zarate.gob.ar/transparencia/deuda",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-10-15",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No disponible desglose por finalidad"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.zarate.gob.ar/digesto/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-01",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060490",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.lujan.gob.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.lujan.gob.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-15",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Plataforma PaisDigital con metadatos limpios"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.lujan.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-15",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución RAFAM publicada vía PaisDigital"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.lujan.gob.ar/transparencia/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-20",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró publicación de deuda"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.lujan.gob.ar/transparencia/gastos-finalidad",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-10-05",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.lujan.gob.ar/normativa/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-30",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060042",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.ayacucho.gob.ar",
+      "portalAccesible": true,
+      "clicksDesdeHome": 3,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.ayacucho.gob.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-04-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "PaisDigital, publicación con algo de rezago"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.ayacucho.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-12-01",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "Rezago significativo: ~5 meses"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró SEF"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No publica deuda"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No disponible"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.ayacucho.gob.ar/normativa/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2024,
+        "trimestre": null,
+        "fechaPublicacion": "2024-12-30",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Año anterior"
+      }
+    ]
+  },
+  {
+    "municipioId": "060476",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.loberia.gob.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-01",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Reportes económicos trimestrales completos"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-10-30",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Buen nivel de actualización: solo 30 días de rezago"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/transparencia/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-05",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/transparencia/deuda",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-05",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/transparencia/gasto-finalidad",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-05",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.loberia.gob.ar/normativa/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060049",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.azul.gob.ar",
+      "portalAccesible": true,
+      "clicksDesdeHome": 4,
+      "menuTransparenciaVisible": false
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.azul.gob.ar/gobierno/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-05-10",
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "PDF escaneado"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.azul.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 1,
+        "fechaPublicacion": "2025-10-15",
+        "fechaCorte": "2025-03-31",
+        "esParseable": false,
+        "notas": "PDF escaneado, rezago muy alto (~6 meses)"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No encontrado"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No encontrado"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No disponible"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.azul.gob.ar/normativa",
+        "formato": "PDF",
+        "anio": 2024,
+        "trimestre": null,
+        "fechaPublicacion": "2024-11-20",
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "PDF escaneado, año anterior"
+      }
+    ]
+  },
+  {
+    "municipioId": "060105",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.bragado.gov.ar/transparencia",
+      "portalAccesible": true,
+      "clicksDesdeHome": 2,
+      "menuTransparenciaVisible": true
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.bragado.gov.ar/transparencia/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-03-10",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Reportes RAFAM claros"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.bragado.gov.ar/transparencia/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 3,
+        "fechaPublicacion": "2025-11-25",
+        "fechaCorte": "2025-09-30",
+        "esParseable": true,
+        "notas": "Ejecución RAFAM"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": true,
+        "url": "https://www.bragado.gov.ar/transparencia/sef",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-09-20",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": true,
+        "url": "https://www.bragado.gov.ar/transparencia/deuda",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-09-20",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No se encontró desglose por finalidad"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://www.bragado.gov.ar/normativa/ordenanza-fiscal",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-02-10",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": null
+      }
+    ]
+  },
+  {
+    "municipioId": "060567",
+    "fechaAuditoria": "2026-03-28",
+    "auditor": "equipo-radar",
+    "accesibilidad": {
+      "urlPortal": "https://www.necochea.gob.ar",
+      "portalAccesible": true,
+      "clicksDesdeHome": 3,
+      "menuTransparenciaVisible": false
+    },
+    "documentos": [
+      {
+        "categoria": "PRESUPUESTO",
+        "publicado": true,
+        "url": "https://www.necochea.gob.ar/gobierno/presupuesto",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-04-30",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Ordenanza fiscal vigente publicada vía SIBOM"
+      },
+      {
+        "categoria": "EJECUCION",
+        "publicado": true,
+        "url": "https://www.necochea.gob.ar/gobierno/ejecucion",
+        "formato": "PDF",
+        "anio": 2025,
+        "trimestre": 2,
+        "fechaPublicacion": "2025-11-20",
+        "fechaCorte": "2025-06-30",
+        "esParseable": true,
+        "notas": "Rezago moderado: ~5 meses"
+      },
+      {
+        "categoria": "SEF",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No encontrado"
+      },
+      {
+        "categoria": "DEUDA",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No encontrado"
+      },
+      {
+        "categoria": "FINALIDAD_FUNCION",
+        "publicado": false,
+        "url": null,
+        "formato": null,
+        "anio": null,
+        "trimestre": null,
+        "fechaPublicacion": null,
+        "fechaCorte": null,
+        "esParseable": false,
+        "notas": "No disponible"
+      },
+      {
+        "categoria": "ORDENANZA_FISCAL",
+        "publicado": true,
+        "url": "https://sibom.slyt.gba.gob.ar/normas/necochea",
+        "formato": "HTML",
+        "anio": 2025,
+        "trimestre": null,
+        "fechaPublicacion": "2025-01-15",
+        "fechaCorte": null,
+        "esParseable": true,
+        "notas": "Publicada vía SIBOM"
+      }
+    ]
+  }
+]

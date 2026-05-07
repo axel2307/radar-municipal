@@ -1,0 +1,145 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 82.5,
+    "bandaAnchaPer100": 28.0,
+    "pctComputadora": 68.5,
+    "serviciosDigitales": 1.0,
+    "notas": "Alta conectividad. Trámites online completos vía portal municipal."
+  },
+  {
+    "municipioId": "060274",
+    "nombre": "General Pueyrredón",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 80.2,
+    "bandaAnchaPer100": 26.5,
+    "pctComputadora": 65.8,
+    "serviciosDigitales": 0.5,
+    "notas": "Buena conectividad urbana. Trámites online básicos."
+  },
+  {
+    "municipioId": "060756",
+    "nombre": "Tandil",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 78.0,
+    "bandaAnchaPer100": 25.0,
+    "pctComputadora": 63.5,
+    "serviciosDigitales": 1.0,
+    "notas": "Polo tecnológico con buen ecosistema digital. Trámites online completos."
+  },
+  {
+    "municipioId": "060840",
+    "nombre": "Vicente López",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 90.0,
+    "bandaAnchaPer100": 35.0,
+    "pctComputadora": 82.0,
+    "serviciosDigitales": 1.0,
+    "notas": "Máxima conectividad del conurbano. App municipal y trámites 100% online."
+  },
+  {
+    "municipioId": "060648",
+    "nombre": "San Isidro",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 88.5,
+    "bandaAnchaPer100": 32.0,
+    "pctComputadora": 78.0,
+    "serviciosDigitales": 1.0,
+    "notas": "Alta conectividad. Portal con trámites online completos."
+  },
+  {
+    "municipioId": "060412",
+    "nombre": "La Plata",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 79.0,
+    "bandaAnchaPer100": 24.0,
+    "pctComputadora": 64.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Capital provincial con brecha digital en periferia. Trámites online básicos."
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 72.0,
+    "bandaAnchaPer100": 20.0,
+    "pctComputadora": 55.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Conectividad media. Portal con algunos trámites online."
+  },
+  {
+    "municipioId": "060434",
+    "nombre": "Luján",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 70.5,
+    "bandaAnchaPer100": 19.0,
+    "pctComputadora": 52.0,
+    "serviciosDigitales": 0.5,
+    "notas": "PaisDigital con servicios digitales básicos. Conectividad en crecimiento."
+  },
+  {
+    "municipioId": "060028",
+    "nombre": "Ayacucho",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 55.0,
+    "bandaAnchaPer100": 12.0,
+    "pctComputadora": 40.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Zona rural con baja cobertura de banda ancha. Portal PaisDigital básico."
+  },
+  {
+    "municipioId": "060427",
+    "nombre": "Lobería",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 50.0,
+    "bandaAnchaPer100": 10.0,
+    "pctComputadora": 35.0,
+    "serviciosDigitales": 0,
+    "notas": "Partido rural con baja conectividad. Sin trámites online significativos."
+  },
+  {
+    "municipioId": "060063",
+    "nombre": "Azul",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 65.0,
+    "bandaAnchaPer100": 16.0,
+    "pctComputadora": 48.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Ciudad intermedia con conectividad en crecimiento. Trámites online básicos."
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 62.0,
+    "bandaAnchaPer100": 15.0,
+    "pctComputadora": 45.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Ciudad pequeña con conectividad moderada."
+  },
+  {
+    "municipioId": "060512",
+    "nombre": "Necochea",
+    "anio": 2024,
+    "fuente": "INDEC Censo 2022 + ENACOM datos abiertos + auditoría portal",
+    "pctInternet": 68.0,
+    "bandaAnchaPer100": 18.0,
+    "pctComputadora": 50.0,
+    "serviciosDigitales": 0.5,
+    "notas": "Ciudad costera con conectividad media. Trámites online básicos."
+  }
+]

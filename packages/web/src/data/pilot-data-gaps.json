@@ -1,0 +1,202 @@
+[
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "gaps": []
+  },
+  {
+    "municipioId": "060357",
+    "nombre": "General Pueyrredón",
+    "gaps": []
+  },
+  {
+    "municipioId": "060791",
+    "nombre": "Tandil",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      }
+    ]
+  },
+  {
+    "municipioId": "060861",
+    "nombre": "Vicente López",
+    "gaps": []
+  },
+  {
+    "municipioId": "060735",
+    "nombre": "San Isidro",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  },
+  {
+    "municipioId": "060441",
+    "nombre": "La Plata",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "gaps": []
+  },
+  {
+    "municipioId": "060490",
+    "nombre": "Luján",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  },
+  {
+    "municipioId": "060042",
+    "nombre": "Ayacucho",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      },
+      {
+        "campo": "SEF",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  },
+  {
+    "municipioId": "060476",
+    "nombre": "Lobería",
+    "gaps": []
+  },
+  {
+    "municipioId": "060049",
+    "nombre": "Azul",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "RESULTADO_FISCAL",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      },
+      {
+        "campo": "SEF",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "gaps": []
+  },
+  {
+    "municipioId": "060567",
+    "nombre": "Necochea",
+    "gaps": [
+      {
+        "campo": "DEUDA_STOCK",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": true,
+        "tipo": "OPACIDAD_SELECTIVA"
+      },
+      {
+        "campo": "GASTO_FINALIDAD_FUNCION",
+        "anio": 2025,
+        "trimestre": 4,
+        "existeEnMunicipal": false,
+        "existeEnProvincial": false,
+        "tipo": "SIN_DATOS"
+      }
+    ]
+  }
+]

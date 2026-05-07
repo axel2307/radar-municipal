@@ -1,0 +1,365 @@
+[
+  {
+    "municipioId": "060098",
+    "nombreFuente": "BERISSO",
+    "fechaSnapshot": "2026-03-31",
+    "saldoTotal": 2529157801.7019997,
+    "acreedoresConSaldo": 7,
+    "acreedores": [
+      {
+        "nombre": "TESORO PROVINCIAL",
+        "saldo": 253444.282,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "A.R.C.A",
+        "saldo": 96640897.67999999,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PERSONAL",
+        "saldo": 1100196171.78,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "PROVEEDORES",
+        "saldo": 297526109.6600001,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "CONTRATISTAS",
+        "saldo": 43744462.59000003,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "TRANSFERENCIAS",
+        "saldo": 24885000,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "OTROS",
+        "saldo": 965911715.7099996,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      }
+    ],
+    "fuenteUrl": "https://berisso.gob.ar/storage/pdfs/34803f0b-dfb6-495b-9c97-9e1bdf55b257.xlsx",
+    "parsedAt": "2026-05-06T18:51:10.264Z"
+  },
+  {
+    "municipioId": "060154",
+    "nombreFuente": "CARMEN DE ARECO",
+    "fechaSnapshot": "2024-12-31",
+    "saldoTotal": 212924568.56,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 212701105.6,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (dec.prov.1316/2010)",
+        "saldo": 223462.96,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "http://carmendeareco.gob.ar/wp-content/uploads/2025/10/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-30-09-2025-.xlsx",
+    "parsedAt": "2026-05-06T18:51:10.975Z"
+  },
+  {
+    "municipioId": "060154",
+    "nombreFuente": "CARMEN DE ARECO",
+    "fechaSnapshot": "2024-12-31",
+    "saldoTotal": 212924568.56,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 212701105.6,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (dec.prov.1316/2010)",
+        "saldo": 223462.96,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-31-12-2024.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.263Z"
+  },
+  {
+    "municipioId": "060154",
+    "nombreFuente": "CARMEN DE ARECO",
+    "fechaSnapshot": "2024-09-30",
+    "saldoTotal": 2712025.7100000004,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 2451869.99,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (dec.prov.1316/2010)",
+        "saldo": 260155.72,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.400Z"
+  },
+  {
+    "municipioId": "060154",
+    "nombreFuente": "CARMEN DE ARECO",
+    "fechaSnapshot": "2024-06-30",
+    "saldoTotal": 1023754.07,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 763598.35,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (dec.prov.1316/2010)",
+        "saldo": 260155.72,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2024.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.529Z"
+  },
+  {
+    "municipioId": "060154",
+    "nombreFuente": "CARMEN DE ARECO",
+    "fechaSnapshot": "2020-06-30",
+    "saldoTotal": 1023754.07,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 763598.35,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (dec.prov.1316/2010)",
+        "saldo": 260155.72,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2020.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.659Z"
+  },
+  {
+    "municipioId": "060274",
+    "nombreFuente": "Florentino Ameghino",
+    "fechaSnapshot": "2025-09-30",
+    "saldoTotal": 193783854.87,
+    "acreedoresConSaldo": 4,
+    "acreedores": [
+      {
+        "nombre": "TESORO PROVINCIAL (DECRETO 264/20: Fondo Esp.de Emerg. Sanit. para la Contenc. Fiscal Municipal)",
+        "saldo": 3000000,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 4116930.71,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PROGRAMA PCIAL. DE DESENDEUDAMIENTO DEC.259/12",
+        "saldo": 375200.09,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PROVEEDORES",
+        "saldo": 186291724.07,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      }
+    ],
+    "fuenteUrl": "https://ameghino.gob.ar/wp-content/uploads/2025/10/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-09-2025.xlsx",
+    "parsedAt": "2026-05-06T18:51:12.235Z"
+  },
+  {
+    "municipioId": "060274",
+    "nombreFuente": "Florentino Ameghino",
+    "fechaSnapshot": "2025-06-30",
+    "saldoTotal": 53859942.2,
+    "acreedoresConSaldo": 4,
+    "acreedores": [
+      {
+        "nombre": "TESORO PROVINCIAL (DECRETO 264/20: Fondo Esp.de Emerg. Sanit. para la Contenc. Fiscal Municipal)",
+        "saldo": 3000000,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 4044690.26,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PROGRAMA PCIAL. DE DESENDEUDAMIENTO DEC.259/12",
+        "saldo": 410887.19,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PROVEEDORES",
+        "saldo": 46404364.75,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      }
+    ],
+    "fuenteUrl": "https://ameghino.gob.ar/wp-content/uploads/2025/08/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-06-2025.xlsx",
+    "parsedAt": "2026-05-06T18:51:12.411Z"
+  },
+  {
+    "municipioId": "060308",
+    "nombreFuente": "General Madariaga",
+    "fechaSnapshot": "2022-06-30",
+    "saldoTotal": 29074471.75,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 5817271.75,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL COVID 19",
+        "saldo": 23257200,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/stock_deuda_30-06-22.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.740Z"
+  },
+  {
+    "municipioId": "060308",
+    "nombreFuente": "General Madariaga",
+    "fechaSnapshot": "2022-03-31",
+    "saldoTotal": 29074471.75,
+    "acreedoresConSaldo": 2,
+    "acreedores": [
+      {
+        "nombre": "INSTITUTO DE LA VIVIENDA",
+        "saldo": 5817271.75,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL COVID 19",
+        "saldo": 23257200,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/stock_deuda_31-03-2022.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.771Z"
+  },
+  {
+    "municipioId": "060308",
+    "nombreFuente": "General Madariaga",
+    "fechaSnapshot": "2021-09-30",
+    "saldoTotal": 23257200,
+    "acreedoresConSaldo": 1,
+    "acreedores": [
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL COVID 19",
+        "saldo": 23257200,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      }
+    ],
+    "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/registro_endeudamiento_30-09-2021a.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.803Z"
+  },
+  {
+    "municipioId": "060462",
+    "nombreFuente": "LINCOLN",
+    "fechaSnapshot": "2022-06-30",
+    "saldoTotal": 111614689.21999998,
+    "acreedoresConSaldo": 7,
+    "acreedores": [
+      {
+        "nombre": "TESORO PROVINCIAL (Detallar en este item: Desendeudamiento, Fondo Esp.de Emerg. Sanit. para la Contenc. Fiscal Municipal etc.)",
+        "saldo": 10000000,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (DETALLAR)",
+        "saldo": 254336,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PERSONAL",
+        "saldo": 6047709.76,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "PROVEEDORES",
+        "saldo": 65095510.38,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "CONTRATISTAS",
+        "saldo": 1218047.74,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "TRANSFERENCIAS",
+        "saldo": 25629050.1,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "OTROS",
+        "saldo": 3370035.24,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      }
+    ],
+    "fuenteUrl": "https://www.lincoln.gob.ar/sites/default/files/stock_de_deuda_y_p_de_vtos_06-2022.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.879Z"
+  },
+  {
+    "municipioId": "060462",
+    "nombreFuente": "LINCOLN",
+    "fechaSnapshot": "2021-12-31",
+    "saldoTotal": 74238672.26,
+    "acreedoresConSaldo": 7,
+    "acreedores": [
+      {
+        "nombre": "TESORO PROVINCIAL (Detallar en este item: Desendeudamiento, Fondo Esp.de Emerg. Sanit. para la Contenc. Fiscal Municipal etc.)",
+        "saldo": 10000000,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "OTROS DE ORIGEN PROVINCIAL (DETALLAR)",
+        "saldo": 293987,
+        "seccion": "ORGANISMOS PUBLICOS PROVINCIALES"
+      },
+      {
+        "nombre": "PERSONAL",
+        "saldo": 6814.6,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "PROVEEDORES",
+        "saldo": 53598077.86,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "CONTRATISTAS",
+        "saldo": 177047.74,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "TRANSFERENCIAS",
+        "saldo": 7865037.11,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      },
+      {
+        "nombre": "OTROS",
+        "saldo": 2297707.95,
+        "seccion": "1.3. DEUDA FLOTANTE"
+      }
+    ],
+    "fuenteUrl": "https://www.lincoln.gob.ar/sites/default/files/stock_de_deuda_y_p_de_vtos_12-2021.xlsx",
+    "parsedAt": "2026-05-06T18:51:11.937Z"
+  }
+]

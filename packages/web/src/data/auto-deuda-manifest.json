@@ -1,0 +1,38 @@
+{
+  "refreshedAt": "2026-05-06T18:51:12.412Z",
+  "totalContrataciones": 13,
+  "municipiosConDatos": 5,
+  "aggregates": 13,
+  "fuentes": [
+    {
+      "label": "Berisso",
+      "municipioId": "060098",
+      "datasetsParseados": 1,
+      "contrataciones": 1
+    },
+    {
+      "label": "Carmen de Areco",
+      "municipioId": "060154",
+      "datasetsParseados": 5,
+      "contrataciones": 5
+    },
+    {
+      "label": "Florentino Ameghino",
+      "municipioId": "060274",
+      "datasetsParseados": 2,
+      "contrataciones": 2
+    },
+    {
+      "label": "General Juan Madariaga",
+      "municipioId": "060308",
+      "datasetsParseados": 3,
+      "contrataciones": 3
+    },
+    {
+      "label": "Lincoln",
+      "municipioId": "060462",
+      "datasetsParseados": 2,
+      "contrataciones": 2
+    }
+  ]
+}
