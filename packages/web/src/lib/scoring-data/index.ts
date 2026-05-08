@@ -7,3 +7,4 @@ export * from "./presion-impositiva";
 export * from "./compras";
 export * from "./deuda";
 export * from "./refresh";
+export * from "./vial";

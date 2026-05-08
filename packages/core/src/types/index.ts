@@ -66,3 +66,4 @@ export {
   type MonthlyRefreshRun,
   type GlobalRefreshManifest,
 } from "./refresh";
+export { type RedVialMunicipal } from "./vial";

@@ -184,6 +184,21 @@ const SPECS: FileSpec[] = [
     validate: refreshManifestValidator,
   },
   {
+    filename: "auto-vial.json",
+    required: false, // post-Sprint-30; primer cron run lo crea
+    validate: arrayWithRequiredFields(5, [
+      "municipioId",
+      "kmRuralEstimado",
+      "kmTotalEstimado",
+      "extractedAt",
+    ]),
+  },
+  {
+    filename: "auto-vial-manifest.json",
+    required: false,
+    validate: refreshManifestValidator,
+  },
+  {
     filename: "auto-refresh-manifest.json",
     required: false, // emitido sólo por consolidate-manifest (post-Sprint-27 deploy)
     validate: (data, problems) => {

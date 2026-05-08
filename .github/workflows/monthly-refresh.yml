@@ -46,6 +46,11 @@ jobs:
             script: "refresh:pilar4"
           - target: deuda
             script: "refresh:deuda"
+          # Sprint 31: Pilar 5 vial. ~80 partidos rurales × ~3s/query con
+          # 2s sleep + retries = típicamente 6-8 min. Timeout 30min cubre
+          # peor caso de Overpass lento.
+          - target: vial
+            script: "refresh:vial"
 
     outputs:
       # Cada matrix job emite: target, status, durationMs, error (si lo hay).

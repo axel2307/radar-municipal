@@ -22,6 +22,7 @@
     "batch:parse-ordenanzas": "tsx src/cli/batch-parse-ordenanzas.ts",
     "refresh:pilar4": "tsx src/cli/refresh-pilar4.ts",
     "refresh:deuda": "tsx src/cli/refresh-pilar2-deuda.ts",
+    "refresh:vial": "tsx src/cli/refresh-pilar5-vial.ts",
     "validate:data": "tsx scripts/validate-data.ts",
     "consolidate:manifest": "tsx scripts/consolidate-manifest.ts",
     "test": "vitest run",
@@ -36,6 +37,7 @@
     "playwright": "^1.58.2"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/pdf-parse": "^1.1.5",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"

@@ -1,0 +1,620 @@
+{
+  "refreshedAt": "2026-05-08T21:59:09.061Z",
+  "totalContrataciones": 102,
+  "municipiosConDatos": 102,
+  "aggregates": 102,
+  "fuentes": [
+    {
+      "label": "Adolfo Alsina",
+      "municipioId": "060007",
+      "datasetsParseados": 1,
+      "contrataciones": 5652.1
+    },
+    {
+      "label": "Adolfo Gonzales Chaves",
+      "municipioId": "060014",
+      "datasetsParseados": 1,
+      "contrataciones": 1651.7
+    },
+    {
+      "label": "Alberti",
+      "municipioId": "060021",
+      "datasetsParseados": 1,
+      "contrataciones": 1313.9
+    },
+    {
+      "label": "Arrecifes",
+      "municipioId": "060035",
+      "datasetsParseados": 1,
+      "contrataciones": 1223.5
+    },
+    {
+      "label": "Ayacucho",
+      "municipioId": "060042",
+      "datasetsParseados": 1,
+      "contrataciones": 2460.9
+    },
+    {
+      "label": "Azul",
+      "municipioId": "060049",
+      "datasetsParseados": 1,
+      "contrataciones": 2788.2
+    },
+    {
+      "label": "Bahía Blanca",
+      "municipioId": "060056",
+      "datasetsParseados": 1,
+      "contrataciones": 1288.2
+    },
+    {
+      "label": "Balcarce",
+      "municipioId": "060070",
+      "datasetsParseados": 1,
+      "contrataciones": 1862.8
+    },
+    {
+      "label": "Baradero",
+      "municipioId": "060077",
+      "datasetsParseados": 1,
+      "contrataciones": 1000.1
+    },
+    {
+      "label": "Benito Juárez",
+      "municipioId": "060084",
+      "datasetsParseados": 1,
+      "contrataciones": 2066.9
+    },
+    {
+      "label": "Bragado",
+      "municipioId": "060105",
+      "datasetsParseados": 1,
+      "contrataciones": 2222.4
+    },
+    {
+      "label": "Brandsen",
+      "municipioId": "060112",
+      "datasetsParseados": 1,
+      "contrataciones": 1478.5
+    },
+    {
+      "label": "Campana",
+      "municipioId": "060119",
+      "datasetsParseados": 1,
+      "contrataciones": 423.6
+    },
+    {
+      "label": "Cañuelas",
+      "municipioId": "060126",
+      "datasetsParseados": 1,
+      "contrataciones": 1190.7
+    },
+    {
+      "label": "Capitán Sarmiento",
+      "municipioId": "060134",
+      "datasetsParseados": 1,
+      "contrataciones": 532.3
+    },
+    {
+      "label": "Carlos Casares",
+      "municipioId": "060140",
+      "datasetsParseados": 1,
+      "contrataciones": 1970.5
+    },
+    {
+      "label": "Carlos Tejedor",
+      "municipioId": "060147",
+      "datasetsParseados": 1,
+      "contrataciones": 3183.1
+    },
+    {
+      "label": "Carmen de Areco",
+      "municipioId": "060154",
+      "datasetsParseados": 1,
+      "contrataciones": 718.9
+    },
+    {
+      "label": "Castelli",
+      "municipioId": "060161",
+      "datasetsParseados": 1,
+      "contrataciones": 982.2
+    },
+    {
+      "label": "Colón",
+      "municipioId": "060168",
+      "datasetsParseados": 1,
+      "contrataciones": 2063.4
+    },
+    {
+      "label": "Coronel de Marina Leonardo Rosales",
+      "municipioId": "060175",
+      "datasetsParseados": 1,
+      "contrataciones": 818.5
+    },
+    {
+      "label": "Coronel Dorrego",
+      "municipioId": "060182",
+      "datasetsParseados": 1,
+      "contrataciones": 2386.5
+    },
+    {
+      "label": "Coronel Pringles",
+      "municipioId": "060189",
+      "datasetsParseados": 1,
+      "contrataciones": 2398.7
+    },
+    {
+      "label": "Coronel Suárez",
+      "municipioId": "060196",
+      "datasetsParseados": 1,
+      "contrataciones": 3574.7
+    },
+    {
+      "label": "Chacabuco",
+      "municipioId": "060203",
+      "datasetsParseados": 1,
+      "contrataciones": 2198.6
+    },
+    {
+      "label": "Chascomús",
+      "municipioId": "060210",
+      "datasetsParseados": 1,
+      "contrataciones": 1496
+    },
+    {
+      "label": "Chivilcoy",
+      "municipioId": "060217",
+      "datasetsParseados": 1,
+      "contrataciones": 1861.8
+    },
+    {
+      "label": "Daireaux",
+      "municipioId": "060224",
+      "datasetsParseados": 1,
+      "contrataciones": 2903.3
+    },
+    {
+      "label": "Dolores",
+      "municipioId": "060231",
+      "datasetsParseados": 1,
+      "contrataciones": 1025
+    },
+    {
+      "label": "Exaltación de la Cruz",
+      "municipioId": "060260",
+      "datasetsParseados": 1,
+      "contrataciones": 975.5
+    },
+    {
+      "label": "Florentino Ameghino",
+      "municipioId": "060274",
+      "datasetsParseados": 1,
+      "contrataciones": 1071.8
+    },
+    {
+      "label": "General Alvarado",
+      "municipioId": "060277",
+      "datasetsParseados": 1,
+      "contrataciones": 605.4
+    },
+    {
+      "label": "General Alvear",
+      "municipioId": "060280",
+      "datasetsParseados": 1,
+      "contrataciones": 1354.5
+    },
+    {
+      "label": "General Arenales",
+      "municipioId": "060287",
+      "datasetsParseados": 1,
+      "contrataciones": 1994.6
+    },
+    {
+      "label": "General Belgrano",
+      "municipioId": "060294",
+      "datasetsParseados": 1,
+      "contrataciones": 1181.5
+    },
+    {
+      "label": "General Guido",
+      "municipioId": "060301",
+      "datasetsParseados": 1,
+      "contrataciones": 1053.2
+    },
+    {
+      "label": "General Juan Madariaga",
+      "municipioId": "060308",
+      "datasetsParseados": 1,
+      "contrataciones": 860.1
+    },
+    {
+      "label": "General La Madrid",
+      "municipioId": "060315",
+      "datasetsParseados": 1,
+      "contrataciones": 1700.7
+    },
+    {
+      "label": "General Las Heras",
+      "municipioId": "060322",
+      "datasetsParseados": 1,
+      "contrataciones": 953.9
+    },
+    {
+      "label": "General Lavalle",
+      "municipioId": "060329",
+      "datasetsParseados": 1,
+      "contrataciones": 1048.5
+    },
+    {
+      "label": "General Paz",
+      "municipioId": "060336",
+      "datasetsParseados": 1,
+      "contrataciones": 723.3
+    },
+    {
+      "label": "General Pinto",
+      "municipioId": "060343",
+      "datasetsParseados": 1,
+      "contrataciones": 1652.2
+    },
+    {
+      "label": "General Pueyrredón",
+      "municipioId": "060357",
+      "datasetsParseados": 1,
+      "contrataciones": 779.3
+    },
+    {
+      "label": "General Viamonte",
+      "municipioId": "060371",
+      "datasetsParseados": 1,
+      "contrataciones": 1724.5
+    },
+    {
+      "label": "General Villegas",
+      "municipioId": "060378",
+      "datasetsParseados": 1,
+      "contrataciones": 4259.8
+    },
+    {
+      "label": "Guaminí",
+      "municipioId": "060385",
+      "datasetsParseados": 1,
+      "contrataciones": 3619.3
+    },
+    {
+      "label": "Hipólito Yrigoyen",
+      "municipioId": "060392",
+      "datasetsParseados": 1,
+      "contrataciones": 1642
+    },
+    {
+      "label": "Junín",
+      "municipioId": "060410",
+      "datasetsParseados": 1,
+      "contrataciones": 2092.8
+    },
+    {
+      "label": "La Costa",
+      "municipioId": "060412",
+      "datasetsParseados": 1,
+      "contrataciones": 373.2
+    },
+    {
+      "label": "Laprida",
+      "municipioId": "060420",
+      "datasetsParseados": 1,
+      "contrataciones": 1282
+    },
+    {
+      "label": "Las Flores",
+      "municipioId": "060427",
+      "datasetsParseados": 1,
+      "contrataciones": 1648.4
+    },
+    {
+      "label": "Lezama",
+      "municipioId": "060448",
+      "datasetsParseados": 1,
+      "contrataciones": 578.4
+    },
+    {
+      "label": "Leandro N. Alem",
+      "municipioId": "060455",
+      "datasetsParseados": 1,
+      "contrataciones": 1396.2
+    },
+    {
+      "label": "Lincoln",
+      "municipioId": "060462",
+      "datasetsParseados": 1,
+      "contrataciones": 4889.3
+    },
+    {
+      "label": "Lobos",
+      "municipioId": "060469",
+      "datasetsParseados": 1,
+      "contrataciones": 1802.6
+    },
+    {
+      "label": "Lobería",
+      "municipioId": "060476",
+      "datasetsParseados": 1,
+      "contrataciones": 2397.9
+    },
+    {
+      "label": "Luján",
+      "municipioId": "060490",
+      "datasetsParseados": 1,
+      "contrataciones": 1313.6
+    },
+    {
+      "label": "Magdalena",
+      "municipioId": "060497",
+      "datasetsParseados": 1,
+      "contrataciones": 1436.1
+    },
+    {
+      "label": "Maipú",
+      "municipioId": "060498",
+      "datasetsParseados": 1,
+      "contrataciones": 773.7
+    },
+    {
+      "label": "Mar Chiquita",
+      "municipioId": "060511",
+      "datasetsParseados": 1,
+      "contrataciones": 1009.8
+    },
+    {
+      "label": "Mercedes",
+      "municipioId": "060519",
+      "datasetsParseados": 1,
+      "contrataciones": 1281.9
+    },
+    {
+      "label": "Monte",
+      "municipioId": "060528",
+      "datasetsParseados": 1,
+      "contrataciones": 1051.4
+    },
+    {
+      "label": "Monte Hermoso",
+      "municipioId": "060531",
+      "datasetsParseados": 1,
+      "contrataciones": 52.4
+    },
+    {
+      "label": "Navarro",
+      "municipioId": "060546",
+      "datasetsParseados": 1,
+      "contrataciones": 1645.5
+    },
+    {
+      "label": "Bolívar",
+      "municipioId": "060547",
+      "datasetsParseados": 1,
+      "contrataciones": 3579.5
+    },
+    {
+      "label": "9 de Julio",
+      "municipioId": "060560",
+      "datasetsParseados": 1,
+      "contrataciones": 3326.4
+    },
+    {
+      "label": "Necochea",
+      "municipioId": "060567",
+      "datasetsParseados": 1,
+      "contrataciones": 2972.2
+    },
+    {
+      "label": "Olavarría",
+      "municipioId": "060574",
+      "datasetsParseados": 1,
+      "contrataciones": 3426.6
+    },
+    {
+      "label": "Patagones",
+      "municipioId": "060581",
+      "datasetsParseados": 1,
+      "contrataciones": 3912.9
+    },
+    {
+      "label": "Pehuajó",
+      "municipioId": "060588",
+      "datasetsParseados": 1,
+      "contrataciones": 3892.7
+    },
+    {
+      "label": "Pellegrini",
+      "municipioId": "060595",
+      "datasetsParseados": 1,
+      "contrataciones": 1191.3
+    },
+    {
+      "label": "Pergamino",
+      "municipioId": "060602",
+      "datasetsParseados": 1,
+      "contrataciones": 4685.7
+    },
+    {
+      "label": "Pila",
+      "municipioId": "060609",
+      "datasetsParseados": 1,
+      "contrataciones": 1322.8
+    },
+    {
+      "label": "Pinamar",
+      "municipioId": "060623",
+      "datasetsParseados": 1,
+      "contrataciones": 98.9
+    },
+    {
+      "label": "Puan",
+      "municipioId": "060631",
+      "datasetsParseados": 1,
+      "contrataciones": 4729.2
+    },
+    {
+      "label": "Punta Indio",
+      "municipioId": "060632",
+      "datasetsParseados": 1,
+      "contrataciones": 720.8
+    },
+    {
+      "label": "Ramallo",
+      "municipioId": "060644",
+      "datasetsParseados": 1,
+      "contrataciones": 1566.8
+    },
+    {
+      "label": "Rauch",
+      "municipioId": "060648",
+      "datasetsParseados": 1,
+      "contrataciones": 1825.3
+    },
+    {
+      "label": "Rivadavia",
+      "municipioId": "060651",
+      "datasetsParseados": 1,
+      "contrataciones": 3192.7
+    },
+    {
+      "label": "Rojas",
+      "municipioId": "060655",
+      "datasetsParseados": 1,
+      "contrataciones": 2931.9
+    },
+    {
+      "label": "Roque Pérez",
+      "municipioId": "060658",
+      "datasetsParseados": 1,
+      "contrataciones": 1462.8
+    },
+    {
+      "label": "Saavedra",
+      "municipioId": "060665",
+      "datasetsParseados": 1,
+      "contrataciones": 2932
+    },
+    {
+      "label": "Saladillo",
+      "municipioId": "060672",
+      "datasetsParseados": 1,
+      "contrataciones": 1776.5
+    },
+    {
+      "label": "Salliqueló",
+      "municipioId": "060679",
+      "datasetsParseados": 1,
+      "contrataciones": 999.9
+    },
+    {
+      "label": "Salto",
+      "municipioId": "060686",
+      "datasetsParseados": 1,
+      "contrataciones": 1646.6
+    },
+    {
+      "label": "San Andrés de Giles",
+      "municipioId": "060693",
+      "datasetsParseados": 1,
+      "contrataciones": 1335.4
+    },
+    {
+      "label": "San Antonio de Areco",
+      "municipioId": "060700",
+      "datasetsParseados": 1,
+      "contrataciones": 1041.4
+    },
+    {
+      "label": "San Cayetano",
+      "municipioId": "060707",
+      "datasetsParseados": 1,
+      "contrataciones": 1356.1
+    },
+    {
+      "label": "San Nicolás",
+      "municipioId": "060721",
+      "datasetsParseados": 1,
+      "contrataciones": 1189.2
+    },
+    {
+      "label": "San Pedro",
+      "municipioId": "060728",
+      "datasetsParseados": 1,
+      "contrataciones": 1390.1
+    },
+    {
+      "label": "Suipacha",
+      "municipioId": "060749",
+      "datasetsParseados": 1,
+      "contrataciones": 850.2
+    },
+    {
+      "label": "Tapalqué",
+      "municipioId": "060760",
+      "datasetsParseados": 1,
+      "contrataciones": 1960.8
+    },
+    {
+      "label": "Tordillo",
+      "municipioId": "060766",
+      "datasetsParseados": 1,
+      "contrataciones": 507.1
+    },
+    {
+      "label": "Tornquist",
+      "municipioId": "060770",
+      "datasetsParseados": 1,
+      "contrataciones": 2166.6
+    },
+    {
+      "label": "Trenque Lauquen",
+      "municipioId": "060778",
+      "datasetsParseados": 1,
+      "contrataciones": 5079.8
+    },
+    {
+      "label": "Tres Arroyos",
+      "municipioId": "060784",
+      "datasetsParseados": 1,
+      "contrataciones": 2595.3
+    },
+    {
+      "label": "Tandil",
+      "municipioId": "060791",
+      "datasetsParseados": 1,
+      "contrataciones": 2265.9
+    },
+    {
+      "label": "Tres Lomas",
+      "municipioId": "060798",
+      "datasetsParseados": 1,
+      "contrataciones": 1360.4
+    },
+    {
+      "label": "25 de Mayo",
+      "municipioId": "060805",
+      "datasetsParseados": 1,
+      "contrataciones": 4468.5
+    },
+    {
+      "label": "Villa Gesell",
+      "municipioId": "060812",
+      "datasetsParseados": 1,
+      "contrataciones": 90.4
+    },
+    {
+      "label": "Villarino",
+      "municipioId": "060819",
+      "datasetsParseados": 1,
+      "contrataciones": 4824.7
+    },
+    {
+      "label": "Zárate",
+      "municipioId": "060882",
+      "datasetsParseados": 1,
+      "contrataciones": 666.4
+    }
+  ]
+}

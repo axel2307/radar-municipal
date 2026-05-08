@@ -68,6 +68,12 @@ const TARGETS: TargetSpec[] = [
     manifestPath: "auto-deuda-manifest.json",
     dataPath: "auto-deuda.json",
   },
+  {
+    target: "vial",
+    script: "refresh:vial",
+    manifestPath: "auto-vial-manifest.json",
+    dataPath: "auto-vial.json",
+  },
 ];
 
 // ─────────────────────────────────────────

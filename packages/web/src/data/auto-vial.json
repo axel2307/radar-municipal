@@ -1,0 +1,1634 @@
+[
+  {
+    "municipioId": "060007",
+    "nombre": "Adolfo Alsina",
+    "km": {
+      "track": 91.6,
+      "unclassified": 5560.5,
+      "tertiary": 1211.6,
+      "secondary": 548.1,
+      "primary": 0
+    },
+    "kmRuralEstimado": 5652.1,
+    "kmTotalEstimado": 7411.8,
+    "waysProcesados": 2130,
+    "extractedAt": "2026-05-08T21:50:01.526Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060014",
+    "nombre": "Adolfo Gonzales Chaves",
+    "km": {
+      "track": 37.7,
+      "unclassified": 1614,
+      "tertiary": 929,
+      "secondary": 137.6,
+      "primary": 193.6
+    },
+    "kmRuralEstimado": 1651.7,
+    "kmTotalEstimado": 2911.9,
+    "waysProcesados": 857,
+    "extractedAt": "2026-05-08T21:50:05.215Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060021",
+    "nombre": "Alberti",
+    "km": {
+      "track": 18.5,
+      "unclassified": 1295.4,
+      "tertiary": 349.9,
+      "secondary": 131.4,
+      "primary": 126.9
+    },
+    "kmRuralEstimado": 1313.9,
+    "kmTotalEstimado": 1922.1,
+    "waysProcesados": 906,
+    "extractedAt": "2026-05-08T21:50:09.226Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060035",
+    "nombre": "Arrecifes",
+    "km": {
+      "track": 80.6,
+      "unclassified": 1142.9,
+      "tertiary": 504.1,
+      "secondary": 38.3,
+      "primary": 205
+    },
+    "kmRuralEstimado": 1223.5,
+    "kmTotalEstimado": 1970.9,
+    "waysProcesados": 1034,
+    "extractedAt": "2026-05-08T21:50:13.263Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060042",
+    "nombre": "Ayacucho",
+    "km": {
+      "track": 72.1,
+      "unclassified": 2388.8,
+      "tertiary": 1513.8,
+      "secondary": 83.1,
+      "primary": 473.3
+    },
+    "kmRuralEstimado": 2460.9,
+    "kmTotalEstimado": 4531.1,
+    "waysProcesados": 1424,
+    "extractedAt": "2026-05-08T21:49:24.465Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060049",
+    "nombre": "Azul",
+    "km": {
+      "track": 55.1,
+      "unclassified": 2733.1,
+      "tertiary": 1766.6,
+      "secondary": 240.8,
+      "primary": 186
+    },
+    "kmRuralEstimado": 2788.2,
+    "kmTotalEstimado": 4981.6,
+    "waysProcesados": 2089,
+    "extractedAt": "2026-05-08T21:49:39.748Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060056",
+    "nombre": "Bahía Blanca",
+    "km": {
+      "track": 122.4,
+      "unclassified": 1165.8,
+      "tertiary": 294.6,
+      "secondary": 98.6,
+      "primary": 110
+    },
+    "kmRuralEstimado": 1288.2,
+    "kmTotalEstimado": 1791.4,
+    "waysProcesados": 1781,
+    "extractedAt": "2026-05-08T21:48:48.232Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060070",
+    "nombre": "Balcarce",
+    "km": {
+      "track": 49.9,
+      "unclassified": 1812.9,
+      "tertiary": 1048.1,
+      "secondary": 174.3,
+      "primary": 192
+    },
+    "kmRuralEstimado": 1862.8,
+    "kmTotalEstimado": 3277.2,
+    "waysProcesados": 1017,
+    "extractedAt": "2026-05-08T21:50:20.344Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060077",
+    "nombre": "Baradero",
+    "km": {
+      "track": 28.1,
+      "unclassified": 972,
+      "tertiary": 283.9,
+      "secondary": 56.1,
+      "primary": 77.5
+    },
+    "kmRuralEstimado": 1000.1,
+    "kmTotalEstimado": 1417.6,
+    "waysProcesados": 630,
+    "extractedAt": "2026-05-08T21:50:23.997Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060084",
+    "nombre": "Benito Juárez",
+    "km": {
+      "track": 64.4,
+      "unclassified": 2002.5,
+      "tertiary": 1282.9,
+      "secondary": 130.1,
+      "primary": 210.6
+    },
+    "kmRuralEstimado": 2066.9,
+    "kmTotalEstimado": 3690.5,
+    "waysProcesados": 1054,
+    "extractedAt": "2026-05-08T21:50:42.161Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060105",
+    "nombre": "Bragado",
+    "km": {
+      "track": 39.6,
+      "unclassified": 2182.8,
+      "tertiary": 723.3,
+      "secondary": 166.3,
+      "primary": 37.3
+    },
+    "kmRuralEstimado": 2222.4,
+    "kmTotalEstimado": 3149.3,
+    "waysProcesados": 1299,
+    "extractedAt": "2026-05-08T21:49:43.364Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060112",
+    "nombre": "Brandsen",
+    "km": {
+      "track": 114.6,
+      "unclassified": 1363.9,
+      "tertiary": 341,
+      "secondary": 107.6,
+      "primary": 170.9
+    },
+    "kmRuralEstimado": 1478.5,
+    "kmTotalEstimado": 2098,
+    "waysProcesados": 1854,
+    "extractedAt": "2026-05-08T21:50:46.096Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060119",
+    "nombre": "Campana",
+    "km": {
+      "track": 43.9,
+      "unclassified": 379.7,
+      "tertiary": 178.1,
+      "secondary": 103,
+      "primary": 16.5
+    },
+    "kmRuralEstimado": 423.6,
+    "kmTotalEstimado": 721.2,
+    "waysProcesados": 1030,
+    "extractedAt": "2026-05-08T21:50:49.730Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060126",
+    "nombre": "Cañuelas",
+    "km": {
+      "track": 35.7,
+      "unclassified": 1155,
+      "tertiary": 349.5,
+      "secondary": 45.2,
+      "primary": 94
+    },
+    "kmRuralEstimado": 1190.7,
+    "kmTotalEstimado": 1679.4,
+    "waysProcesados": 1156,
+    "extractedAt": "2026-05-08T21:50:53.370Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060134",
+    "nombre": "Capitán Sarmiento",
+    "km": {
+      "track": 5,
+      "unclassified": 527.3,
+      "tertiary": 202.9,
+      "secondary": 16,
+      "primary": 55.6
+    },
+    "kmRuralEstimado": 532.3,
+    "kmTotalEstimado": 806.8,
+    "waysProcesados": 410,
+    "extractedAt": "2026-05-08T21:51:09.695Z",
+    "fuenteUrl": "https://overpass.kumi.systems/api/interpreter"
+  },
+  {
+    "municipioId": "060140",
+    "nombre": "Carlos Casares",
+    "km": {
+      "track": 8.7,
+      "unclassified": 1961.8,
+      "tertiary": 737.9,
+      "secondary": 39.6,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1970.5,
+    "kmTotalEstimado": 2748,
+    "waysProcesados": 720,
+    "extractedAt": "2026-05-08T21:51:13.360Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060147",
+    "nombre": "Carlos Tejedor",
+    "km": {
+      "track": 45.8,
+      "unclassified": 3137.3,
+      "tertiary": 787.7,
+      "secondary": 92.9,
+      "primary": 0
+    },
+    "kmRuralEstimado": 3183.1,
+    "kmTotalEstimado": 4063.7,
+    "waysProcesados": 933,
+    "extractedAt": "2026-05-08T21:51:30.919Z",
+    "fuenteUrl": "https://overpass.kumi.systems/api/interpreter"
+  },
+  {
+    "municipioId": "060154",
+    "nombre": "Carmen de Areco",
+    "km": {
+      "track": 29.9,
+      "unclassified": 689,
+      "tertiary": 491.6,
+      "secondary": 23.9,
+      "primary": 93.7
+    },
+    "kmRuralEstimado": 718.9,
+    "kmTotalEstimado": 1328.1,
+    "waysProcesados": 505,
+    "extractedAt": "2026-05-08T21:51:34.838Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060161",
+    "nombre": "Castelli",
+    "km": {
+      "track": 216.1,
+      "unclassified": 766.1,
+      "tertiary": 308.1,
+      "secondary": 105.8,
+      "primary": 56.4
+    },
+    "kmRuralEstimado": 982.2,
+    "kmTotalEstimado": 1452.5,
+    "waysProcesados": 691,
+    "extractedAt": "2026-05-08T21:51:38.440Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060168",
+    "nombre": "Colón",
+    "km": {
+      "track": 210.9,
+      "unclassified": 1852.5,
+      "tertiary": 355,
+      "secondary": 186.3,
+      "primary": 74.9
+    },
+    "kmRuralEstimado": 2063.4,
+    "kmTotalEstimado": 2679.6,
+    "waysProcesados": 1324,
+    "extractedAt": "2026-05-08T21:51:42.035Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060175",
+    "nombre": "Coronel de Marina Leonardo Rosales",
+    "km": {
+      "track": 56.5,
+      "unclassified": 762,
+      "tertiary": 106.7,
+      "secondary": 48.7,
+      "primary": 75.5
+    },
+    "kmRuralEstimado": 818.5,
+    "kmTotalEstimado": 1049.4,
+    "waysProcesados": 597,
+    "extractedAt": "2026-05-08T21:51:45.553Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060182",
+    "nombre": "Coronel Dorrego",
+    "km": {
+      "track": 74.3,
+      "unclassified": 2312.2,
+      "tertiary": 600.4,
+      "secondary": 199.8,
+      "primary": 35.7
+    },
+    "kmRuralEstimado": 2386.5,
+    "kmTotalEstimado": 3222.4,
+    "waysProcesados": 897,
+    "extractedAt": "2026-05-08T21:51:49.145Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060189",
+    "nombre": "Coronel Pringles",
+    "km": {
+      "track": 35.7,
+      "unclassified": 2363,
+      "tertiary": 1136.7,
+      "secondary": 189.9,
+      "primary": 169.1
+    },
+    "kmRuralEstimado": 2398.7,
+    "kmTotalEstimado": 3894.4,
+    "waysProcesados": 1040,
+    "extractedAt": "2026-05-08T21:51:57.928Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060196",
+    "nombre": "Coronel Suárez",
+    "km": {
+      "track": 86.4,
+      "unclassified": 3488.3,
+      "tertiary": 1129.4,
+      "secondary": 410.5,
+      "primary": 171.4
+    },
+    "kmRuralEstimado": 3574.7,
+    "kmTotalEstimado": 5286,
+    "waysProcesados": 2303,
+    "extractedAt": "2026-05-08T21:52:07.019Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060203",
+    "nombre": "Chacabuco",
+    "km": {
+      "track": 77,
+      "unclassified": 2121.6,
+      "tertiary": 692.3,
+      "secondary": 38.9,
+      "primary": 194.9
+    },
+    "kmRuralEstimado": 2198.6,
+    "kmTotalEstimado": 3124.7,
+    "waysProcesados": 1365,
+    "extractedAt": "2026-05-08T21:52:10.834Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060210",
+    "nombre": "Chascomús",
+    "km": {
+      "track": 197.8,
+      "unclassified": 1298.2,
+      "tertiary": 753.9,
+      "secondary": 156.7,
+      "primary": 95.4
+    },
+    "kmRuralEstimado": 1496,
+    "kmTotalEstimado": 2502,
+    "waysProcesados": 1183,
+    "extractedAt": "2026-05-08T21:52:14.753Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060217",
+    "nombre": "Chivilcoy",
+    "km": {
+      "track": 21.3,
+      "unclassified": 1840.5,
+      "tertiary": 655.9,
+      "secondary": 120.5,
+      "primary": 176.4
+    },
+    "kmRuralEstimado": 1861.8,
+    "kmTotalEstimado": 2814.6,
+    "waysProcesados": 1157,
+    "extractedAt": "2026-05-08T21:52:19.006Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060224",
+    "nombre": "Daireaux",
+    "km": {
+      "track": 8.7,
+      "unclassified": 2894.6,
+      "tertiary": 906.5,
+      "secondary": 189.5,
+      "primary": 74
+    },
+    "kmRuralEstimado": 2903.3,
+    "kmTotalEstimado": 4073.3,
+    "waysProcesados": 1187,
+    "extractedAt": "2026-05-08T21:52:25.479Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060231",
+    "nombre": "Dolores",
+    "km": {
+      "track": 94.2,
+      "unclassified": 930.8,
+      "tertiary": 435.3,
+      "secondary": 46.2,
+      "primary": 97.7
+    },
+    "kmRuralEstimado": 1025,
+    "kmTotalEstimado": 1604.2,
+    "waysProcesados": 680,
+    "extractedAt": "2026-05-08T21:52:29.153Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060260",
+    "nombre": "Exaltación de la Cruz",
+    "km": {
+      "track": 59.9,
+      "unclassified": 915.6,
+      "tertiary": 316.3,
+      "secondary": 137.3,
+      "primary": 30.7
+    },
+    "kmRuralEstimado": 975.5,
+    "kmTotalEstimado": 1459.8,
+    "waysProcesados": 1683,
+    "extractedAt": "2026-05-08T21:52:33.029Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060274",
+    "nombre": "Florentino Ameghino",
+    "km": {
+      "track": 3,
+      "unclassified": 1068.8,
+      "tertiary": 416.8,
+      "secondary": 112.9,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1071.8,
+    "kmTotalEstimado": 1601.5,
+    "waysProcesados": 367,
+    "extractedAt": "2026-05-08T21:52:36.377Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060277",
+    "nombre": "General Alvarado",
+    "km": {
+      "track": 19.4,
+      "unclassified": 586,
+      "tertiary": 429.7,
+      "secondary": 137,
+      "primary": 25.3
+    },
+    "kmRuralEstimado": 605.4,
+    "kmTotalEstimado": 1197.4,
+    "waysProcesados": 539,
+    "extractedAt": "2026-05-08T21:52:40.280Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060280",
+    "nombre": "General Alvear",
+    "km": {
+      "track": 30.6,
+      "unclassified": 1323.9,
+      "tertiary": 919.4,
+      "secondary": 53.1,
+      "primary": 224.2
+    },
+    "kmRuralEstimado": 1354.5,
+    "kmTotalEstimado": 2551.2,
+    "waysProcesados": 564,
+    "extractedAt": "2026-05-08T21:52:43.917Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060287",
+    "nombre": "General Arenales",
+    "km": {
+      "track": 25.7,
+      "unclassified": 1968.9,
+      "tertiary": 370,
+      "secondary": 136.5,
+      "primary": 97.8
+    },
+    "kmRuralEstimado": 1994.6,
+    "kmTotalEstimado": 2598.9,
+    "waysProcesados": 747,
+    "extractedAt": "2026-05-08T21:52:47.493Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060294",
+    "nombre": "General Belgrano",
+    "km": {
+      "track": 37.7,
+      "unclassified": 1143.8,
+      "tertiary": 604,
+      "secondary": 90.8,
+      "primary": 175.7
+    },
+    "kmRuralEstimado": 1181.5,
+    "kmTotalEstimado": 2052,
+    "waysProcesados": 886,
+    "extractedAt": "2026-05-08T21:52:57.318Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060301",
+    "nombre": "General Guido",
+    "km": {
+      "track": 21.9,
+      "unclassified": 1031.3,
+      "tertiary": 735.1,
+      "secondary": 23.8,
+      "primary": 18
+    },
+    "kmRuralEstimado": 1053.2,
+    "kmTotalEstimado": 1830.1,
+    "waysProcesados": 509,
+    "extractedAt": "2026-05-08T21:53:00.847Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060308",
+    "nombre": "General Juan Madariaga",
+    "km": {
+      "track": 57.5,
+      "unclassified": 802.6,
+      "tertiary": 648.2,
+      "secondary": 135.6,
+      "primary": 318.7
+    },
+    "kmRuralEstimado": 860.1,
+    "kmTotalEstimado": 1962.6,
+    "waysProcesados": 1120,
+    "extractedAt": "2026-05-08T21:53:04.708Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060315",
+    "nombre": "General La Madrid",
+    "km": {
+      "track": 16.7,
+      "unclassified": 1684,
+      "tertiary": 1131.2,
+      "secondary": 98.9,
+      "primary": 157.1
+    },
+    "kmRuralEstimado": 1700.7,
+    "kmTotalEstimado": 3087.9,
+    "waysProcesados": 724,
+    "extractedAt": "2026-05-08T21:53:08.288Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060322",
+    "nombre": "General Las Heras",
+    "km": {
+      "track": 30.1,
+      "unclassified": 923.8,
+      "tertiary": 245.5,
+      "secondary": 74.6,
+      "primary": 93.3
+    },
+    "kmRuralEstimado": 953.9,
+    "kmTotalEstimado": 1367.3,
+    "waysProcesados": 834,
+    "extractedAt": "2026-05-08T21:53:11.935Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060329",
+    "nombre": "General Lavalle",
+    "km": {
+      "track": 296.7,
+      "unclassified": 751.8,
+      "tertiary": 381.8,
+      "secondary": 37.3,
+      "primary": 396.6
+    },
+    "kmRuralEstimado": 1048.5,
+    "kmTotalEstimado": 1864.2,
+    "waysProcesados": 1363,
+    "extractedAt": "2026-05-08T21:53:15.842Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060336",
+    "nombre": "General Paz",
+    "km": {
+      "track": 20.2,
+      "unclassified": 703.1,
+      "tertiary": 444.2,
+      "secondary": 37.9,
+      "primary": 103.4
+    },
+    "kmRuralEstimado": 723.3,
+    "kmTotalEstimado": 1308.8,
+    "waysProcesados": 541,
+    "extractedAt": "2026-05-08T21:53:19.397Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060343",
+    "nombre": "General Pinto",
+    "km": {
+      "track": 27,
+      "unclassified": 1625.2,
+      "tertiary": 407.1,
+      "secondary": 135.3,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1652.2,
+    "kmTotalEstimado": 2194.6,
+    "waysProcesados": 576,
+    "extractedAt": "2026-05-08T21:53:23.161Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060357",
+    "nombre": "General Pueyrredón",
+    "km": {
+      "track": 67.7,
+      "unclassified": 711.6,
+      "tertiary": 429.9,
+      "secondary": 250.3,
+      "primary": 140.8
+    },
+    "kmRuralEstimado": 779.3,
+    "kmTotalEstimado": 1600.3,
+    "waysProcesados": 1675,
+    "extractedAt": "2026-05-08T21:48:55.560Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060371",
+    "nombre": "General Viamonte",
+    "km": {
+      "track": 69,
+      "unclassified": 1655.5,
+      "tertiary": 581.8,
+      "secondary": 112.1,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1724.5,
+    "kmTotalEstimado": 2418.4,
+    "waysProcesados": 735,
+    "extractedAt": "2026-05-08T21:53:26.738Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060378",
+    "nombre": "General Villegas",
+    "km": {
+      "track": 72.3,
+      "unclassified": 4187.5,
+      "tertiary": 1046.6,
+      "secondary": 114.3,
+      "primary": 0
+    },
+    "kmRuralEstimado": 4259.8,
+    "kmTotalEstimado": 5420.7,
+    "waysProcesados": 1314,
+    "extractedAt": "2026-05-08T21:53:35.067Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060385",
+    "nombre": "Guaminí",
+    "km": {
+      "track": 48.2,
+      "unclassified": 3571.1,
+      "tertiary": 919.3,
+      "secondary": 330.9,
+      "primary": 52.2
+    },
+    "kmRuralEstimado": 3619.3,
+    "kmTotalEstimado": 4921.7,
+    "waysProcesados": 1636,
+    "extractedAt": "2026-05-08T21:53:39.007Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060392",
+    "nombre": "Hipólito Yrigoyen",
+    "km": {
+      "track": 5.9,
+      "unclassified": 1636.1,
+      "tertiary": 475.8,
+      "secondary": 146.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1642,
+    "kmTotalEstimado": 2264,
+    "waysProcesados": 582,
+    "extractedAt": "2026-05-08T21:53:42.528Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060410",
+    "nombre": "Junín",
+    "km": {
+      "track": 50.9,
+      "unclassified": 2041.9,
+      "tertiary": 638.5,
+      "secondary": 149.2,
+      "primary": 73.2
+    },
+    "kmRuralEstimado": 2092.8,
+    "kmTotalEstimado": 2953.7,
+    "waysProcesados": 1407,
+    "extractedAt": "2026-05-08T21:53:46.191Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060412",
+    "nombre": "La Costa",
+    "km": {
+      "track": 143.6,
+      "unclassified": 229.6,
+      "tertiary": 254.4,
+      "secondary": 14.7,
+      "primary": 134
+    },
+    "kmRuralEstimado": 373.2,
+    "kmTotalEstimado": 776.3,
+    "waysProcesados": 1042,
+    "extractedAt": "2026-05-08T21:53:49.833Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060420",
+    "nombre": "Laprida",
+    "km": {
+      "track": 30.4,
+      "unclassified": 1251.6,
+      "tertiary": 774.8,
+      "secondary": 46.1,
+      "primary": 132.6
+    },
+    "kmRuralEstimado": 1282,
+    "kmTotalEstimado": 2235.5,
+    "waysProcesados": 421,
+    "extractedAt": "2026-05-08T21:53:53.503Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060427",
+    "nombre": "Las Flores",
+    "km": {
+      "track": 96.5,
+      "unclassified": 1551.9,
+      "tertiary": 866.5,
+      "secondary": 73.1,
+      "primary": 119.6
+    },
+    "kmRuralEstimado": 1648.4,
+    "kmTotalEstimado": 2707.6,
+    "waysProcesados": 843,
+    "extractedAt": "2026-05-08T21:53:57.776Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060448",
+    "nombre": "Lezama",
+    "km": {
+      "track": 106.5,
+      "unclassified": 471.9,
+      "tertiary": 375.2,
+      "secondary": 37.2,
+      "primary": 15.2
+    },
+    "kmRuralEstimado": 578.4,
+    "kmTotalEstimado": 1006,
+    "waysProcesados": 345,
+    "extractedAt": "2026-05-08T21:54:01.758Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060455",
+    "nombre": "Leandro N. Alem",
+    "km": {
+      "track": 47.6,
+      "unclassified": 1348.6,
+      "tertiary": 392.7,
+      "secondary": 145.2,
+      "primary": 2.8
+    },
+    "kmRuralEstimado": 1396.2,
+    "kmTotalEstimado": 1936.9,
+    "waysProcesados": 758,
+    "extractedAt": "2026-05-08T21:54:05.272Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060462",
+    "nombre": "Lincoln",
+    "km": {
+      "track": 162.6,
+      "unclassified": 4726.7,
+      "tertiary": 1371.8,
+      "secondary": 344,
+      "primary": 0
+    },
+    "kmRuralEstimado": 4889.3,
+    "kmTotalEstimado": 6605.1,
+    "waysProcesados": 2248,
+    "extractedAt": "2026-05-08T21:54:15.004Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060469",
+    "nombre": "Lobos",
+    "km": {
+      "track": 21.5,
+      "unclassified": 1781.1,
+      "tertiary": 542.4,
+      "secondary": 49.3,
+      "primary": 252.9
+    },
+    "kmRuralEstimado": 1802.6,
+    "kmTotalEstimado": 2647.2,
+    "waysProcesados": 1269,
+    "extractedAt": "2026-05-08T21:54:18.764Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060476",
+    "nombre": "Lobería",
+    "km": {
+      "track": 16.1,
+      "unclassified": 2381.8,
+      "tertiary": 948.5,
+      "secondary": 154.9,
+      "primary": 275.8
+    },
+    "kmRuralEstimado": 2397.9,
+    "kmTotalEstimado": 3777.1,
+    "waysProcesados": 1118,
+    "extractedAt": "2026-05-08T21:49:28.231Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060490",
+    "nombre": "Luján",
+    "km": {
+      "track": 189.8,
+      "unclassified": 1123.8,
+      "tertiary": 427.1,
+      "secondary": 134.3,
+      "primary": 40.1
+    },
+    "kmRuralEstimado": 1313.6,
+    "kmTotalEstimado": 1915.1,
+    "waysProcesados": 2586,
+    "extractedAt": "2026-05-08T21:49:16.384Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060497",
+    "nombre": "Magdalena",
+    "km": {
+      "track": 112.1,
+      "unclassified": 1324,
+      "tertiary": 415.6,
+      "secondary": 246.8,
+      "primary": 58.6
+    },
+    "kmRuralEstimado": 1436.1,
+    "kmTotalEstimado": 2157.1,
+    "waysProcesados": 1726,
+    "extractedAt": "2026-05-08T21:54:25.229Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060498",
+    "nombre": "Maipú",
+    "km": {
+      "track": 35.4,
+      "unclassified": 738.3,
+      "tertiary": 519.9,
+      "secondary": 5,
+      "primary": 184.3
+    },
+    "kmRuralEstimado": 773.7,
+    "kmTotalEstimado": 1482.9,
+    "waysProcesados": 410,
+    "extractedAt": "2026-05-08T21:54:28.576Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060511",
+    "nombre": "Mar Chiquita",
+    "km": {
+      "track": 33.5,
+      "unclassified": 976.3,
+      "tertiary": 644.3,
+      "secondary": 109.2,
+      "primary": 88.6
+    },
+    "kmRuralEstimado": 1009.8,
+    "kmTotalEstimado": 1851.9,
+    "waysProcesados": 634,
+    "extractedAt": "2026-05-08T21:54:32.239Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060519",
+    "nombre": "Mercedes",
+    "km": {
+      "track": 68,
+      "unclassified": 1213.9,
+      "tertiary": 451.8,
+      "secondary": 81.4,
+      "primary": 66.7
+    },
+    "kmRuralEstimado": 1281.9,
+    "kmTotalEstimado": 1881.8,
+    "waysProcesados": 1384,
+    "extractedAt": "2026-05-08T21:54:37.185Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060528",
+    "nombre": "Monte",
+    "km": {
+      "track": 31.3,
+      "unclassified": 1020.1,
+      "tertiary": 512.1,
+      "secondary": 47,
+      "primary": 150.4
+    },
+    "kmRuralEstimado": 1051.4,
+    "kmTotalEstimado": 1760.9,
+    "waysProcesados": 847,
+    "extractedAt": "2026-05-08T21:54:40.906Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060531",
+    "nombre": "Monte Hermoso",
+    "km": {
+      "track": 0.3,
+      "unclassified": 52.1,
+      "tertiary": 40.5,
+      "secondary": 29.1,
+      "primary": 0
+    },
+    "kmRuralEstimado": 52.4,
+    "kmTotalEstimado": 122,
+    "waysProcesados": 96,
+    "extractedAt": "2026-05-08T21:54:43.986Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060546",
+    "nombre": "Navarro",
+    "km": {
+      "track": 26.4,
+      "unclassified": 1619.1,
+      "tertiary": 561.5,
+      "secondary": 51.4,
+      "primary": 196.9
+    },
+    "kmRuralEstimado": 1645.5,
+    "kmTotalEstimado": 2455.3,
+    "waysProcesados": 969,
+    "extractedAt": "2026-05-08T21:54:47.663Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060547",
+    "nombre": "Bolívar",
+    "km": {
+      "track": 16.8,
+      "unclassified": 3562.7,
+      "tertiary": 1169.7,
+      "secondary": 113.4,
+      "primary": 89.8
+    },
+    "kmRuralEstimado": 3579.5,
+    "kmTotalEstimado": 4952.4,
+    "waysProcesados": 1322,
+    "extractedAt": "2026-05-08T21:59:09.049Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060560",
+    "nombre": "9 de Julio",
+    "km": {
+      "track": 10.1,
+      "unclassified": 3316.3,
+      "tertiary": 1376.6,
+      "secondary": 192.8,
+      "primary": 0
+    },
+    "kmRuralEstimado": 3326.4,
+    "kmTotalEstimado": 4895.8,
+    "waysProcesados": 1738,
+    "extractedAt": "2026-05-08T21:54:57.495Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060567",
+    "nombre": "Necochea",
+    "km": {
+      "track": 41.7,
+      "unclassified": 2930.5,
+      "tertiary": 1175.8,
+      "secondary": 280.8,
+      "primary": 319.1
+    },
+    "kmRuralEstimado": 2972.2,
+    "kmTotalEstimado": 4747.9,
+    "waysProcesados": 1521,
+    "extractedAt": "2026-05-08T21:49:52.968Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060574",
+    "nombre": "Olavarría",
+    "km": {
+      "track": 29.1,
+      "unclassified": 3397.5,
+      "tertiary": 1685.9,
+      "secondary": 193,
+      "primary": 181.1
+    },
+    "kmRuralEstimado": 3426.6,
+    "kmTotalEstimado": 5486.6,
+    "waysProcesados": 2342,
+    "extractedAt": "2026-05-08T21:55:07.106Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060581",
+    "nombre": "Patagones",
+    "km": {
+      "track": 491.8,
+      "unclassified": 3421.1,
+      "tertiary": 1231.8,
+      "secondary": 127.7,
+      "primary": 0
+    },
+    "kmRuralEstimado": 3912.9,
+    "kmTotalEstimado": 5272.4,
+    "waysProcesados": 3401,
+    "extractedAt": "2026-05-08T21:55:17.900Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060588",
+    "nombre": "Pehuajó",
+    "km": {
+      "track": 18.6,
+      "unclassified": 3874.1,
+      "tertiary": 953.1,
+      "secondary": 193.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 3892.7,
+    "kmTotalEstimado": 5039,
+    "waysProcesados": 1480,
+    "extractedAt": "2026-05-08T21:55:22.149Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060595",
+    "nombre": "Pellegrini",
+    "km": {
+      "track": 6,
+      "unclassified": 1185.3,
+      "tertiary": 641.3,
+      "secondary": 140.6,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1191.3,
+    "kmTotalEstimado": 1973.2,
+    "waysProcesados": 346,
+    "extractedAt": "2026-05-08T21:55:25.554Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060602",
+    "nombre": "Pergamino",
+    "km": {
+      "track": 1933,
+      "unclassified": 2752.7,
+      "tertiary": 624.9,
+      "secondary": 154.4,
+      "primary": 330.6
+    },
+    "kmRuralEstimado": 4685.7,
+    "kmTotalEstimado": 5795.6,
+    "waysProcesados": 6733,
+    "extractedAt": "2026-05-08T21:55:38.348Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060609",
+    "nombre": "Pila",
+    "km": {
+      "track": 62.3,
+      "unclassified": 1260.5,
+      "tertiary": 722.2,
+      "secondary": 42.2,
+      "primary": 173.4
+    },
+    "kmRuralEstimado": 1322.8,
+    "kmTotalEstimado": 2260.6,
+    "waysProcesados": 367,
+    "extractedAt": "2026-05-08T21:55:42.006Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060623",
+    "nombre": "Pinamar",
+    "km": {
+      "track": 13.9,
+      "unclassified": 85,
+      "tertiary": 17.6,
+      "secondary": 83.7,
+      "primary": 80.8
+    },
+    "kmRuralEstimado": 98.9,
+    "kmTotalEstimado": 281,
+    "waysProcesados": 404,
+    "extractedAt": "2026-05-08T21:55:49.696Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060631",
+    "nombre": "Puan",
+    "km": {
+      "track": 94.8,
+      "unclassified": 4634.4,
+      "tertiary": 985,
+      "secondary": 242.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 4729.2,
+    "kmTotalEstimado": 5956.4,
+    "waysProcesados": 1268,
+    "extractedAt": "2026-05-08T21:56:09.229Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060632",
+    "nombre": "Punta Indio",
+    "km": {
+      "track": 104.2,
+      "unclassified": 616.6,
+      "tertiary": 396,
+      "secondary": 132.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 720.8,
+    "kmTotalEstimado": 1249,
+    "waysProcesados": 484,
+    "extractedAt": "2026-05-08T21:56:12.759Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060644",
+    "nombre": "Ramallo",
+    "km": {
+      "track": 381.8,
+      "unclassified": 1185,
+      "tertiary": 383.7,
+      "secondary": 90.4,
+      "primary": 105.2
+    },
+    "kmRuralEstimado": 1566.8,
+    "kmTotalEstimado": 2146.1,
+    "waysProcesados": 1922,
+    "extractedAt": "2026-05-08T21:56:18.241Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060648",
+    "nombre": "Rauch",
+    "km": {
+      "track": 56.1,
+      "unclassified": 1769.2,
+      "tertiary": 798.1,
+      "secondary": 69.7,
+      "primary": 303.6
+    },
+    "kmRuralEstimado": 1825.3,
+    "kmTotalEstimado": 2996.7,
+    "waysProcesados": 731,
+    "extractedAt": "2026-05-08T21:56:25.845Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060651",
+    "nombre": "Rivadavia",
+    "km": {
+      "track": 39.2,
+      "unclassified": 3153.5,
+      "tertiary": 833.8,
+      "secondary": 63.8,
+      "primary": 19.8
+    },
+    "kmRuralEstimado": 3192.7,
+    "kmTotalEstimado": 4110.1,
+    "waysProcesados": 1246,
+    "extractedAt": "2026-05-08T21:56:33.406Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060655",
+    "nombre": "Rojas",
+    "km": {
+      "track": 480.6,
+      "unclassified": 2451.3,
+      "tertiary": 501.2,
+      "secondary": 189.1,
+      "primary": 215.5
+    },
+    "kmRuralEstimado": 2931.9,
+    "kmTotalEstimado": 3837.7,
+    "waysProcesados": 2974,
+    "extractedAt": "2026-05-08T21:56:37.383Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060658",
+    "nombre": "Roque Pérez",
+    "km": {
+      "track": 16.1,
+      "unclassified": 1446.7,
+      "tertiary": 636.4,
+      "secondary": 82.6,
+      "primary": 171.6
+    },
+    "kmRuralEstimado": 1462.8,
+    "kmTotalEstimado": 2353.4,
+    "waysProcesados": 995,
+    "extractedAt": "2026-05-08T21:56:43.506Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060665",
+    "nombre": "Saavedra",
+    "km": {
+      "track": 38.7,
+      "unclassified": 2893.3,
+      "tertiary": 611.1,
+      "secondary": 221.9,
+      "primary": 0
+    },
+    "kmRuralEstimado": 2932,
+    "kmTotalEstimado": 3765,
+    "waysProcesados": 1368,
+    "extractedAt": "2026-05-08T21:56:47.166Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060672",
+    "nombre": "Saladillo",
+    "km": {
+      "track": 34.6,
+      "unclassified": 1741.9,
+      "tertiary": 733.6,
+      "secondary": 80.8,
+      "primary": 236.1
+    },
+    "kmRuralEstimado": 1776.5,
+    "kmTotalEstimado": 2827,
+    "waysProcesados": 1059,
+    "extractedAt": "2026-05-08T21:56:50.807Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060679",
+    "nombre": "Salliqueló",
+    "km": {
+      "track": 17.3,
+      "unclassified": 982.6,
+      "tertiary": 239.3,
+      "secondary": 162,
+      "primary": 0
+    },
+    "kmRuralEstimado": 999.9,
+    "kmTotalEstimado": 1401.2,
+    "waysProcesados": 348,
+    "extractedAt": "2026-05-08T21:56:54.191Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060686",
+    "nombre": "Salto",
+    "km": {
+      "track": 234.1,
+      "unclassified": 1412.5,
+      "tertiary": 508.3,
+      "secondary": 39.4,
+      "primary": 325.1
+    },
+    "kmRuralEstimado": 1646.6,
+    "kmTotalEstimado": 2519.4,
+    "waysProcesados": 1454,
+    "extractedAt": "2026-05-08T21:56:57.999Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060693",
+    "nombre": "San Andrés de Giles",
+    "km": {
+      "track": 103.1,
+      "unclassified": 1232.3,
+      "tertiary": 479.1,
+      "secondary": 61.6,
+      "primary": 81.8
+    },
+    "kmRuralEstimado": 1335.4,
+    "kmTotalEstimado": 1957.9,
+    "waysProcesados": 1492,
+    "extractedAt": "2026-05-08T21:57:01.765Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060700",
+    "nombre": "San Antonio de Areco",
+    "km": {
+      "track": 58.1,
+      "unclassified": 983.3,
+      "tertiary": 425.2,
+      "secondary": 64.8,
+      "primary": 89.8
+    },
+    "kmRuralEstimado": 1041.4,
+    "kmTotalEstimado": 1621.2,
+    "waysProcesados": 954,
+    "extractedAt": "2026-05-08T21:57:05.472Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060707",
+    "nombre": "San Cayetano",
+    "km": {
+      "track": 6.2,
+      "unclassified": 1349.9,
+      "tertiary": 616.4,
+      "secondary": 219.5,
+      "primary": 43.1
+    },
+    "kmRuralEstimado": 1356.1,
+    "kmTotalEstimado": 2235.1,
+    "waysProcesados": 555,
+    "extractedAt": "2026-05-08T21:57:10.667Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060721",
+    "nombre": "San Nicolás",
+    "km": {
+      "track": 214.8,
+      "unclassified": 974.4,
+      "tertiary": 225.5,
+      "secondary": 68.1,
+      "primary": 80.3
+    },
+    "kmRuralEstimado": 1189.2,
+    "kmTotalEstimado": 1563.1,
+    "waysProcesados": 1864,
+    "extractedAt": "2026-05-08T21:57:15.277Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060728",
+    "nombre": "San Pedro",
+    "km": {
+      "track": 121.7,
+      "unclassified": 1268.4,
+      "tertiary": 394.8,
+      "secondary": 101.3,
+      "primary": 84.9
+    },
+    "kmRuralEstimado": 1390.1,
+    "kmTotalEstimado": 1971.1,
+    "waysProcesados": 954,
+    "extractedAt": "2026-05-08T21:57:18.903Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060749",
+    "nombre": "Suipacha",
+    "km": {
+      "track": 2.6,
+      "unclassified": 847.6,
+      "tertiary": 489.7,
+      "secondary": 22.8,
+      "primary": 36.4
+    },
+    "kmRuralEstimado": 850.2,
+    "kmTotalEstimado": 1399.1,
+    "waysProcesados": 455,
+    "extractedAt": "2026-05-08T21:57:22.251Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060760",
+    "nombre": "Tapalqué",
+    "km": {
+      "track": 12,
+      "unclassified": 1948.8,
+      "tertiary": 1243.5,
+      "secondary": 81.7,
+      "primary": 145.4
+    },
+    "kmRuralEstimado": 1960.8,
+    "kmTotalEstimado": 3431.4,
+    "waysProcesados": 700,
+    "extractedAt": "2026-05-08T21:57:31.753Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060766",
+    "nombre": "Tordillo",
+    "km": {
+      "track": 141.1,
+      "unclassified": 366,
+      "tertiary": 99.9,
+      "secondary": 18.9,
+      "primary": 179.8
+    },
+    "kmRuralEstimado": 507.1,
+    "kmTotalEstimado": 805.7,
+    "waysProcesados": 443,
+    "extractedAt": "2026-05-08T21:57:38.851Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060770",
+    "nombre": "Tornquist",
+    "km": {
+      "track": 91.3,
+      "unclassified": 2075.3,
+      "tertiary": 623.1,
+      "secondary": 144.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 2166.6,
+    "kmTotalEstimado": 2933.9,
+    "waysProcesados": 989,
+    "extractedAt": "2026-05-08T21:57:42.495Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060778",
+    "nombre": "Trenque Lauquen",
+    "km": {
+      "track": 47.8,
+      "unclassified": 5032,
+      "tertiary": 1176.1,
+      "secondary": 207.2,
+      "primary": 0
+    },
+    "kmRuralEstimado": 5079.8,
+    "kmTotalEstimado": 6463.1,
+    "waysProcesados": 1717,
+    "extractedAt": "2026-05-08T21:57:53.099Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060784",
+    "nombre": "Tres Arroyos",
+    "km": {
+      "track": 119.2,
+      "unclassified": 2476.1,
+      "tertiary": 1043.1,
+      "secondary": 284.4,
+      "primary": 44.2
+    },
+    "kmRuralEstimado": 2595.3,
+    "kmTotalEstimado": 3967,
+    "waysProcesados": 1482,
+    "extractedAt": "2026-05-08T21:58:03.855Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060791",
+    "nombre": "Tandil",
+    "km": {
+      "track": 120.2,
+      "unclassified": 2145.7,
+      "tertiary": 1615.3,
+      "secondary": 214.2,
+      "primary": 347.5
+    },
+    "kmRuralEstimado": 2265.9,
+    "kmTotalEstimado": 4442.9,
+    "waysProcesados": 1944,
+    "extractedAt": "2026-05-08T21:49:08.795Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060798",
+    "nombre": "Tres Lomas",
+    "km": {
+      "track": 24.5,
+      "unclassified": 1335.9,
+      "tertiary": 180.2,
+      "secondary": 185.1,
+      "primary": 0
+    },
+    "kmRuralEstimado": 1360.4,
+    "kmTotalEstimado": 1725.7,
+    "waysProcesados": 326,
+    "extractedAt": "2026-05-08T21:58:07.614Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060805",
+    "nombre": "25 de Mayo",
+    "km": {
+      "track": 84.8,
+      "unclassified": 4383.7,
+      "tertiary": 1690.9,
+      "secondary": 268.1,
+      "primary": 335.9
+    },
+    "kmRuralEstimado": 4468.5,
+    "kmTotalEstimado": 6763.4,
+    "waysProcesados": 2573,
+    "extractedAt": "2026-05-08T21:58:46.194Z",
+    "fuenteUrl": "https://overpass.kumi.systems/api/interpreter"
+  },
+  {
+    "municipioId": "060812",
+    "nombre": "Villa Gesell",
+    "km": {
+      "track": 25,
+      "unclassified": 65.4,
+      "tertiary": 139.9,
+      "secondary": 29.4,
+      "primary": 66.4
+    },
+    "kmRuralEstimado": 90.4,
+    "kmTotalEstimado": 326.1,
+    "waysProcesados": 300,
+    "extractedAt": "2026-05-08T21:58:49.906Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060819",
+    "nombre": "Villarino",
+    "km": {
+      "track": 244.3,
+      "unclassified": 4580.4,
+      "tertiary": 991.8,
+      "secondary": 97.8,
+      "primary": 125.9
+    },
+    "kmRuralEstimado": 4824.7,
+    "kmTotalEstimado": 6040.2,
+    "waysProcesados": 3618,
+    "extractedAt": "2026-05-08T21:59:00.132Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060882",
+    "nombre": "Zárate",
+    "km": {
+      "track": 29.9,
+      "unclassified": 636.5,
+      "tertiary": 246.5,
+      "secondary": 61.4,
+      "primary": 16.7
+    },
+    "kmRuralEstimado": 666.4,
+    "kmTotalEstimado": 991,
+    "waysProcesados": 906,
+    "extractedAt": "2026-05-08T21:49:12.436Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  }
+]

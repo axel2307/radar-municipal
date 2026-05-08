@@ -51,6 +51,7 @@ export {
   type GlobalRefreshManifest,
   type AcreedorSaldo,
   type StockDeudaSnapshot,
+  type RedVialMunicipal,
 } from "./types/index";
 
 // Constants
