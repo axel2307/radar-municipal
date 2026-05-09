@@ -8,6 +8,7 @@ import {
   getStockDeudaByMunicipio,
   getStockDeudaSeriesByMunicipio,
   getRedVialByMunicipio,
+  getVialCrossMetrics,
 } from "@/lib/scoring-data";
 import { ScoreBadge } from "@/components/ScoreBadge";
 import { SpendingBreakdown } from "@/components/SpendingBreakdown";
@@ -77,6 +78,7 @@ export default async function EconomiaPage({ params }: PageProps) {
   const deudaSnapshot = getStockDeudaByMunicipio(id);
   const deudaSeries = getStockDeudaSeriesByMunicipio(id);
   const redVial = getRedVialByMunicipio(id);
+  const vialCross = getVialCrossMetrics(id);
 
   if (!municipio) {
     notFound();
@@ -622,9 +624,84 @@ export default async function EconomiaPage({ params }: PageProps) {
                 >
                   OpenStreetMap contributors
                 </a>{" "}
-                bajo licencia ODbL. Sprint 31+ extenderá cobertura a los ~80
-                partidos rurales y cruzará con gasto vial RAFAM.
+                bajo licencia ODbL.
               </p>
+            </section>
+          )}
+
+          {/* Cruce gasto × red vial — Sprint 32 / Pilar 5 */}
+          {vialCross && (
+            <section>
+              <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+                <h2 className="text-lg font-semibold">
+                  Pesos por km de red rural
+                </h2>
+                <span className="text-xs text-muted-foreground">
+                  Cruce RAFAM × OSM
+                </span>
+              </div>
+              <p className="mb-4 text-xs text-muted-foreground max-w-3xl">
+                Aproxima cuántos pesos del gasto en{" "}
+                <em>servicios económicos</em> ejecuta el municipio por
+                kilómetro de red rural estimada. Indicador comparativo entre
+                partidos con la misma cobertura.
+              </p>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-4">
+                <div className="rounded-lg border-2 border-amber-200 bg-amber-50/30 p-4">
+                  <p className="text-xs text-muted-foreground">
+                    Pesos por km rural
+                  </p>
+                  <p className="text-2xl font-bold tabular-nums">
+                    {formatArs(vialCross.pesosPorKmRural)}
+                    <span className="ml-1 text-sm font-normal text-muted-foreground">
+                      / km
+                    </span>
+                  </p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    Año fiscal {vialCross.anioFiscal}
+                  </p>
+                </div>
+                <div className="rounded-lg border border-border bg-card p-4">
+                  <p className="text-xs text-muted-foreground">
+                    Gasto en servicios económicos
+                  </p>
+                  <p className="text-xl font-semibold tabular-nums">
+                    {formatArs(vialCross.gastoServiciosEconomicos)}
+                  </p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    {vialCross.pctServiciosEconomicos.toFixed(1)}% del gasto
+                    total
+                  </p>
+                </div>
+                <div className="rounded-lg border border-border bg-card p-4">
+                  <p className="text-xs text-muted-foreground">Gasto total</p>
+                  <p className="text-xl font-semibold tabular-nums">
+                    {formatArs(vialCross.gastoTotal)}
+                  </p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    Ejecutado {vialCross.anioFiscal}
+                  </p>
+                </div>
+                <div className="rounded-lg border border-border bg-card p-4">
+                  <p className="text-xs text-muted-foreground">
+                    Red rural OSM
+                  </p>
+                  <p className="text-xl font-semibold tabular-nums">
+                    {vialCross.kmRuralEstimado.toLocaleString("es-AR")}{" "}
+                    <span className="text-sm font-normal text-muted-foreground">
+                      km
+                    </span>
+                  </p>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    Denominador
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-lg border border-amber-200 bg-amber-50/40 p-3 text-[11px] text-amber-900 leading-relaxed">
+                <strong>Nota metodológica:</strong> {vialCross.notas}
+              </div>
             </section>
           )}
 

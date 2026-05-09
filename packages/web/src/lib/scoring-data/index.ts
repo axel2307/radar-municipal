@@ -8,3 +8,4 @@ export * from "./compras";
 export * from "./deuda";
 export * from "./refresh";
 export * from "./vial";
+export * from "./vial-cross";
