@@ -2,7 +2,11 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import { getAllMunicipiosForMap, type RankingEntry } from "@/lib/scoring-data";
+import {
+  getAllMunicipiosForMap,
+  getAllMunicipiosForVialDensity,
+  type RankingEntry,
+} from "@/lib/scoring-data";
 
 // El JSON de partidos pesa ~2.7 MB; el SSR del componente con esa data
 // degradaba la hidratación de toda la página. Cargamos `ProvinceMap`
@@ -26,7 +30,14 @@ const ProvinceMap = dynamic(
   },
 );
 
-const METRIC_OPTIONS: { key: keyof RankingEntry; label: string }[] = [
+// Sprint 34 — la opción "vialDensity" no es un score normalizado 0-100,
+// sino km/km² (~0.2-2.0). Se trata como un kind aparte para que ProvinceMap
+// elija paleta + tooltip + leyenda apropiados.
+const VIAL_DENSITY_KEY = "vialDensity";
+
+type MetricOption = { key: string; label: string };
+
+const METRIC_OPTIONS: MetricOption[] = [
   { key: "scoreTotal", label: "Score total" },
   { key: "scoreTransparencia", label: "Transparencia" },
   { key: "scoreFiscal", label: "Fiscal" },
@@ -40,6 +51,7 @@ const METRIC_OPTIONS: { key: keyof RankingEntry; label: string }[] = [
   { key: "scoreConectividad", label: "Conectividad" },
   { key: "scoreEspacioPublico", label: "Espacio público" },
   { key: "scoreSeguridadVial", label: "Seguridad vial" },
+  { key: VIAL_DENSITY_KEY, label: "Densidad vial rural (km/km²)" },
 ];
 
 interface MapPageClientProps {
@@ -55,16 +67,22 @@ interface MapPageClientProps {
 export function MapPageClient({ initialEntries }: MapPageClientProps) {
   const [selectedMetric, setSelectedMetric] = useState<string>("scoreTotal");
 
+  const isVialDensity = selectedMetric === VIAL_DENSITY_KEY;
+
   const entries = useMemo(() => {
+    if (isVialDensity) return getAllMunicipiosForVialDensity();
     if (selectedMetric === "scoreTotal") return initialEntries;
     return getAllMunicipiosForMap(selectedMetric as keyof RankingEntry);
-  }, [selectedMetric, initialEntries]);
+  }, [selectedMetric, initialEntries, isVialDensity]);
 
   // Stats
   const withData = entries.filter((e) => e.score != null);
   const avgScore = withData.length > 0
     ? withData.reduce((sum, e) => sum + (e.score ?? 0), 0) / withData.length
     : 0;
+  const avgLabel = isVialDensity
+    ? avgScore.toFixed(2) + " km/km²"
+    : avgScore.toFixed(1);
 
   return (
     <div className="space-y-6">
@@ -79,7 +97,7 @@ export function MapPageClient({ initialEntries }: MapPageClientProps) {
           <p className="text-xs text-muted-foreground">Con datos</p>
         </div>
         <div className="rounded-lg border border-border bg-card p-4 text-center">
-          <p className="text-2xl font-bold">{avgScore.toFixed(1)}</p>
+          <p className="text-2xl font-bold">{avgLabel}</p>
           <p className="text-xs text-muted-foreground">Promedio</p>
         </div>
         <div className="rounded-lg border border-border bg-card p-4 text-center">
@@ -90,9 +108,10 @@ export function MapPageClient({ initialEntries }: MapPageClientProps) {
 
       <ProvinceMap
         entries={entries}
-        metrics={METRIC_OPTIONS.map((m) => ({ key: m.key, label: m.label }))}
+        metrics={METRIC_OPTIONS}
         selectedMetric={selectedMetric}
         onMetricChange={setSelectedMetric}
+        metricKind={isVialDensity ? "vialDensity" : "score"}
       />
     </div>
   );

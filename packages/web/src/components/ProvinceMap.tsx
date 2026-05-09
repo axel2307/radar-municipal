@@ -14,6 +14,13 @@ interface MapEntry {
   esPiloto: boolean;
 }
 
+/**
+ * Tipo de métrica para color/legend/tooltip:
+ *  - `score`:        valor 0-100 con paleta divergente rojo→verde (default).
+ *  - `vialDensity`:  km/km² (~0.2–2.0) con paleta secuencial YlOrBr.
+ */
+type MetricKind = "score" | "vialDensity";
+
 interface ProvinceMapProps {
   entries: MapEntry[];
   /** Available metrics to select from */
@@ -24,6 +31,8 @@ interface ProvinceMapProps {
   onMetricChange?: (key: string) => void;
   /** Compact mode for homepage embed */
   compact?: boolean;
+  /** Tipo de métrica → controla paleta + formato tooltip + legend. */
+  metricKind?: MetricKind;
 }
 
 interface PartidoProps {
@@ -63,6 +72,43 @@ function getScoreHex(score: number | null): string {
   if (score >= 25) return "#f97316";
   return "#ef4444";
 }
+
+/**
+ * Sprint 34 — paleta secuencial YlOrBr para densidad vial rural (km/km²).
+ * Bins elegidos sobre la distribución empírica de los 102 partidos:
+ * mín=0.22, p25=0.44, p50=0.67, p75=0.99, máx=2.04.
+ */
+function getDensityHex(density: number | null): string {
+  if (density == null) return "#e2e8f0";
+  if (density >= 1.0) return "#7c2d12";
+  if (density >= 0.8) return "#c2410c";
+  if (density >= 0.6) return "#f59e0b";
+  if (density >= 0.4) return "#fde68a";
+  return "#fef3c7";
+}
+
+function formatVialDensity(v: number | null): string {
+  if (v == null) return "Sin datos";
+  return `${v.toFixed(2)} km/km²`;
+}
+
+const SCORE_LEGEND = [
+  { color: "#ef4444", label: "<25" },
+  { color: "#f97316", label: "25-40" },
+  { color: "#f59e0b", label: "40-50" },
+  { color: "#84cc16", label: "50-70" },
+  { color: "#22c55e", label: "70+" },
+  { color: "#e2e8f0", label: "Sin datos" },
+];
+
+const DENSITY_LEGEND = [
+  { color: "#fef3c7", label: "<0.4" },
+  { color: "#fde68a", label: "0.4-0.6" },
+  { color: "#f59e0b", label: "0.6-0.8" },
+  { color: "#c2410c", label: "0.8-1.0" },
+  { color: "#7c2d12", label: "1.0+" },
+  { color: "#e2e8f0", label: "Sin datos" },
+];
 
 const REGION_LABELS: Record<string, string> = {
   AMBA: "AMBA",
@@ -116,7 +162,15 @@ export function ProvinceMap({
   selectedMetric,
   onMetricChange,
   compact = false,
+  metricKind = "score",
 }: ProvinceMapProps) {
+  const colorFn = metricKind === "vialDensity" ? getDensityHex : getScoreHex;
+  const formatValue =
+    metricKind === "vialDensity" ? formatVialDensity : formatScore;
+  const legendItems =
+    metricKind === "vialDensity" ? DENSITY_LEGEND : SCORE_LEGEND;
+  const legendLabel =
+    metricKind === "vialDensity" ? "km/km²:" : "Score:";
   const router = useRouter();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [view, setView] = useState<Viewport>(IDENTITY_VIEW);
@@ -307,7 +361,7 @@ export function ProvinceMap({
           <>
             <div
               className="h-4 w-4 rounded-sm shrink-0"
-              style={{ backgroundColor: getScoreHex(hovered.score) }}
+              style={{ backgroundColor: colorFn(hovered.score) }}
             />
             <span className="font-medium">{hovered.nombre}</span>
             <span className="text-muted-foreground">
@@ -319,7 +373,7 @@ export function ProvinceMap({
               </span>
             )}
             <span className="ml-auto font-semibold">
-              {hovered.score != null ? formatScore(hovered.score) : "Sin datos"}
+              {formatValue(hovered.score)}
             </span>
           </>
         ) : (
@@ -356,7 +410,7 @@ export function ProvinceMap({
           <g transform={transformStr}>
             {PRECOMPUTED_PATHS.map((p) => {
               const entry = byId.get(p.id);
-              const fill = getScoreHex(entry?.score ?? null);
+              const fill = colorFn(entry?.score ?? null);
               const isHovered = hoveredId === p.id;
               const isPiloto = entry?.esPiloto ?? false;
               return (
@@ -394,14 +448,14 @@ export function ProvinceMap({
                   role={entry ? "button" : undefined}
                   aria-label={
                     entry
-                      ? `${entry.nombre}: ${entry.score != null ? formatScore(entry.score) : "sin datos"}`
+                      ? `${entry.nombre}: ${formatValue(entry.score)}`
                       : p.nombre
                   }
                 >
                   <title>
                     {p.nombre}
                     {entry?.score != null
-                      ? ` — ${formatScore(entry.score)}`
+                      ? ` — ${formatValue(entry.score)}`
                       : entry
                         ? " — sin datos"
                         : ""}
@@ -464,15 +518,8 @@ export function ProvinceMap({
           compact && "mt-2",
         )}
       >
-        <span>Score:</span>
-        {[
-          { color: "#ef4444", label: "<25" },
-          { color: "#f97316", label: "25-40" },
-          { color: "#f59e0b", label: "40-50" },
-          { color: "#84cc16", label: "50-70" },
-          { color: "#22c55e", label: "70+" },
-          { color: "#e2e8f0", label: "Sin datos" },
-        ].map((item) => (
+        <span>{legendLabel}</span>
+        {legendItems.map((item) => (
           <span key={item.label} className="inline-flex items-center gap-1">
             <span
               className="inline-block h-3 w-3 rounded-sm"

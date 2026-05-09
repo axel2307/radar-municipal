@@ -1,4 +1,4 @@
-import type { RedVialMunicipal } from "@radar-municipal/core";
+import { MUNICIPIOS, type RedVialMunicipal } from "@radar-municipal/core";
 
 import autoVialJson from "../../data/auto-vial.json";
 
@@ -20,4 +20,38 @@ export function getRedVialByMunicipio(
 
 export function getAllRedVial(): RedVialMunicipal[] {
   return [...allVial];
+}
+
+/**
+ * Sprint 34 — Densidad vial rural por partido para el heatmap `/mapa`.
+ *
+ * Devuelve `kmRuralEstimado / superficieKm2` (km de camino rural por km²
+ * de superficie). 102 partidos del Interior + Costa Atlántica tienen
+ * cobertura post-Sprint-31; el resto sale `score: null` y aparece gris.
+ *
+ * Mismo shape que `getAllMunicipiosForMap` para reusar `ProvinceMap` sin
+ * branching de tipos — el componente decide la paleta de colores con el
+ * prop `metricKind`.
+ */
+export function getAllMunicipiosForVialDensity(): {
+  id: string;
+  nombre: string;
+  score: number | null;
+  region: string;
+  esPiloto: boolean;
+}[] {
+  return MUNICIPIOS.map((m) => {
+    const v = byMunicipio.get(m.id);
+    const density =
+      v && m.superficieKm2 && v.kmRuralEstimado > 0
+        ? v.kmRuralEstimado / m.superficieKm2
+        : null;
+    return {
+      id: m.id,
+      nombre: m.nombre,
+      score: density,
+      region: m.region,
+      esPiloto: m.esPiloto,
+    };
+  });
 }
