@@ -16,10 +16,14 @@ interface MapEntry {
 
 /**
  * Tipo de métrica para color/legend/tooltip:
- *  - `score`:        valor 0-100 con paleta divergente rojo→verde (default).
- *  - `vialDensity`:  km/km² (~0.2–2.0) con paleta secuencial YlOrBr.
+ *  - `score`:           valor 0-100 con paleta divergente rojo→verde (default).
+ *  - `vialDensity`:     km/km² (~0.2–2.0) con paleta secuencial YlOrBr.
+ *  - `pesosPorKmRural`: ARS por km rural (~$1M–$100M) con paleta PuRd.
+ *
+ * Para agregar uno nuevo: extender la unión y la `METRIC_KIND_CONFIGS`
+ * más abajo. Cero cambios al render.
  */
-type MetricKind = "score" | "vialDensity";
+type MetricKind = "score" | "vialDensity" | "pesosPorKmRural";
 
 interface ProvinceMapProps {
   entries: MapEntry[];
@@ -64,8 +68,11 @@ const PRECOMPUTED_PATHS: { id: string; nombre: string; d: string }[] =
     })
     .filter((x): x is { id: string; nombre: string; d: string } => x !== null);
 
+const NO_DATA_COLOR = "#e2e8f0";
+
+// ─── score (0-100, divergente rojo→verde) ──────────────────────────
 function getScoreHex(score: number | null): string {
-  if (score == null) return "#e2e8f0";
+  if (score == null) return NO_DATA_COLOR;
   if (score >= 70) return "#22c55e";
   if (score >= 50) return "#84cc16";
   if (score >= 40) return "#f59e0b";
@@ -73,13 +80,11 @@ function getScoreHex(score: number | null): string {
   return "#ef4444";
 }
 
-/**
- * Sprint 34 — paleta secuencial YlOrBr para densidad vial rural (km/km²).
- * Bins elegidos sobre la distribución empírica de los 102 partidos:
- * mín=0.22, p25=0.44, p50=0.67, p75=0.99, máx=2.04.
- */
+// ─── vialDensity (km/km², secuencial YlOrBr) ───────────────────────
+// Sprint 34 — bins sobre distribución empírica de 102 partidos
+// (mín=0.22, p25=0.44, p50=0.67, p75=0.99, máx=2.04).
 function getDensityHex(density: number | null): string {
-  if (density == null) return "#e2e8f0";
+  if (density == null) return NO_DATA_COLOR;
   if (density >= 1.0) return "#7c2d12";
   if (density >= 0.8) return "#c2410c";
   if (density >= 0.6) return "#f59e0b";
@@ -92,13 +97,33 @@ function formatVialDensity(v: number | null): string {
   return `${v.toFixed(2)} km/km²`;
 }
 
+// ─── pesosPorKmRural (ARS, secuencial PuRd) ────────────────────────
+// Sprint 35 — bins sobre distribución empírica de 10 partidos del cross
+// (mín=$1.49M Lobería, máx=$91.4M GP outlier urbano). Cluster grueso
+// en $1-2M; saltos a $5M, $20M, $90M.
+function getPesosPorKmHex(v: number | null): string {
+  if (v == null) return NO_DATA_COLOR;
+  if (v >= 30e6) return "#7a0177"; // outlier urbano
+  if (v >= 10e6) return "#c51b8a";
+  if (v >= 5e6) return "#f768a1";
+  if (v >= 2e6) return "#fbb4b9";
+  return "#feebe2";
+}
+
+function formatPesosPorKm(v: number | null): string {
+  if (v == null) return "Sin datos";
+  // Formato compacto: 1.49M, 22.51M, 91.4M
+  return `$${(v / 1e6).toFixed(2)}M / km`;
+}
+
+// ─── Legend tables ─────────────────────────────────────────────────
 const SCORE_LEGEND = [
   { color: "#ef4444", label: "<25" },
   { color: "#f97316", label: "25-40" },
   { color: "#f59e0b", label: "40-50" },
   { color: "#84cc16", label: "50-70" },
   { color: "#22c55e", label: "70+" },
-  { color: "#e2e8f0", label: "Sin datos" },
+  { color: NO_DATA_COLOR, label: "Sin datos" },
 ];
 
 const DENSITY_LEGEND = [
@@ -107,8 +132,46 @@ const DENSITY_LEGEND = [
   { color: "#f59e0b", label: "0.6-0.8" },
   { color: "#c2410c", label: "0.8-1.0" },
   { color: "#7c2d12", label: "1.0+" },
-  { color: "#e2e8f0", label: "Sin datos" },
+  { color: NO_DATA_COLOR, label: "Sin datos" },
 ];
+
+const PESOS_LEGEND = [
+  { color: "#feebe2", label: "<$2M" },
+  { color: "#fbb4b9", label: "$2-5M" },
+  { color: "#f768a1", label: "$5-10M" },
+  { color: "#c51b8a", label: "$10-30M" },
+  { color: "#7a0177", label: "$30M+" },
+  { color: NO_DATA_COLOR, label: "Sin datos" },
+];
+
+// ─── Config map ────────────────────────────────────────────────────
+interface MetricKindConfig {
+  colorFn: (v: number | null) => string;
+  formatValue: (v: number | null) => string;
+  legendItems: { color: string; label: string }[];
+  legendLabel: string;
+}
+
+const METRIC_KIND_CONFIGS: Record<MetricKind, MetricKindConfig> = {
+  score: {
+    colorFn: getScoreHex,
+    formatValue: formatScore,
+    legendItems: SCORE_LEGEND,
+    legendLabel: "Score:",
+  },
+  vialDensity: {
+    colorFn: getDensityHex,
+    formatValue: formatVialDensity,
+    legendItems: DENSITY_LEGEND,
+    legendLabel: "km/km²:",
+  },
+  pesosPorKmRural: {
+    colorFn: getPesosPorKmHex,
+    formatValue: formatPesosPorKm,
+    legendItems: PESOS_LEGEND,
+    legendLabel: "$/km rural:",
+  },
+};
 
 const REGION_LABELS: Record<string, string> = {
   AMBA: "AMBA",
@@ -164,13 +227,8 @@ export function ProvinceMap({
   compact = false,
   metricKind = "score",
 }: ProvinceMapProps) {
-  const colorFn = metricKind === "vialDensity" ? getDensityHex : getScoreHex;
-  const formatValue =
-    metricKind === "vialDensity" ? formatVialDensity : formatScore;
-  const legendItems =
-    metricKind === "vialDensity" ? DENSITY_LEGEND : SCORE_LEGEND;
-  const legendLabel =
-    metricKind === "vialDensity" ? "km/km²:" : "Score:";
+  const { colorFn, formatValue, legendItems, legendLabel } =
+    METRIC_KIND_CONFIGS[metricKind];
   const router = useRouter();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [view, setView] = useState<Viewport>(IDENTITY_VIEW);

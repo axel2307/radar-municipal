@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import {
   getAllMunicipiosForMap,
   getAllMunicipiosForVialDensity,
+  getAllMunicipiosForPesosPorKmRural,
   type RankingEntry,
 } from "@/lib/scoring-data";
 
@@ -30,10 +31,11 @@ const ProvinceMap = dynamic(
   },
 );
 
-// Sprint 34 — la opción "vialDensity" no es un score normalizado 0-100,
-// sino km/km² (~0.2-2.0). Se trata como un kind aparte para que ProvinceMap
-// elija paleta + tooltip + leyenda apropiados.
+// Sprint 34/35 — opciones que NO son scores normalizados 0-100, sino
+// indicadores en su unidad natural. Se tratan como kinds aparte para que
+// ProvinceMap elija paleta + tooltip + leyenda apropiados.
 const VIAL_DENSITY_KEY = "vialDensity";
+const PESOS_POR_KM_KEY = "pesosPorKmRural";
 
 type MetricOption = { key: string; label: string };
 
@@ -52,6 +54,7 @@ const METRIC_OPTIONS: MetricOption[] = [
   { key: "scoreEspacioPublico", label: "Espacio público" },
   { key: "scoreSeguridadVial", label: "Seguridad vial" },
   { key: VIAL_DENSITY_KEY, label: "Densidad vial rural (km/km²)" },
+  { key: PESOS_POR_KM_KEY, label: "Pesos por km rural ($/km)" },
 ];
 
 interface MapPageClientProps {
@@ -68,21 +71,30 @@ export function MapPageClient({ initialEntries }: MapPageClientProps) {
   const [selectedMetric, setSelectedMetric] = useState<string>("scoreTotal");
 
   const isVialDensity = selectedMetric === VIAL_DENSITY_KEY;
+  const isPesosPorKm = selectedMetric === PESOS_POR_KM_KEY;
+  const metricKind = isPesosPorKm
+    ? "pesosPorKmRural"
+    : isVialDensity
+      ? "vialDensity"
+      : "score";
 
   const entries = useMemo(() => {
+    if (isPesosPorKm) return getAllMunicipiosForPesosPorKmRural();
     if (isVialDensity) return getAllMunicipiosForVialDensity();
     if (selectedMetric === "scoreTotal") return initialEntries;
     return getAllMunicipiosForMap(selectedMetric as keyof RankingEntry);
-  }, [selectedMetric, initialEntries, isVialDensity]);
+  }, [selectedMetric, initialEntries, isVialDensity, isPesosPorKm]);
 
   // Stats
   const withData = entries.filter((e) => e.score != null);
   const avgScore = withData.length > 0
     ? withData.reduce((sum, e) => sum + (e.score ?? 0), 0) / withData.length
     : 0;
-  const avgLabel = isVialDensity
-    ? avgScore.toFixed(2) + " km/km²"
-    : avgScore.toFixed(1);
+  const avgLabel = isPesosPorKm
+    ? `$${(avgScore / 1e6).toFixed(2)}M / km`
+    : isVialDensity
+      ? avgScore.toFixed(2) + " km/km²"
+      : avgScore.toFixed(1);
 
   return (
     <div className="space-y-6">
@@ -111,7 +123,7 @@ export function MapPageClient({ initialEntries }: MapPageClientProps) {
         metrics={METRIC_OPTIONS}
         selectedMetric={selectedMetric}
         onMetricChange={setSelectedMetric}
-        metricKind={isVialDensity ? "vialDensity" : "score"}
+        metricKind={metricKind}
       />
     </div>
   );

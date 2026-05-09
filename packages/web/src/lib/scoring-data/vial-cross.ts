@@ -22,7 +22,7 @@
  */
 
 import { getRedVialByMunicipio } from "./vial";
-import type { RedVialMunicipal } from "@radar-municipal/core";
+import { MUNICIPIOS, type RedVialMunicipal } from "@radar-municipal/core";
 
 import pilotFiscalJson from "../../data/pilot-fiscal.json";
 import pilotGastoFuncionJson from "../../data/pilot-gasto-funcion.json";
@@ -135,4 +135,30 @@ export function getVialCrossCoverage(): {
     if (m) ids.push(v.municipioId);
   }
   return { total: vialJson.length, withCross: ids.length, ids };
+}
+
+/**
+ * Sprint 35 — feed para el heatmap `/mapa` con métrica `pesosPorKmRural`.
+ *
+ * Mismo shape que `getAllMunicipiosForVialDensity` para reusar `ProvinceMap`
+ * sin branching. Devuelve los 135 partidos; sólo los 10 con cross completo
+ * tienen `score: number`, el resto sale `null` y se pinta gris.
+ */
+export function getAllMunicipiosForPesosPorKmRural(): {
+  id: string;
+  nombre: string;
+  score: number | null;
+  region: string;
+  esPiloto: boolean;
+}[] {
+  return MUNICIPIOS.map((m) => {
+    const cross = getVialCrossMetrics(m.id);
+    return {
+      id: m.id,
+      nombre: m.nombre,
+      score: cross?.pesosPorKmRural ?? null,
+      region: m.region,
+      esPiloto: m.esPiloto,
+    };
+  });
 }
