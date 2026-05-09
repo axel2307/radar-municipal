@@ -9,9 +9,10 @@
  *  - `pilot-gasto-funcion.json` (13 piloto, % servicios económicos)
  *  - `auto-vial.json` (102 partidos rurales — Sprint 31)
  *
- * Resultado actual: 3 partidos en intersección (Bahía Blanca, Bragado, Zárate).
- * Sprint 33+ podría extender la cobertura agregando parser RAFAM más fino o
- * llevando gasto-funcion a más municipios.
+ * Resultado tras Sprint 33 (fix de IDs canónicos en pilot-gasto-funcion):
+ * 10 partidos en intersección. Excluye conurbano (no está en auto-vial).
+ * Variance del cross: $1.49M/km (Lobería rural) a $91M/km (Mar del Plata
+ * urbano), reflejando que la métrica funciona mejor para partidos rurales.
  *
  * Disclaimer importante: usamos `gastoServiciosEconomicos` como proxy del
  * gasto vial. Servicios económicos incluye vialidad pero también obra
@@ -93,7 +94,7 @@ export function getVialCrossMetrics(
     notas:
       "Proxy: 'pesos en servicios económicos por km rural OSM'. Servicios económicos " +
       "incluye vialidad + obra pública + agro + otros. Sobre-estima el gasto vial puro. " +
-      "Cobertura limitada a la intersección de 13 piloto fiscal × 102 vial rural = ~3 partidos.",
+      "Cobertura: intersección de 13 piloto fiscal × 102 vial rural = 10 partidos (post-Sprint-33 fix de IDs canónicos).",
   };
 }
 

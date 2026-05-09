@@ -4,10 +4,10 @@
     "nombre": "Bahía Blanca",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
-    "presupuestoParticipativo": 1.0,
-    "audienciasPublicas": 1.0,
-    "sistemaReclamos": 1.0,
-    "transparenciaHcd": 1.0,
+    "presupuestoParticipativo": 1,
+    "audienciasPublicas": 1,
+    "sistemaReclamos": 1,
+    "transparenciaHcd": 1,
     "evidenciaPresupuesto": "Programa 'Presupuesto Participativo BB' activo desde 2008, edición 2025 con 47 proyectos",
     "evidenciaAudiencias": "Ordenanza de audiencias públicas reglamentada, se realizan periódicamente",
     "urlReclamos": "https://www.bahia.gob.ar/reclamos/",
@@ -15,13 +15,13 @@
     "notas": "Municipio líder en participación ciudadana en PBA."
   },
   {
-    "municipioId": "060274",
+    "municipioId": "060357",
     "nombre": "General Pueyrredón",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
-    "presupuestoParticipativo": 1.0,
+    "presupuestoParticipativo": 1,
     "audienciasPublicas": 0.5,
-    "sistemaReclamos": 1.0,
+    "sistemaReclamos": 1,
     "transparenciaHcd": 0.5,
     "evidenciaPresupuesto": "Presupuesto participativo activo, edición 2024 con proyectos barriales",
     "evidenciaAudiencias": "Ordenanza de audiencias existe, baja frecuencia de realización",
@@ -30,13 +30,13 @@
     "notas": "Presupuesto participativo consolidado, HCD publica actas pero no votaciones nominales."
   },
   {
-    "municipioId": "060756",
+    "municipioId": "060791",
     "nombre": "Tandil",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
     "presupuestoParticipativo": 0.5,
     "audienciasPublicas": 0.5,
-    "sistemaReclamos": 1.0,
+    "sistemaReclamos": 1,
     "transparenciaHcd": 0.5,
     "evidenciaPresupuesto": "Tuvo programa de presupuesto participativo, sin ediciones recientes confirmadas",
     "evidenciaAudiencias": "Ordenanza existe, sin evidencia de audiencias recientes",
@@ -45,13 +45,13 @@
     "notas": "Sistema de reclamos digital robusto, participación institucional moderada."
   },
   {
-    "municipioId": "060840",
+    "municipioId": "060861",
     "nombre": "Vicente López",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
-    "presupuestoParticipativo": 1.0,
+    "presupuestoParticipativo": 1,
     "audienciasPublicas": 0.5,
-    "sistemaReclamos": 1.0,
+    "sistemaReclamos": 1,
     "transparenciaHcd": 0.5,
     "evidenciaPresupuesto": "Programa 'Vecinos Deciden' activo con votación online",
     "evidenciaAudiencias": "Audiencias reglamentadas, frecuencia irregular",
@@ -60,7 +60,7 @@
     "notas": "App municipal muy completa para reclamos. HCD con información parcial."
   },
   {
-    "municipioId": "060648",
+    "municipioId": "060735",
     "nombre": "San Isidro",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -75,14 +75,14 @@
     "notas": "Sin presupuesto participativo. Reclamos por mail/formulario básico."
   },
   {
-    "municipioId": "060412",
+    "municipioId": "060441",
     "nombre": "La Plata",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
-    "presupuestoParticipativo": 1.0,
+    "presupuestoParticipativo": 1,
     "audienciasPublicas": 0.5,
-    "sistemaReclamos": 1.0,
-    "transparenciaHcd": 1.0,
+    "sistemaReclamos": 1,
+    "transparenciaHcd": 1,
     "evidenciaPresupuesto": "Presupuesto participativo activo, edición 2024 con proyectos por delegación",
     "evidenciaAudiencias": "Audiencias obligatorias por ordenanza, frecuencia variable",
     "urlReclamos": "https://reclamos.laplata.gob.ar/",
@@ -105,7 +105,7 @@
     "notas": "Participación institucional baja. HCD sin presencia digital."
   },
   {
-    "municipioId": "060434",
+    "municipioId": "060490",
     "nombre": "Luján",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -120,7 +120,7 @@
     "notas": "Sin mecanismos formales de participación detectados más allá de contacto básico."
   },
   {
-    "municipioId": "060028",
+    "municipioId": "060042",
     "nombre": "Ayacucho",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -135,7 +135,7 @@
     "notas": "Municipio rural sin mecanismos digitales de participación."
   },
   {
-    "municipioId": "060427",
+    "municipioId": "060476",
     "nombre": "Lobería",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -150,7 +150,7 @@
     "notas": "Municipio rural sin mecanismos formales de participación digital."
   },
   {
-    "municipioId": "060042",
+    "municipioId": "060049",
     "nombre": "Azul",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -165,7 +165,7 @@
     "notas": "Participación mínima. Audiencias reglamentadas pero sin evidencia de realización."
   },
   {
-    "municipioId": "060098",
+    "municipioId": "060105",
     "nombre": "Bragado",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
@@ -180,7 +180,7 @@
     "notas": "Contacto básico por formulario. Sin otros mecanismos."
   },
   {
-    "municipioId": "060525",
+    "municipioId": "060567",
     "nombre": "Necochea",
     "anio": 2025,
     "fuente": "Relevamiento portal municipal + SIBOM",
