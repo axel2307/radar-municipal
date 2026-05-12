@@ -634,7 +634,7 @@ export default async function EconomiaPage({ params }: PageProps) {
             <section>
               <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
                 <h2 className="text-lg font-semibold">
-                  Pesos por km de red rural
+                  Pesos por km de red {vialCross.denominador === "rural" ? "rural" : "vial (total)"}
                 </h2>
                 <span className="text-xs text-muted-foreground">
                   Cruce RAFAM × OSM
@@ -643,17 +643,21 @@ export default async function EconomiaPage({ params }: PageProps) {
               <p className="mb-4 text-xs text-muted-foreground max-w-3xl">
                 Aproxima cuántos pesos del gasto en{" "}
                 <em>servicios económicos</em> ejecuta el municipio por
-                kilómetro de red rural estimada. Indicador comparativo entre
-                partidos con la misma cobertura.
+                kilómetro de red{" "}
+                {vialCross.denominador === "rural" ? "rural" : "total (incluye conectores urbanos)"}
+                . Indicador comparativo entre partidos con la misma cobertura.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-4">
                 <div className="rounded-lg border-2 border-amber-200 bg-amber-50/30 p-4">
                   <p className="text-xs text-muted-foreground">
-                    Pesos por km rural
+                    Pesos por km{" "}
+                    <span className="font-medium text-amber-700">
+                      ({vialCross.denominador})
+                    </span>
                   </p>
                   <p className="text-2xl font-bold tabular-nums">
-                    {formatArs(vialCross.pesosPorKmRural)}
+                    {formatArs(vialCross.pesosPorKm)}
                     <span className="ml-1 text-sm font-normal text-muted-foreground">
                       / km
                     </span>
@@ -685,16 +689,16 @@ export default async function EconomiaPage({ params }: PageProps) {
                 </div>
                 <div className="rounded-lg border border-border bg-card p-4">
                   <p className="text-xs text-muted-foreground">
-                    Red rural OSM
+                    Red {vialCross.denominador} OSM
                   </p>
                   <p className="text-xl font-semibold tabular-nums">
-                    {vialCross.kmRuralEstimado.toLocaleString("es-AR")}{" "}
+                    {vialCross.kmDenominador.toLocaleString("es-AR")}{" "}
                     <span className="text-sm font-normal text-muted-foreground">
                       km
                     </span>
                   </p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    Denominador
+                    Denominador efectivo
                   </p>
                 </div>
               </div>

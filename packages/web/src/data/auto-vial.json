@@ -816,6 +816,22 @@
     "fuenteUrl": "https://overpass-api.de/api/interpreter"
   },
   {
+    "municipioId": "060441",
+    "nombre": "La Plata",
+    "km": {
+      "track": 440.8,
+      "unclassified": 1895.1,
+      "tertiary": 584.9,
+      "secondary": 553,
+      "primary": 461
+    },
+    "kmRuralEstimado": 2335.9,
+    "kmTotalEstimado": 3934.8,
+    "waysProcesados": 6974,
+    "extractedAt": "2026-05-12T12:08:53.585Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
     "municipioId": "060448",
     "nombre": "Lezama",
     "km": {
@@ -1440,6 +1456,22 @@
     "fuenteUrl": "https://overpass-api.de/api/interpreter"
   },
   {
+    "municipioId": "060735",
+    "nombre": "San Isidro",
+    "km": {
+      "track": 6.6,
+      "unclassified": 16.6,
+      "tertiary": 158.3,
+      "secondary": 118.3,
+      "primary": 37.3
+    },
+    "kmRuralEstimado": 23.2,
+    "kmTotalEstimado": 337.1,
+    "waysProcesados": 2122,
+    "extractedAt": "2026-05-12T12:08:45.958Z",
+    "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
     "municipioId": "060749",
     "nombre": "Suipacha",
     "km": {
@@ -1614,6 +1646,22 @@
     "waysProcesados": 3618,
     "extractedAt": "2026-05-08T21:59:00.132Z",
     "fuenteUrl": "https://overpass-api.de/api/interpreter"
+  },
+  {
+    "municipioId": "060861",
+    "nombre": "Vicente López",
+    "km": {
+      "track": 0,
+      "unclassified": 2.3,
+      "tertiary": 154.5,
+      "secondary": 86.8,
+      "primary": 12.5
+    },
+    "kmRuralEstimado": 2.3,
+    "kmTotalEstimado": 256.1,
+    "waysProcesados": 2003,
+    "extractedAt": "2026-05-12T12:08:35.444Z",
+    "fuenteUrl": "https://overpass.kumi.systems/api/interpreter"
   },
   {
     "municipioId": "060882",

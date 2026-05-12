@@ -9,10 +9,11 @@
  *  - `pilot-gasto-funcion.json` (13 piloto, % servicios económicos)
  *  - `auto-vial.json` (102 partidos rurales — Sprint 31)
  *
- * Resultado tras Sprint 33 (fix de IDs canónicos en pilot-gasto-funcion):
- * 10 partidos en intersección. Excluye conurbano (no está en auto-vial).
- * Variance del cross: $1.49M/km (Lobería rural) a $91M/km (Mar del Plata
- * urbano), reflejando que la métrica funciona mejor para partidos rurales.
+ * Resultado tras Sprint 36 (auto-vial extendido a 3 conurbano piloto):
+ * 13 partidos en intersección. Para los conurbano donde `kmRural < 100` el
+ * denominador es `kmTotal` (no rural), y la métrica se anota con
+ * `denominador: "total"`. La Plata cae del lado rural porque el partido es
+ * grande y tiene zona semi-rural (2336 km de track+unclassified).
  *
  * Disclaimer importante: usamos `gastoServiciosEconomicos` como proxy del
  * gasto vial. Servicios económicos incluye vialidad pero también obra
@@ -47,18 +48,36 @@ for (const f of fiscalRaw) fiscalById.set(f.municipioId, f);
 const gastoFuncionById = new Map<string, GastoFuncionRow>();
 for (const g of gastoFuncionRaw) gastoFuncionById.set(g.municipioId, g);
 
+/**
+ * Threshold de "red rural significativa" — partidos con menos de este
+ * valor en track+unclassified usan `kmTotalEstimado` como denominador.
+ * Calibrado en Sprint 36 contra los 3 conurbano piloto:
+ * VL (rural=2), SI (rural=23) → caen en total; La Plata (rural=2336) → rural.
+ */
+const RURAL_KM_THRESHOLD = 100;
+
 export interface VialCrossMetrics {
   municipioId: string;
   /** Km estimados de red rural (track + unclassified). */
   kmRuralEstimado: number;
+  /** Km estimados de red total (track..primary). */
+  kmTotalEstimado: number;
   /** Gasto total ejecutado en el año fiscal (ARS nominales). */
   gastoTotal: number;
   /** % del gasto total destinado a "servicios económicos". */
   pctServiciosEconomicos: number;
   /** Gasto en servicios económicos = gastoTotal × pct/100. */
   gastoServiciosEconomicos: number;
-  /** Métrica principal: gastoServiciosEconomicos / kmRuralEstimado. */
-  pesosPorKmRural: number;
+  /**
+   * Métrica principal: gastoServiciosEconomicos / kmDenominador.
+   * Para partidos rurales el denominador es `kmRuralEstimado`; para
+   * conurbano (kmRural < 100) es `kmTotalEstimado` — ver `denominador`.
+   */
+  pesosPorKm: number;
+  /** Qué denominador se usó: "rural" o "total". Crítico para leer el valor. */
+  denominador: "rural" | "total";
+  /** Valor del denominador efectivamente usado (km). */
+  kmDenominador: number;
   /** Año fiscal del dato de gasto. */
   anioFiscal: number;
   /** Disclaimers para mostrar en UI. */
@@ -76,25 +95,37 @@ export function getVialCrossMetrics(
   const gasto = gastoFuncionById.get(municipioId);
   const vial = getRedVialByMunicipio(municipioId);
   if (!fiscal || !gasto || !vial) return null;
-  if (vial.kmRuralEstimado <= 0) return null;
+  if (vial.kmTotalEstimado <= 0) return null;
 
   const gastoTotal = extractGastoTotal(fiscal);
   const pctEco = gasto.pctServiciosEconomicos;
   if (gastoTotal == null || pctEco == null) return null;
 
+  const isRural = vial.kmRuralEstimado >= RURAL_KM_THRESHOLD;
+  const denominador: "rural" | "total" = isRural ? "rural" : "total";
+  const kmDenominador = isRural
+    ? vial.kmRuralEstimado
+    : vial.kmTotalEstimado;
+  if (kmDenominador <= 0) return null;
+
   const gastoEco = (gastoTotal * pctEco) / 100;
   return {
     municipioId,
     kmRuralEstimado: vial.kmRuralEstimado,
+    kmTotalEstimado: vial.kmTotalEstimado,
     gastoTotal,
     pctServiciosEconomicos: pctEco,
     gastoServiciosEconomicos: Math.round(gastoEco),
-    pesosPorKmRural: Math.round(gastoEco / vial.kmRuralEstimado),
+    pesosPorKm: Math.round(gastoEco / kmDenominador),
+    denominador,
+    kmDenominador,
     anioFiscal: gasto.anio ?? fiscal.anio ?? 0,
     notas:
-      "Proxy: 'pesos en servicios económicos por km rural OSM'. Servicios económicos " +
+      "Proxy: 'pesos en servicios económicos por km de red OSM'. Servicios económicos " +
       "incluye vialidad + obra pública + agro + otros. Sobre-estima el gasto vial puro. " +
-      "Cobertura: intersección de 13 piloto fiscal × 102 vial rural = 10 partidos (post-Sprint-33 fix de IDs canónicos).",
+      "Para partidos rurales el denominador es la red rural (track+unclassified); para " +
+      "conurbano con red rural <100 km, el denominador es la red total (incluye " +
+      "tertiary/secondary/primary). Cobertura: 13 piloto (Sprint 36 extendió a conurbano).",
   };
 }
 
@@ -138,13 +169,14 @@ export function getVialCrossCoverage(): {
 }
 
 /**
- * Sprint 35 — feed para el heatmap `/mapa` con métrica `pesosPorKmRural`.
+ * Sprint 35/36 — feed para el heatmap `/mapa` con métrica `pesosPorKm`.
  *
  * Mismo shape que `getAllMunicipiosForVialDensity` para reusar `ProvinceMap`
- * sin branching. Devuelve los 135 partidos; sólo los 10 con cross completo
- * tienen `score: number`, el resto sale `null` y se pinta gris.
+ * sin branching. Devuelve los 135 partidos; los 13 con cross completo
+ * tienen `score: number` (mix de denominadores rural/total — la tooltip
+ * lo aclara via `denominador` cuando el usuario hovea la ficha).
  */
-export function getAllMunicipiosForPesosPorKmRural(): {
+export function getAllMunicipiosForPesosPorKm(): {
   id: string;
   nombre: string;
   score: number | null;
@@ -156,7 +188,7 @@ export function getAllMunicipiosForPesosPorKmRural(): {
     return {
       id: m.id,
       nombre: m.nombre,
-      score: cross?.pesosPorKmRural ?? null,
+      score: cross?.pesosPorKm ?? null,
       region: m.region,
       esPiloto: m.esPiloto,
     };

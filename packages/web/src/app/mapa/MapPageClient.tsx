@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import {
   getAllMunicipiosForMap,
   getAllMunicipiosForVialDensity,
-  getAllMunicipiosForPesosPorKmRural,
+  getAllMunicipiosForPesosPorKm,
   type RankingEntry,
 } from "@/lib/scoring-data";
 
@@ -35,7 +35,7 @@ const ProvinceMap = dynamic(
 // indicadores en su unidad natural. Se tratan como kinds aparte para que
 // ProvinceMap elija paleta + tooltip + leyenda apropiados.
 const VIAL_DENSITY_KEY = "vialDensity";
-const PESOS_POR_KM_KEY = "pesosPorKmRural";
+const PESOS_POR_KM_KEY = "pesosPorKm";
 
 type MetricOption = { key: string; label: string };
 
@@ -54,7 +54,7 @@ const METRIC_OPTIONS: MetricOption[] = [
   { key: "scoreEspacioPublico", label: "Espacio público" },
   { key: "scoreSeguridadVial", label: "Seguridad vial" },
   { key: VIAL_DENSITY_KEY, label: "Densidad vial rural (km/km²)" },
-  { key: PESOS_POR_KM_KEY, label: "Pesos por km rural ($/km)" },
+  { key: PESOS_POR_KM_KEY, label: "Pesos por km de red vial ($/km)" },
 ];
 
 interface MapPageClientProps {
@@ -73,13 +73,13 @@ export function MapPageClient({ initialEntries }: MapPageClientProps) {
   const isVialDensity = selectedMetric === VIAL_DENSITY_KEY;
   const isPesosPorKm = selectedMetric === PESOS_POR_KM_KEY;
   const metricKind = isPesosPorKm
-    ? "pesosPorKmRural"
+    ? "pesosPorKm"
     : isVialDensity
       ? "vialDensity"
       : "score";
 
   const entries = useMemo(() => {
-    if (isPesosPorKm) return getAllMunicipiosForPesosPorKmRural();
+    if (isPesosPorKm) return getAllMunicipiosForPesosPorKm();
     if (isVialDensity) return getAllMunicipiosForVialDensity();
     if (selectedMetric === "scoreTotal") return initialEntries;
     return getAllMunicipiosForMap(selectedMetric as keyof RankingEntry);

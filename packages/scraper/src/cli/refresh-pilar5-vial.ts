@@ -39,23 +39,29 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ─────────────────────────────────────────
 // Sprint 31 — Cobertura completa de rurales
+// Sprint 36 — + 3 conurbano piloto para cerrar el cross
 //
-// Sprint 30 corrió 10 sample. Sprint 31 extiende a TODOS los partidos
-// no-conurbano: regiones INTERIOR + COSTA_ATLANTICA. Total esperado
-// ~70-80 partidos.
+// Sprint 30 corrió 10 sample. Sprint 31 extendió a TODOS los partidos
+// no-conurbano: regiones INTERIOR + COSTA_ATLANTICA (~80-100 partidos).
+// Sprint 36 agrega los 3 piloto del conurbano (Vicente López, San
+// Isidro, La Plata) para que `vial-cross` cubra los 13 piloto enteros.
+// Total esperado ~105 partidos.
 //
 // Override via env var `VIAL_MUNICIPIO_IDS` (CSV) si querés correr
-// sólo unos específicos (e.g. en dev local para no esperar 5 minutos).
+// sólo unos específicos (e.g. en dev local para no esperar 10 minutos).
 // ─────────────────────────────────────────
+
+const CONURBANO_PILOTO_VIAL = ["060861", "060735", "060441"];
 
 function getTargetMunicipios(): string[] {
   const override = process.env.VIAL_MUNICIPIO_IDS;
   if (override) {
     return override.split(",").map((s) => s.trim()).filter(Boolean);
   }
-  return MUNICIPIOS.filter(
+  const rurales = MUNICIPIOS.filter(
     (m) => m.region === Region.INTERIOR || m.region === Region.COSTA_ATLANTICA,
   ).map((m) => m.id);
+  return [...rurales, ...CONURBANO_PILOTO_VIAL];
 }
 
 interface PartidoFeature {

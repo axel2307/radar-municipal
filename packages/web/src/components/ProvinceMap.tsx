@@ -18,12 +18,12 @@ interface MapEntry {
  * Tipo de métrica para color/legend/tooltip:
  *  - `score`:           valor 0-100 con paleta divergente rojo→verde (default).
  *  - `vialDensity`:     km/km² (~0.2–2.0) con paleta secuencial YlOrBr.
- *  - `pesosPorKmRural`: ARS por km rural (~$1M–$100M) con paleta PuRd.
+ *  - `pesosPorKm`: ARS por km rural (~$1M–$100M) con paleta PuRd.
  *
  * Para agregar uno nuevo: extender la unión y la `METRIC_KIND_CONFIGS`
  * más abajo. Cero cambios al render.
  */
-type MetricKind = "score" | "vialDensity" | "pesosPorKmRural";
+type MetricKind = "score" | "vialDensity" | "pesosPorKm";
 
 interface ProvinceMapProps {
   entries: MapEntry[];
@@ -97,10 +97,10 @@ function formatVialDensity(v: number | null): string {
   return `${v.toFixed(2)} km/km²`;
 }
 
-// ─── pesosPorKmRural (ARS, secuencial PuRd) ────────────────────────
-// Sprint 35 — bins sobre distribución empírica de 10 partidos del cross
-// (mín=$1.49M Lobería, máx=$91.4M GP outlier urbano). Cluster grueso
-// en $1-2M; saltos a $5M, $20M, $90M.
+// ─── pesosPorKm (ARS, secuencial PuRd) ────────────────────────
+// Sprint 35 — bins sobre distribución empírica de 10 partidos rurales.
+// Sprint 36 — extendido a 13 (incluye conurbano con denominador "total"
+// cuando kmRural < 100). Distribución mantiene 4/1/2/3/3 sobre los bins.
 function getPesosPorKmHex(v: number | null): string {
   if (v == null) return NO_DATA_COLOR;
   if (v >= 30e6) return "#7a0177"; // outlier urbano
@@ -165,7 +165,7 @@ const METRIC_KIND_CONFIGS: Record<MetricKind, MetricKindConfig> = {
     legendItems: DENSITY_LEGEND,
     legendLabel: "km/km²:",
   },
-  pesosPorKmRural: {
+  pesosPorKm: {
     colorFn: getPesosPorKmHex,
     formatValue: formatPesosPorKm,
     legendItems: PESOS_LEGEND,

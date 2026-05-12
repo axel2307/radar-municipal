@@ -1,9 +1,21 @@
 {
-  "refreshedAt": "2026-05-08T21:59:09.061Z",
-  "totalContrataciones": 102,
-  "municipiosConDatos": 102,
-  "aggregates": 102,
+  "refreshedAt": "2026-05-12T23:14:09.504Z",
+  "totalContrataciones": 105,
+  "municipiosConDatos": 105,
+  "aggregates": 105,
   "fuentes": [
+    {
+      "label": "25 de Mayo",
+      "municipioId": "060805",
+      "datasetsParseados": 1,
+      "contrataciones": 4468.5
+    },
+    {
+      "label": "9 de Julio",
+      "municipioId": "060560",
+      "datasetsParseados": 1,
+      "contrataciones": 3326.4
+    },
     {
       "label": "Adolfo Alsina",
       "municipioId": "060007",
@@ -65,6 +77,12 @@
       "contrataciones": 2066.9
     },
     {
+      "label": "Bolívar",
+      "municipioId": "060547",
+      "datasetsParseados": 1,
+      "contrataciones": 3579.5
+    },
+    {
       "label": "Bragado",
       "municipioId": "060105",
       "datasetsParseados": 1,
@@ -119,6 +137,24 @@
       "contrataciones": 982.2
     },
     {
+      "label": "Chacabuco",
+      "municipioId": "060203",
+      "datasetsParseados": 1,
+      "contrataciones": 2198.6
+    },
+    {
+      "label": "Chascomús",
+      "municipioId": "060210",
+      "datasetsParseados": 1,
+      "contrataciones": 1496
+    },
+    {
+      "label": "Chivilcoy",
+      "municipioId": "060217",
+      "datasetsParseados": 1,
+      "contrataciones": 1861.8
+    },
+    {
       "label": "Colón",
       "municipioId": "060168",
       "datasetsParseados": 1,
@@ -147,24 +183,6 @@
       "municipioId": "060196",
       "datasetsParseados": 1,
       "contrataciones": 3574.7
-    },
-    {
-      "label": "Chacabuco",
-      "municipioId": "060203",
-      "datasetsParseados": 1,
-      "contrataciones": 2198.6
-    },
-    {
-      "label": "Chascomús",
-      "municipioId": "060210",
-      "datasetsParseados": 1,
-      "contrataciones": 1496
-    },
-    {
-      "label": "Chivilcoy",
-      "municipioId": "060217",
-      "datasetsParseados": 1,
-      "contrataciones": 1861.8
     },
     {
       "label": "Daireaux",
@@ -299,6 +317,12 @@
       "contrataciones": 373.2
     },
     {
+      "label": "La Plata",
+      "municipioId": "060441",
+      "datasetsParseados": 1,
+      "contrataciones": 2335.9
+    },
+    {
       "label": "Laprida",
       "municipioId": "060420",
       "datasetsParseados": 1,
@@ -311,16 +335,16 @@
       "contrataciones": 1648.4
     },
     {
-      "label": "Lezama",
-      "municipioId": "060448",
-      "datasetsParseados": 1,
-      "contrataciones": 578.4
-    },
-    {
       "label": "Leandro N. Alem",
       "municipioId": "060455",
       "datasetsParseados": 1,
       "contrataciones": 1396.2
+    },
+    {
+      "label": "Lezama",
+      "municipioId": "060448",
+      "datasetsParseados": 1,
+      "contrataciones": 578.4
     },
     {
       "label": "Lincoln",
@@ -329,16 +353,16 @@
       "contrataciones": 4889.3
     },
     {
-      "label": "Lobos",
-      "municipioId": "060469",
-      "datasetsParseados": 1,
-      "contrataciones": 1802.6
-    },
-    {
       "label": "Lobería",
       "municipioId": "060476",
       "datasetsParseados": 1,
       "contrataciones": 2397.9
+    },
+    {
+      "label": "Lobos",
+      "municipioId": "060469",
+      "datasetsParseados": 1,
+      "contrataciones": 1802.6
     },
     {
       "label": "Luján",
@@ -387,18 +411,6 @@
       "municipioId": "060546",
       "datasetsParseados": 1,
       "contrataciones": 1645.5
-    },
-    {
-      "label": "Bolívar",
-      "municipioId": "060547",
-      "datasetsParseados": 1,
-      "contrataciones": 3579.5
-    },
-    {
-      "label": "9 de Julio",
-      "municipioId": "060560",
-      "datasetsParseados": 1,
-      "contrataciones": 3326.4
     },
     {
       "label": "Necochea",
@@ -533,6 +545,12 @@
       "contrataciones": 1356.1
     },
     {
+      "label": "San Isidro",
+      "municipioId": "060735",
+      "datasetsParseados": 1,
+      "contrataciones": 23.2
+    },
+    {
       "label": "San Nicolás",
       "municipioId": "060721",
       "datasetsParseados": 1,
@@ -549,6 +567,12 @@
       "municipioId": "060749",
       "datasetsParseados": 1,
       "contrataciones": 850.2
+    },
+    {
+      "label": "Tandil",
+      "municipioId": "060791",
+      "datasetsParseados": 1,
+      "contrataciones": 2265.9
     },
     {
       "label": "Tapalqué",
@@ -581,22 +605,16 @@
       "contrataciones": 2595.3
     },
     {
-      "label": "Tandil",
-      "municipioId": "060791",
-      "datasetsParseados": 1,
-      "contrataciones": 2265.9
-    },
-    {
       "label": "Tres Lomas",
       "municipioId": "060798",
       "datasetsParseados": 1,
       "contrataciones": 1360.4
     },
     {
-      "label": "25 de Mayo",
-      "municipioId": "060805",
+      "label": "Vicente López",
+      "municipioId": "060861",
       "datasetsParseados": 1,
-      "contrataciones": 4468.5
+      "contrataciones": 2.3
     },
     {
       "label": "Villa Gesell",
