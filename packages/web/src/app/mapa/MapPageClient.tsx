@@ -37,6 +37,8 @@ const ProvinceMap = dynamic(
 const VIAL_DENSITY_KEY = "vialDensity";
 const PESOS_POR_KM_KEY = "pesosPorKm";
 
+type MetricKind = "score" | "vialDensity" | "pesosPorKm";
+
 type MetricOption = { key: string; label: string };
 
 const METRIC_OPTIONS: MetricOption[] = [
@@ -57,74 +59,148 @@ const METRIC_OPTIONS: MetricOption[] = [
   { key: PESOS_POR_KM_KEY, label: "Pesos por km de red vial ($/km)" },
 ];
 
+type MapEntry = {
+  id: string;
+  nombre: string;
+  score: number | null;
+  region: string;
+  esPiloto: boolean;
+};
+
+/**
+ * Resuelve la métrica seleccionada al par (entries, metricKind). Centralizado
+ * para que ambos slots del split-screen Sprint 37 usen exactamente la misma
+ * lógica de carga.
+ */
+function resolveMetric(
+  metricKey: string,
+  initialEntries: MapEntry[],
+): { entries: MapEntry[]; metricKind: MetricKind } {
+  if (metricKey === PESOS_POR_KM_KEY) {
+    return { entries: getAllMunicipiosForPesosPorKm(), metricKind: "pesosPorKm" };
+  }
+  if (metricKey === VIAL_DENSITY_KEY) {
+    return {
+      entries: getAllMunicipiosForVialDensity(),
+      metricKind: "vialDensity",
+    };
+  }
+  if (metricKey === "scoreTotal") {
+    return { entries: initialEntries, metricKind: "score" };
+  }
+  return {
+    entries: getAllMunicipiosForMap(metricKey as keyof RankingEntry),
+    metricKind: "score",
+  };
+}
+
+function formatAvg(metricKind: MetricKind, avg: number): string {
+  if (metricKind === "pesosPorKm") return `$${(avg / 1e6).toFixed(2)}M / km`;
+  if (metricKind === "vialDensity") return `${avg.toFixed(2)} km/km²`;
+  return avg.toFixed(1);
+}
+
 interface MapPageClientProps {
-  initialEntries: {
-    id: string;
-    nombre: string;
-    score: number | null;
-    region: string;
-    esPiloto: boolean;
-  }[];
+  initialEntries: MapEntry[];
 }
 
 export function MapPageClient({ initialEntries }: MapPageClientProps) {
   const [selectedMetric, setSelectedMetric] = useState<string>("scoreTotal");
+  const [compareMode, setCompareMode] = useState<boolean>(false);
+  // Default secundario sugerente: scoreFiscal junto al scoreTotal abre la
+  // pregunta natural "¿qué partidos suben el total a pesar de fiscal flojo?".
+  const [compareMetric, setCompareMetric] = useState<string>("scoreFiscal");
 
-  const isVialDensity = selectedMetric === VIAL_DENSITY_KEY;
-  const isPesosPorKm = selectedMetric === PESOS_POR_KM_KEY;
-  const metricKind = isPesosPorKm
-    ? "pesosPorKm"
-    : isVialDensity
-      ? "vialDensity"
-      : "score";
+  const slotA = useMemo(
+    () => resolveMetric(selectedMetric, initialEntries),
+    [selectedMetric, initialEntries],
+  );
+  const slotB = useMemo(
+    () => resolveMetric(compareMetric, initialEntries),
+    [compareMetric, initialEntries],
+  );
 
-  const entries = useMemo(() => {
-    if (isPesosPorKm) return getAllMunicipiosForPesosPorKm();
-    if (isVialDensity) return getAllMunicipiosForVialDensity();
-    if (selectedMetric === "scoreTotal") return initialEntries;
-    return getAllMunicipiosForMap(selectedMetric as keyof RankingEntry);
-  }, [selectedMetric, initialEntries, isVialDensity, isPesosPorKm]);
-
-  // Stats
-  const withData = entries.filter((e) => e.score != null);
-  const avgScore = withData.length > 0
-    ? withData.reduce((sum, e) => sum + (e.score ?? 0), 0) / withData.length
-    : 0;
-  const avgLabel = isPesosPorKm
-    ? `$${(avgScore / 1e6).toFixed(2)}M / km`
-    : isVialDensity
-      ? avgScore.toFixed(2) + " km/km²"
-      : avgScore.toFixed(1);
+  // Stats — sólo para el modo single. En split el foco es la comparación.
+  const withData = slotA.entries.filter((e) => e.score != null);
+  const avgScore =
+    withData.length > 0
+      ? withData.reduce((sum, e) => sum + (e.score ?? 0), 0) / withData.length
+      : 0;
+  const avgLabel = formatAvg(slotA.metricKind, avgScore);
 
   return (
     <div className="space-y-6">
-      {/* Stats bar */}
-      <div className="grid gap-4 sm:grid-cols-4">
-        <div className="rounded-lg border border-border bg-card p-4 text-center">
-          <p className="text-2xl font-bold">{entries.length}</p>
-          <p className="text-xs text-muted-foreground">Municipios totales</p>
-        </div>
-        <div className="rounded-lg border border-border bg-card p-4 text-center">
-          <p className="text-2xl font-bold text-primary">{withData.length}</p>
-          <p className="text-xs text-muted-foreground">Con datos</p>
-        </div>
-        <div className="rounded-lg border border-border bg-card p-4 text-center">
-          <p className="text-2xl font-bold">{avgLabel}</p>
-          <p className="text-xs text-muted-foreground">Promedio</p>
-        </div>
-        <div className="rounded-lg border border-border bg-card p-4 text-center">
-          <p className="text-2xl font-bold text-muted-foreground">{entries.length - withData.length}</p>
-          <p className="text-xs text-muted-foreground">Sin datos</p>
-        </div>
+      {/* Compare toggle */}
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-xs text-muted-foreground">
+          {compareMode
+            ? "Comparando dos métricas — cada mapa tiene su propio selector, zoom y pan."
+            : "Activá comparación para ver dos métricas lado a lado."}
+        </p>
+        <button
+          type="button"
+          onClick={() => setCompareMode((v) => !v)}
+          aria-pressed={compareMode}
+          className="rounded-md border border-border bg-card px-3 py-1.5 text-sm font-medium hover:bg-muted"
+        >
+          {compareMode ? "✕ Cerrar comparación" : "⇆ Comparar 2 métricas"}
+        </button>
       </div>
 
-      <ProvinceMap
-        entries={entries}
-        metrics={METRIC_OPTIONS}
-        selectedMetric={selectedMetric}
-        onMetricChange={setSelectedMetric}
-        metricKind={metricKind}
-      />
+      {!compareMode && (
+        <>
+          {/* Stats bar (solo single mode) */}
+          <div className="grid gap-4 sm:grid-cols-4">
+            <div className="rounded-lg border border-border bg-card p-4 text-center">
+              <p className="text-2xl font-bold">{slotA.entries.length}</p>
+              <p className="text-xs text-muted-foreground">Municipios totales</p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4 text-center">
+              <p className="text-2xl font-bold text-primary">{withData.length}</p>
+              <p className="text-xs text-muted-foreground">Con datos</p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4 text-center">
+              <p className="text-2xl font-bold">{avgLabel}</p>
+              <p className="text-xs text-muted-foreground">Promedio</p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4 text-center">
+              <p className="text-2xl font-bold text-muted-foreground">
+                {slotA.entries.length - withData.length}
+              </p>
+              <p className="text-xs text-muted-foreground">Sin datos</p>
+            </div>
+          </div>
+
+          <ProvinceMap
+            entries={slotA.entries}
+            metrics={METRIC_OPTIONS}
+            selectedMetric={selectedMetric}
+            onMetricChange={setSelectedMetric}
+            metricKind={slotA.metricKind}
+          />
+        </>
+      )}
+
+      {compareMode && (
+        <div className="grid gap-4 lg:grid-cols-2">
+          <ProvinceMap
+            entries={slotA.entries}
+            metrics={METRIC_OPTIONS}
+            selectedMetric={selectedMetric}
+            onMetricChange={setSelectedMetric}
+            metricKind={slotA.metricKind}
+            mapHeight={360}
+          />
+          <ProvinceMap
+            entries={slotB.entries}
+            metrics={METRIC_OPTIONS}
+            selectedMetric={compareMetric}
+            onMetricChange={setCompareMetric}
+            metricKind={slotB.metricKind}
+            mapHeight={360}
+          />
+        </div>
+      )}
     </div>
   );
 }

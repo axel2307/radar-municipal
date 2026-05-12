@@ -37,6 +37,12 @@ interface ProvinceMapProps {
   compact?: boolean;
   /** Tipo de métrica → controla paleta + formato tooltip + legend. */
   metricKind?: MetricKind;
+  /**
+   * Sprint 37 — override de altura del contenedor del mapa. Útil en
+   * split-screen donde el contenedor es angosto y la altura default de
+   * 520px deja dead-space alrededor del SVG (que escala por width).
+   */
+  mapHeight?: number;
 }
 
 interface PartidoProps {
@@ -226,6 +232,7 @@ export function ProvinceMap({
   onMetricChange,
   compact = false,
   metricKind = "score",
+  mapHeight,
 }: ProvinceMapProps) {
   const { colorFn, formatValue, legendItems, legendLabel } =
     METRIC_KIND_CONFIGS[metricKind];
@@ -245,7 +252,7 @@ export function ProvinceMap({
   }, [entries]);
 
   const hovered = hoveredId ? byId.get(hoveredId) ?? null : null;
-  const height = compact ? 240 : 520;
+  const height = mapHeight ?? (compact ? 240 : 520);
 
   /**
    * Convierte coordenadas de evento (clientX/Y) a coordenadas del viewBox
