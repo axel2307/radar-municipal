@@ -3,10 +3,54 @@ import { Suspense } from "react";
 import { getAllMunicipiosForMap } from "@/lib/scoring-data";
 import { MapPageClient } from "./MapPageClient";
 
-export const metadata: Metadata = {
-  title: "Mapa Provincial",
-  description: "Mapa interactivo de los 135 municipios de la Provincia de Buenos Aires coloreados por score.",
-};
+interface PageSearchParams {
+  a?: string;
+  b?: string;
+  compare?: string;
+}
+
+interface MapaPageProps {
+  searchParams: Promise<PageSearchParams>;
+}
+
+/**
+ * Sprint 39 — OG image dinámica que refleja el state del comparador
+ * via URL params. Renderea Twitter cards distintas según `?a=...&b=...&compare=1`.
+ *
+ * Hacer la página dynamic (consume `searchParams`) es trade-off aceptable:
+ * `/mapa` deja de prerenderizarse estático, pero ganamos previews
+ * compartibles en redes. El render del HTML sigue siendo trivial porque
+ * el contenido pesado (mapa interactivo) ya era client-side dinámico.
+ */
+export async function generateMetadata(
+  { searchParams }: MapaPageProps,
+): Promise<Metadata> {
+  const { a, b, compare } = await searchParams;
+
+  // Serializa sólo los params no-default para mantener canonical URLs
+  // alineadas con el sync que hace MapPageClient.
+  const ogParams = new URLSearchParams();
+  if (a && a !== "scoreTotal") ogParams.set("a", a);
+  if (compare === "1") {
+    ogParams.set("compare", "1");
+    if (b && b !== "scoreFiscal") ogParams.set("b", b);
+  }
+  const qs = ogParams.toString();
+  const ogImageUrl = qs ? `/api/og/mapa?${qs}` : "/api/og/mapa";
+
+  return {
+    title: "Mapa Provincial",
+    description:
+      "Mapa interactivo de los 135 municipios de la Provincia de Buenos Aires coloreados por score.",
+    openGraph: {
+      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [ogImageUrl],
+    },
+  };
+}
 
 /**
  * Sprint 38 — Suspense boundary necesario porque `MapPageClient` lee
@@ -28,7 +72,7 @@ function MapFallback() {
   );
 }
 
-export default function MapaPage() {
+export default function MapaPage(_props: MapaPageProps) {
   const entries = getAllMunicipiosForMap("scoreTotal");
 
   return (
