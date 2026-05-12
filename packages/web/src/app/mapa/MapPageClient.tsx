@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import {
   getAllMunicipiosForMap,
   getAllMunicipiosForVialDensity,
@@ -41,6 +42,14 @@ type MetricKind = "score" | "vialDensity" | "pesosPorKm";
 
 type MetricOption = { key: string; label: string };
 
+/**
+ * Sprint 38 — defaults usados como source of truth para construir URLs
+ * limpias. Si el state coincide con el default, NO se serializa al URL
+ * (i.e. /mapa stays /mapa, no /mapa?a=scoreTotal&b=scoreFiscal&compare=0).
+ */
+const DEFAULT_METRIC_A = "scoreTotal";
+const DEFAULT_METRIC_B = "scoreFiscal";
+
 const METRIC_OPTIONS: MetricOption[] = [
   { key: "scoreTotal", label: "Score total" },
   { key: "scoreTransparencia", label: "Transparencia" },
@@ -58,6 +67,8 @@ const METRIC_OPTIONS: MetricOption[] = [
   { key: VIAL_DENSITY_KEY, label: "Densidad vial rural (km/km²)" },
   { key: PESOS_POR_KM_KEY, label: "Pesos por km de red vial ($/km)" },
 ];
+
+const VALID_METRIC_KEYS = new Set(METRIC_OPTIONS.map((m) => m.key));
 
 type MapEntry = {
   id: string;
@@ -105,11 +116,38 @@ interface MapPageClientProps {
 }
 
 export function MapPageClient({ initialEntries }: MapPageClientProps) {
-  const [selectedMetric, setSelectedMetric] = useState<string>("scoreTotal");
-  const [compareMode, setCompareMode] = useState<boolean>(false);
-  // Default secundario sugerente: scoreFiscal junto al scoreTotal abre la
-  // pregunta natural "¿qué partidos suben el total a pesar de fiscal flojo?".
-  const [compareMetric, setCompareMetric] = useState<string>("scoreFiscal");
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  // Lazy initializers: leen del URL una sola vez al mount. Después de eso
+  // el state es source of truth y syncha al URL via useEffect.
+  const [selectedMetric, setSelectedMetric] = useState<string>(() => {
+    const a = searchParams.get("a");
+    return a && VALID_METRIC_KEYS.has(a) ? a : DEFAULT_METRIC_A;
+  });
+  const [compareMode, setCompareMode] = useState<boolean>(
+    () => searchParams.get("compare") === "1",
+  );
+  const [compareMetric, setCompareMetric] = useState<string>(() => {
+    const b = searchParams.get("b");
+    return b && VALID_METRIC_KEYS.has(b) ? b : DEFAULT_METRIC_B;
+  });
+
+  // Sync state → URL. router.replace evita pollución del history con
+  // cada cambio de métrica (back button salta a la página anterior, no
+  // a la métrica anterior). Sólo serializamos lo que difiere del default.
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedMetric !== DEFAULT_METRIC_A) params.set("a", selectedMetric);
+    if (compareMode) {
+      params.set("compare", "1");
+      if (compareMetric !== DEFAULT_METRIC_B) params.set("b", compareMetric);
+    }
+    const qs = params.toString();
+    const newUrl = qs ? `${pathname}?${qs}` : pathname;
+    router.replace(newUrl, { scroll: false });
+  }, [selectedMetric, compareMode, compareMetric, pathname, router]);
 
   const slotA = useMemo(
     () => resolveMetric(selectedMetric, initialEntries),

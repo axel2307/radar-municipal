@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getAllMunicipiosForMap } from "@/lib/scoring-data";
 import { MapPageClient } from "./MapPageClient";
 
@@ -6,6 +7,26 @@ export const metadata: Metadata = {
   title: "Mapa Provincial",
   description: "Mapa interactivo de los 135 municipios de la Provincia de Buenos Aires coloreados por score.",
 };
+
+/**
+ * Sprint 38 — Suspense boundary necesario porque `MapPageClient` lee
+ * `useSearchParams` para inicializar state desde URL (?a=...&b=...&compare=1).
+ * Sin esto, el build de producción falla con "Missing Suspense boundary".
+ */
+function MapFallback() {
+  return (
+    <div className="rounded-lg border border-border bg-card p-4">
+      <div
+        className="flex w-full items-center justify-center rounded-md bg-muted/30"
+        style={{ height: 520 }}
+        aria-busy="true"
+        aria-label="Cargando mapa..."
+      >
+        <span className="text-sm text-muted-foreground">Cargando mapa…</span>
+      </div>
+    </div>
+  );
+}
 
 export default function MapaPage() {
   const entries = getAllMunicipiosForMap("scoreTotal");
@@ -21,7 +42,9 @@ export default function MapaPage() {
         </p>
       </div>
 
-      <MapPageClient initialEntries={entries} />
+      <Suspense fallback={<MapFallback />}>
+        <MapPageClient initialEntries={entries} />
+      </Suspense>
     </div>
   );
 }
