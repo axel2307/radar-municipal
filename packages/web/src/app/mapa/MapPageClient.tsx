@@ -46,9 +46,14 @@ type MetricOption = { key: string; label: string };
  * Sprint 38 — defaults usados como source of truth para construir URLs
  * limpias. Si el state coincide con el default, NO se serializa al URL
  * (i.e. /mapa stays /mapa, no /mapa?a=scoreTotal&b=scoreFiscal&compare=0).
+ *
+ * Sprint 40 — exportados para que la canonicalización + redirect en
+ * `page.tsx` (server) use exactamente los mismos defaults que el sync
+ * client. Garantiza coherencia entre lo que el server redirige y lo que
+ * el client serializa al URL.
  */
-const DEFAULT_METRIC_A = "scoreTotal";
-const DEFAULT_METRIC_B = "scoreFiscal";
+export const DEFAULT_METRIC_A = "scoreTotal";
+export const DEFAULT_METRIC_B = "scoreFiscal";
 
 const METRIC_OPTIONS: MetricOption[] = [
   { key: "scoreTotal", label: "Score total" },
@@ -68,7 +73,7 @@ const METRIC_OPTIONS: MetricOption[] = [
   { key: PESOS_POR_KM_KEY, label: "Pesos por km de red vial ($/km)" },
 ];
 
-const VALID_METRIC_KEYS = new Set(METRIC_OPTIONS.map((m) => m.key));
+export const VALID_METRIC_KEYS = new Set(METRIC_OPTIONS.map((m) => m.key));
 
 type MapEntry = {
   id: string;
