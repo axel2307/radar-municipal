@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
+import { CommandPaletteTrigger } from "@/components/CommandPalette";
 
 /**
  * Sprint 41B — nav cleanup.
@@ -69,11 +70,15 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile hamburger — recibe primary + secondary con separador */}
-        <MobileNav
-          primaryItems={PRIMARY_NAV_ITEMS}
-          secondaryItems={SECONDARY_NAV_ITEMS}
-        />
+        <div className="flex items-center gap-2">
+          {/* Sprint 45A — Command palette trigger (desktop only, mobile usa hamburger) */}
+          <CommandPaletteTrigger />
+          {/* Mobile hamburger — recibe primary + secondary con separador */}
+          <MobileNav
+            primaryItems={PRIMARY_NAV_ITEMS}
+            secondaryItems={SECONDARY_NAV_ITEMS}
+          />
+        </div>
       </nav>
     </header>
   );

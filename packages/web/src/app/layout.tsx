@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { CommandPalette } from "@/components/CommandPalette";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -75,6 +76,8 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* Sprint 45A — Global ⌘K / Ctrl+K palette */}
+        <CommandPalette />
       </body>
     </html>
   );
