@@ -561,11 +561,11 @@ export function ProvinceMap({
               type="button"
               onClick={handleZoomIn}
               disabled={view.k >= MAX_ZOOM}
-              className="flex h-7 w-7 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
+              className="flex h-10 w-10 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
               aria-label="Acercar"
               title="Acercar (Ctrl + rueda del mouse para zoom continuo)"
             >
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 <line x1="8" y1="3" x2="8" y2="13" />
                 <line x1="3" y1="8" x2="13" y2="8" />
               </svg>
@@ -574,11 +574,11 @@ export function ProvinceMap({
               type="button"
               onClick={handleZoomOut}
               disabled={view.k <= MIN_ZOOM}
-              className="flex h-7 w-7 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
+              className="flex h-10 w-10 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
               aria-label="Alejar"
               title="Alejar"
             >
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                 <line x1="3" y1="8" x2="13" y2="8" />
               </svg>
             </button>
@@ -586,11 +586,11 @@ export function ProvinceMap({
               type="button"
               onClick={handleReset}
               disabled={view.k === 1 && view.tx === 0 && view.ty === 0}
-              className="flex h-7 w-7 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
+              className="flex h-10 w-10 items-center justify-center rounded text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-40"
               aria-label="Resetear vista"
               title="Resetear vista"
             >
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M3 8 a5 5 0 1 0 1.5 -3.5" />
                 <polyline points="3 2 3 5 6 5" />
               </svg>

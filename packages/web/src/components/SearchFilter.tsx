@@ -111,7 +111,8 @@ export function SearchFilter({
 
   return (
     <div className="mb-6 space-y-3">
-      {/* Search input */}
+      {/* Search input — Sprint 43B: aria-label explícito (placeholder no es
+          label accesible para screen readers) + SVG decorativo aria-hidden. */}
       <div className="relative">
         <svg
           className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
@@ -119,6 +120,7 @@ export function SearchFilter({
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -127,7 +129,8 @@ export function SearchFilter({
           />
         </svg>
         <input
-          type="text"
+          type="search"
+          aria-label="Buscar municipio"
           value={query}
           onChange={(e) => handleQueryChange(e.target.value)}
           placeholder="Buscar municipio..."
@@ -139,6 +142,8 @@ export function SearchFilter({
       <button
         type="button"
         onClick={() => setFiltersOpen(!filtersOpen)}
+        aria-expanded={filtersOpen}
+        aria-controls="search-filters-panel"
         className={cn(
           "flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium transition-colors sm:hidden",
           hasActiveFilters
@@ -146,7 +151,14 @@ export function SearchFilter({
             : "bg-card text-muted-foreground hover:bg-muted",
         )}
       >
-        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <svg
+          className="h-3.5 w-3.5"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          aria-hidden="true"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -165,13 +177,17 @@ export function SearchFilter({
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </button>
 
       {/* Filter chips - always visible on desktop, toggled on mobile */}
-      <div className={cn("space-y-3", filtersOpen ? "block" : "hidden sm:block")}>
+      <div
+        id="search-filters-panel"
+        className={cn("space-y-3", filtersOpen ? "block" : "hidden sm:block")}
+      >
         {/* Region chips */}
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-medium text-muted-foreground min-w-[60px]">Region:</span>
