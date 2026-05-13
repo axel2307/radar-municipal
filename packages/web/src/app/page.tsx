@@ -803,7 +803,24 @@ export default function HomePage() {
           ·{" "}
           <Link href="/acerca-de" className="hover:text-primary hover:underline">
             Acerca del proyecto
-          </Link>
+          </Link>{" "}
+          ·{" "}
+          {/* Sprint 47C — RSS discoverable */}
+          <a
+            href="/feed.xml"
+            className="inline-flex items-center gap-1 hover:text-primary hover:underline"
+            title="Suscribite al RSS"
+          >
+            <svg
+              className="h-3 w-3"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M4 4v3.55c8.83 0 16 7.17 16 16h3.55C23.55 13.21 14.79 4 4 4zm0 6v3.55c5.6 0 10.13 4.53 10.13 10.13H17.7C17.7 16.11 11.59 10 4 10zm2.96 9.06a2.04 2.04 0 100 4.08 2.04 2.04 0 000-4.08z" />
+            </svg>
+            Suscribite al RSS
+          </a>
         </p>
       </section>
     </div>

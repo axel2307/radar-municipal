@@ -1,24 +1,52 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Home", () => {
-  test("renders hero with main CTAs", async ({ page }) => {
+test.describe("Home (post-Sprint 41-46)", () => {
+  test("renders hero con CTAs Ranking · Mapa · Metodología", async ({ page }) => {
     await page.goto("/");
 
     await expect(
       page.getByRole("heading", { level: 1, name: /Radar Municipal/i }),
     ).toBeVisible();
 
-    // Hero CTAs: scope via the exact button labels so we don't collide
-    // with the copies in the navbar and footer.
+    // Sprint 41A — hero ahora tiene 3 CTAs (no 2). Mapa es el primary visual.
     await expect(
       page.getByRole("link", { name: "Ver ranking", exact: true }),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: "Conocer la metodología", exact: true }),
+      page.getByRole("link", { name: "Explorar mapa", exact: true }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Metodología", exact: true }).first(),
     ).toBeVisible();
   });
 
-  test("primary CTA navigates to /ranking", async ({ page }) => {
+  test("muestra stats bar con counts", async ({ page }) => {
+    await page.goto("/");
+    // 4 cards en stats bar — "135 Municipios bonaerenses"
+    await expect(page.getByText(/Municipios bonaerenses/i)).toBeVisible();
+    await expect(page.getByText(/Piloto con scoring completo/i)).toBeVisible();
+    await expect(page.getByText(/Dimensiones de análisis/i)).toBeVisible();
+  });
+
+  test("sección '¿Qué buscás?' surfacea las 6 navegaciones", async ({ page }) => {
+    await page.goto("/");
+    // Sprint 46 — wayfinding cards. Cada label debe estar accesible.
+    await expect(
+      page.getByRole("heading", { name: /¿Qué buscás\?/i }),
+    ).toBeVisible();
+    for (const label of [
+      "Tu municipio",
+      "Comparar 2-3 municipios",
+      "Mirada provincial",
+      "¿Cuánto pago de impuestos?",
+      "Licitaciones públicas",
+      "Para tu blog o medio",
+    ]) {
+      await expect(page.getByRole("heading", { name: label })).toBeVisible();
+    }
+  });
+
+  test("CTA hero Ranking navega a /ranking", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "Ver ranking", exact: true }).click();
 
@@ -28,7 +56,7 @@ test.describe("Home", () => {
     ).toBeVisible();
   });
 
-  test("exposes OpenGraph image metadata", async ({ page }) => {
+  test("expone OpenGraph image metadata", async ({ page }) => {
     const response = await page.goto("/");
     expect(response?.ok()).toBeTruthy();
 

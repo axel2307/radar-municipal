@@ -48,6 +48,15 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
+    // Sprint 47C — discovery automática del RSS por feed readers
+    types: {
+      "application/rss+xml": [
+        {
+          url: `${SITE_URL}/feed.xml`,
+          title: "Radar Municipal — Novedades",
+        },
+      ],
+    },
   },
 };
 
