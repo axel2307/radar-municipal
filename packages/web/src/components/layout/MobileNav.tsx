@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useFocusTrap } from "@/lib/hooks/useFocusTrap";
 
 interface NavItem {
   href: string;
@@ -31,6 +32,11 @@ export function MobileNav({ primaryItems, secondaryItems = [] }: MobileNavProps)
   const pathname = usePathname();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  // Sprint 47A — Focus trap: Tab/Shift+Tab no escapan del drawer cuando
+  // está abierto. WCAG 2.1.2 + WAI-ARIA modal dialog pattern.
+  useFocusTrap(open, drawerRef);
 
   // Cerrar al navegar
   useEffect(() => {
@@ -123,13 +129,17 @@ export function MobileNav({ primaryItems, secondaryItems = [] }: MobileNavProps)
 
       {/* Drawer */}
       <div
+        ref={drawerRef}
         id="mobile-nav-drawer"
         role="dialog"
         aria-modal="true"
         aria-label="Menú de navegación"
         aria-hidden={!open}
         className={cn(
-          "fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ease-in-out md:hidden overflow-y-auto",
+          // Sprint 47A — `motion-reduce:transition-none` respeta
+          // prefers-reduced-motion: el drawer aparece/desaparece sin slide
+          // para usuarios con sensibilidad vestibular.
+          "fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ease-in-out motion-reduce:transition-none md:hidden overflow-y-auto",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >

@@ -10,6 +10,7 @@ import {
 } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useFocusTrap } from "@/lib/hooks/useFocusTrap";
 import {
   searchCommandIndex,
   type CommandItem,
@@ -54,8 +55,14 @@ export function CommandPalette() {
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const prevFocusRef = useRef<HTMLElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const results = useMemo(() => searchCommandIndex(query, undefined, 50), [query]);
+
+  // Sprint 47A — Focus trap dentro del dialog. Combinado con Tab manual
+  // sobre los results (que NO son focusables — usa selectedIdx), el trap
+  // mantiene foco en el input + ESC button.
+  useFocusTrap(open, dialogRef);
 
   // ⌘K / Ctrl+K global listener + custom event "open-command-palette" para
   // triggers programáticos (e.g. botón en navbar). Acoplamiento débil:
@@ -157,6 +164,7 @@ export function CommandPalette() {
 
       {/* Modal */}
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-label="Buscar"
