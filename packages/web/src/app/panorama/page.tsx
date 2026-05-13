@@ -9,6 +9,7 @@ import {
   getVialCrossMetrics,
 } from "@/lib/scoring-data";
 import { MUNICIPIOS } from "@radar-municipal/core";
+import { allNormativaData } from "@/lib/scoring-data/loaders";
 import { ScoreDistribution } from "@/components/ScoreDistribution";
 import { DataCoverageHeatmap } from "@/components/DataCoverageHeatmap";
 import { ScoreBadge } from "@/components/ScoreBadge";
@@ -55,6 +56,12 @@ export default function PanoramaPage() {
     .sort((a, b) => b.pesosPorKm - a.pesosPorKm);
   const vialTop3 = vialRows.slice(0, 3);
   const vialBottom3 = vialRows.slice(-3).reverse();
+  // Sprint 44B — Pilar 3 (Normativa) stats agregados
+  const normativaRows = [...allNormativaData.values()];
+  const normativaConBoletin = normativaRows.filter((r) => r.tieneBoletinSibom).length;
+  const normativaConOrdenanza = normativaRows.filter((r) => r.ordenanzaFiscalVigente != null).length;
+  const normativaConAdjudicaciones = normativaRows.filter((r) => r.compras.publicaAdjudicaciones).length;
+
   const vialRatio =
     vialRows.length >= 2
       ? Math.round(vialRows[0].pesosPorKm / vialRows[vialRows.length - 1].pesosPorKm)
@@ -163,7 +170,70 @@ export default function PanoramaPage() {
         </div>
       </section>
 
-      {/* Section 4: Pilar 5 — Pesos por km (Sprint 41C) */}
+      {/* Section 4: Pilar 3 — Normativa & SIBOM (Sprint 44B) */}
+      {normativaRows.length > 0 && (
+        <section className="mb-12">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+            <h2 className="text-lg font-semibold">
+              Pilar 3 — Normativa &amp; publicación institucional
+            </h2>
+            <Link
+              href="/dimensiones/normativa"
+              className="text-sm font-medium text-blue-700 hover:underline"
+            >
+              Ver ranking detallado →
+            </Link>
+          </div>
+          <p className="text-sm text-muted-foreground mb-4">
+            Cobertura del piloto en boletín SIBOM, ordenanzas fiscales y
+            publicación de adjudicaciones.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-lg border-2 border-blue-200 bg-blue-50/40 p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Boletín SIBOM
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums text-blue-700">
+                {normativaConBoletin}
+                <span className="text-sm text-muted-foreground">
+                  /{normativaRows.length}
+                </span>
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">publican boletín</p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Ordenanza fiscal
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums">
+                {normativaConOrdenanza}
+                <span className="text-sm text-muted-foreground">
+                  /{normativaRows.length}
+                </span>
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                con ord. impositiva trazable
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Adjudicaciones
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums">
+                {normativaConAdjudicaciones}
+                <span className="text-sm text-muted-foreground">
+                  /{normativaRows.length}
+                </span>
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                publican quién ganó la licitación
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 5: Pilar 5 — Pesos por km (Sprint 41C) */}
       {vialRows.length > 0 && (
         <section className="mb-12">
           <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
@@ -228,7 +298,7 @@ export default function PanoramaPage() {
         </section>
       )}
 
-      {/* Section 5: Data Coverage Heatmap */}
+      {/* Section 6: Data Coverage Heatmap */}
       <section className="mb-12">
         <h2 className="text-lg font-semibold mb-1">Cobertura de datos</h2>
         <p className="text-sm text-muted-foreground mb-4">
