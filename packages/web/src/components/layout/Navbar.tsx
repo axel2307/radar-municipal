@@ -39,6 +39,11 @@ const SECONDARY_NAV_ITEMS = [
 export function Navbar() {
   const pathname = usePathname();
 
+  // Sprint 45C — En /embed/* el iframe quiere su altura entera para el
+  // widget. Sin navbar, sin footer. RootLayout sigue montando este componente
+  // pero retorna null cuando estamos en una ruta embed.
+  if (pathname?.startsWith("/embed")) return null;
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">

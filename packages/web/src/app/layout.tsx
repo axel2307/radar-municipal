@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { HideOnEmbed } from "@/components/layout/EmbedGate";
 import { JsonLd } from "@/components/JsonLd";
 import { CommandPalette } from "@/components/CommandPalette";
 import "./globals.css";
@@ -75,9 +76,14 @@ export default function RootLayout({
         }} />
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
+        {/* Sprint 45C — Footer oculto en /embed/* via HideOnEmbed gate */}
+        <HideOnEmbed>
+          <Footer />
+        </HideOnEmbed>
         {/* Sprint 45A — Global ⌘K / Ctrl+K palette */}
-        <CommandPalette />
+        <HideOnEmbed>
+          <CommandPalette />
+        </HideOnEmbed>
       </body>
     </html>
   );
