@@ -5,7 +5,10 @@ import {
   getScoreDistribution,
   getRegionalAverages,
   getDataCoverage,
+  getVialCrossCoverage,
+  getVialCrossMetrics,
 } from "@/lib/scoring-data";
+import { MUNICIPIOS } from "@radar-municipal/core";
 import { ScoreDistribution } from "@/components/ScoreDistribution";
 import { DataCoverageHeatmap } from "@/components/DataCoverageHeatmap";
 import { ScoreBadge } from "@/components/ScoreBadge";
@@ -37,6 +40,25 @@ export default function PanoramaPage() {
     0,
   );
   const coveragePct = totalCells > 0 ? Math.round((filledCells / totalCells) * 100) : 0;
+
+  // Sprint 41C — Pilar 5 outliers (cross fiscal × vial OSM)
+  const vialCov = getVialCrossCoverage();
+  const byId = new Map(MUNICIPIOS.map((m) => [m.id, m]));
+  const vialRows = vialCov.ids
+    .map((id) => {
+      const m = getVialCrossMetrics(id);
+      const muni = byId.get(id);
+      if (!m || !muni) return null;
+      return { id, nombre: muni.nombre, pesosPorKm: m.pesosPorKm };
+    })
+    .filter((x): x is { id: string; nombre: string; pesosPorKm: number } => x !== null)
+    .sort((a, b) => b.pesosPorKm - a.pesosPorKm);
+  const vialTop3 = vialRows.slice(0, 3);
+  const vialBottom3 = vialRows.slice(-3).reverse();
+  const vialRatio =
+    vialRows.length >= 2
+      ? Math.round(vialRows[0].pesosPorKm / vialRows[vialRows.length - 1].pesosPorKm)
+      : null;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -141,7 +163,72 @@ export default function PanoramaPage() {
         </div>
       </section>
 
-      {/* Section 4: Data Coverage Heatmap */}
+      {/* Section 4: Pilar 5 — Pesos por km (Sprint 41C) */}
+      {vialRows.length > 0 && (
+        <section className="mb-12">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+            <h2 className="text-lg font-semibold">
+              Pilar 5 — Pesos por km de red vial
+            </h2>
+            <Link
+              href="/dimensiones/red-vial"
+              className="text-sm font-medium text-violet-700 hover:underline"
+            >
+              Ver ranking completo →
+            </Link>
+          </div>
+          <p className="text-sm text-muted-foreground mb-4">
+            Cross fiscal × OSM. {vialRows.length} partidos con datos completos
+            {vialRatio && (
+              <>
+                {" "}· variance <strong>{vialRatio}×</strong> entre el mayor y el menor
+              </>
+            )}.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-violet-700 mb-2">
+                Mayor gasto / km
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {vialTop3.map((r) => (
+                  <Link
+                    key={r.id}
+                    href={`/municipios/${r.id}/economia`}
+                    className="flex items-center justify-between rounded-md border border-violet-200 bg-violet-50/40 px-3 py-2 hover:bg-violet-50 transition-colors"
+                  >
+                    <span className="font-medium text-sm">{r.nombre}</span>
+                    <span className="text-sm font-bold text-violet-700 tabular-nums">
+                      ${(r.pesosPorKm / 1e6).toFixed(2)}M / km
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-pink-700 mb-2">
+                Menor gasto / km
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {vialBottom3.map((r) => (
+                  <Link
+                    key={r.id}
+                    href={`/municipios/${r.id}/economia`}
+                    className="flex items-center justify-between rounded-md border border-pink-200 bg-pink-50/40 px-3 py-2 hover:bg-pink-50 transition-colors"
+                  >
+                    <span className="font-medium text-sm">{r.nombre}</span>
+                    <span className="text-sm font-bold text-pink-700 tabular-nums">
+                      ${(r.pesosPorKm / 1e6).toFixed(2)}M / km
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 5: Data Coverage Heatmap */}
       <section className="mb-12">
         <h2 className="text-lg font-semibold mb-1">Cobertura de datos</h2>
         <p className="text-sm text-muted-foreground mb-4">
