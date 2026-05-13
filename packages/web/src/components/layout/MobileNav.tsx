@@ -5,11 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-interface MobileNavProps {
-  items: { href: string; label: string }[];
+interface NavItem {
+  href: string;
+  label: string;
 }
 
-export function MobileNav({ items }: MobileNavProps) {
+interface MobileNavProps {
+  /** Items principales visibles en desktop. */
+  primaryItems: NavItem[];
+  /** Items secundarios — solo accesibles desde mobile drawer y footer. */
+  secondaryItems?: NavItem[];
+}
+
+export function MobileNav({ primaryItems, secondaryItems = [] }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -29,6 +37,21 @@ export function MobileNav({ items }: MobileNavProps) {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const renderItem = (item: NavItem) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      className={cn(
+        "flex items-center rounded-lg px-4 py-3 text-base font-medium transition-colors",
+        pathname?.startsWith(item.href)
+          ? "bg-primary/10 text-primary"
+          : "text-foreground hover:bg-muted",
+      )}
+    >
+      {item.label}
+    </Link>
+  );
 
   return (
     <>
@@ -54,12 +77,12 @@ export function MobileNav({ items }: MobileNavProps) {
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ease-in-out md:hidden",
+          "fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ease-in-out md:hidden overflow-y-auto",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >
         {/* Header */}
-        <div className="flex h-16 items-center justify-between border-b border-border px-4">
+        <div className="flex h-16 items-center justify-between border-b border-border px-4 sticky top-0 bg-white">
           <span className="text-lg font-semibold text-primary">Menú</span>
           <button
             onClick={() => setOpen(false)}
@@ -74,20 +97,17 @@ export function MobileNav({ items }: MobileNavProps) {
 
         {/* Nav items */}
         <nav className="px-2 py-4">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex items-center rounded-lg px-4 py-3 text-base font-medium transition-colors",
-                pathname?.startsWith(item.href)
-                  ? "bg-primary/10 text-primary"
-                  : "text-foreground hover:bg-muted"
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {primaryItems.map(renderItem)}
+
+          {secondaryItems.length > 0 && (
+            <>
+              <div className="my-3 border-t border-border" />
+              <p className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Análisis profundo
+              </p>
+              {secondaryItems.map(renderItem)}
+            </>
+          )}
         </nav>
       </div>
     </>

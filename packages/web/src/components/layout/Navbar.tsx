@@ -5,18 +5,33 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./MobileNav";
 
-const NAV_ITEMS = [
+/**
+ * Sprint 41B — nav cleanup.
+ *
+ * Desktop top nav: solo 5 items principales (Ranking · Mapa · Comparador ·
+ * Datos · Metodología). Los 7 restantes (análisis profundo + acerca de) van
+ * al footer y al mobile drawer.
+ *
+ * Decisión clave: NO redirigir `/compras`, `/presion-impositiva`,
+ * `/calidad-datos` a `/dimensiones/<slug>` porque cada una tiene contenido
+ * único (panels custom, casos testigo, coverage expandible) que el slug page
+ * NO replica.
+ */
+const PRIMARY_NAV_ITEMS = [
   { href: "/ranking", label: "Ranking" },
-  { href: "/dimensiones", label: "Dimensiones" },
   { href: "/mapa", label: "Mapa" },
+  { href: "/comparador", label: "Comparador" },
+  { href: "/datos-abiertos", label: "Datos" },
+  { href: "/metodologia", label: "Metodología" },
+];
+
+const SECONDARY_NAV_ITEMS = [
+  { href: "/municipios", label: "Municipios" },
   { href: "/panorama", label: "Panorama" },
-  { href: "/calidad-datos", label: "Calidad de datos" },
+  { href: "/dimensiones", label: "Dimensiones" },
   { href: "/presion-impositiva", label: "Presión impositiva" },
   { href: "/compras", label: "Compras" },
-  { href: "/municipios", label: "Municipios" },
-  { href: "/comparador", label: "Comparador" },
-  { href: "/metodologia", label: "Metodología" },
-  { href: "/datos-abiertos", label: "Datos abiertos" },
+  { href: "/calidad-datos", label: "Calidad de datos" },
   { href: "/acerca-de", label: "Acerca de" },
 ];
 
@@ -35,9 +50,9 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav — hidden on mobile */}
+        {/* Desktop nav — solo PRIMARY, hidden on mobile */}
         <ul className="hidden md:flex items-center gap-1">
-          {NAV_ITEMS.map((item) => (
+          {PRIMARY_NAV_ITEMS.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
@@ -54,8 +69,11 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile hamburger menu */}
-        <MobileNav items={NAV_ITEMS} />
+        {/* Mobile hamburger — recibe primary + secondary con separador */}
+        <MobileNav
+          primaryItems={PRIMARY_NAV_ITEMS}
+          secondaryItems={SECONDARY_NAV_ITEMS}
+        />
       </nav>
     </header>
   );
