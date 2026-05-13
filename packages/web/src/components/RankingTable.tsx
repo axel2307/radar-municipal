@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ScoringCategory } from "@radar-municipal/core";
 import { ScoreBadge } from "@/components/ScoreBadge";
 import { formatNumber } from "@/lib/utils";
+import { CATEGORY_BADGE } from "@/lib/colors";
 
 interface RankingRow {
   posicion: number;
@@ -46,13 +47,16 @@ const CATEGORIES: {
   scoringCategory: ScoringCategory;
   columns: { label: string; field: keyof RankingRow }[];
 }[] = [
+  // Sprint 41D — colores generados desde CATEGORY_BADGE (source of truth).
+  // Bug histórico fixeado: "infra" usaba `purple` cuando home/dimensiones
+  // usan `violet`. Ahora todas las consumers comparten el mismo violet.
   {
     key: "gobierno",
     label: "Gobierno Abierto",
     shortLabel: "Gob.",
-    color: "border-blue-300",
+    color: CATEGORY_BADGE[ScoringCategory.GOBIERNO_ABIERTO].borderStrong,
     textColor: "text-blue-600",
-    bgColor: "bg-blue-100",
+    bgColor: CATEGORY_BADGE[ScoringCategory.GOBIERNO_ABIERTO].bg,
     scoringCategory: ScoringCategory.GOBIERNO_ABIERTO,
     columns: [
       { label: "Transp.", field: "scoreTransparencia" },
@@ -64,9 +68,9 @@ const CATEGORIES: {
     key: "economia",
     label: "Economía y Finanzas",
     shortLabel: "Econ.",
-    color: "border-amber-300",
+    color: CATEGORY_BADGE[ScoringCategory.ECONOMIA_FINANZAS].borderStrong,
     textColor: "text-amber-600",
-    bgColor: "bg-amber-100",
+    bgColor: CATEGORY_BADGE[ScoringCategory.ECONOMIA_FINANZAS].bg,
     scoringCategory: ScoringCategory.ECONOMIA_FINANZAS,
     columns: [
       { label: "Fiscal", field: "scoreFiscal" },
@@ -79,9 +83,9 @@ const CATEGORIES: {
     key: "calidad",
     label: "Calidad de Vida",
     shortLabel: "Cal.",
-    color: "border-green-300",
+    color: CATEGORY_BADGE[ScoringCategory.CALIDAD_DE_VIDA].borderStrong,
     textColor: "text-green-600",
-    bgColor: "bg-green-100",
+    bgColor: CATEGORY_BADGE[ScoringCategory.CALIDAD_DE_VIDA].bg,
     scoringCategory: ScoringCategory.CALIDAD_DE_VIDA,
     columns: [
       { label: "Servicios", field: "scoreServiciosBasicos" },
@@ -94,9 +98,9 @@ const CATEGORIES: {
     key: "infra",
     label: "Infraestructura",
     shortLabel: "Infra.",
-    color: "border-purple-300",
-    textColor: "text-purple-600",
-    bgColor: "bg-purple-100",
+    color: CATEGORY_BADGE[ScoringCategory.INFRAESTRUCTURA_MOVILIDAD].borderStrong,
+    textColor: "text-violet-600",
+    bgColor: CATEGORY_BADGE[ScoringCategory.INFRAESTRUCTURA_MOVILIDAD].bg,
     scoringCategory: ScoringCategory.INFRAESTRUCTURA_MOVILIDAD,
     columns: [
       { label: "Seg.Vial", field: "scoreSeguridadVial" },

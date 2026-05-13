@@ -1,9 +1,22 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ScoringCategory, SCORING_CATEGORIES } from "@radar-municipal/core";
 import { getRanking, getAuditDate } from "@/lib/scoring-data";
 import { API_BASE_URL } from "@/lib/config";
 import { FilterableRanking } from "@/components/FilterableRanking";
 import { ShareButton } from "@/components/ShareButton";
+import { CATEGORY_BADGE } from "@/lib/colors";
+import { cn } from "@/lib/utils";
+
+// Sprint 41D — leyenda generada desde el source-of-truth (SCORING_CATEGORIES
+// + CATEGORY_BADGE) en lugar de hardcoded. Si se agregan categorías nuevas
+// o cambian colores, este bloque se actualiza solo.
+const LEGEND_ORDER: ScoringCategory[] = [
+  ScoringCategory.GOBIERNO_ABIERTO,
+  ScoringCategory.ECONOMIA_FINANZAS,
+  ScoringCategory.CALIDAD_DE_VIDA,
+  ScoringCategory.INFRAESTRUCTURA_MOVILIDAD,
+];
 
 export const metadata: Metadata = {
   title: "Ranking",
@@ -27,20 +40,24 @@ export default function RankingPage() {
         <ShareButton title="Ranking de Municipios - Radar Municipal" />
       </div>
 
-      {/* Leyenda de categorías */}
+      {/* Leyenda de categorías — Sprint 41D generada desde shared colors */}
       <div className="mb-4 flex flex-wrap gap-3 text-xs">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-2.5 py-1 text-blue-700 font-medium">
-          Gobierno Abierto (25%)
-        </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-2.5 py-1 text-amber-700 font-medium">
-          Economía y Finanzas (30%)
-        </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-2.5 py-1 text-green-700 font-medium">
-          Calidad de Vida (30%)
-        </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-2.5 py-1 text-purple-700 font-medium">
-          Infraestructura (15%)
-        </span>
+        {LEGEND_ORDER.map((cat) => {
+          const cfg = SCORING_CATEGORIES[cat];
+          const badge = CATEGORY_BADGE[cat];
+          return (
+            <span
+              key={cat}
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 font-medium",
+                badge.bg,
+                badge.text,
+              )}
+            >
+              {cfg.label} ({Math.round(cfg.peso * 100)}%)
+            </span>
+          );
+        })}
       </div>
 
       <FilterableRanking ranking={ranking} />

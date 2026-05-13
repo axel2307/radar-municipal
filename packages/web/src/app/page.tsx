@@ -19,8 +19,10 @@ import { ScoreBadge } from "@/components/ScoreBadge";
 import { HomeMapPreview } from "./HomeMapPreview";
 import { API_BASE_URL } from "@/lib/config";
 import { cn } from "@/lib/utils";
+import { CATEGORY_BADGE } from "@/lib/colors";
 
 // ─── Sprint 41A — Categorías reusables (alineadas con /dimensiones) ──────
+// Sprint 41D — colores movidos a `@/lib/colors` (source of truth única).
 
 const CATEGORY_ORDER: ScoringCategory[] = [
   ScoringCategory.GOBIERNO_ABIERTO,
@@ -28,32 +30,6 @@ const CATEGORY_ORDER: ScoringCategory[] = [
   ScoringCategory.CALIDAD_DE_VIDA,
   ScoringCategory.INFRAESTRUCTURA_MOVILIDAD,
 ];
-
-const CATEGORY_BADGE: Record<
-  ScoringCategory,
-  { bg: string; text: string; border: string }
-> = {
-  [ScoringCategory.GOBIERNO_ABIERTO]: {
-    bg: "bg-blue-100",
-    text: "text-blue-700",
-    border: "border-blue-200",
-  },
-  [ScoringCategory.ECONOMIA_FINANZAS]: {
-    bg: "bg-amber-100",
-    text: "text-amber-700",
-    border: "border-amber-200",
-  },
-  [ScoringCategory.CALIDAD_DE_VIDA]: {
-    bg: "bg-green-100",
-    text: "text-green-700",
-    border: "border-green-200",
-  },
-  [ScoringCategory.INFRAESTRUCTURA_MOVILIDAD]: {
-    bg: "bg-violet-100",
-    text: "text-violet-700",
-    border: "border-violet-200",
-  },
-};
 
 const HEALTH_DOT: Record<"healthy" | "degraded" | "stale", string> = {
   healthy: "bg-green-500",

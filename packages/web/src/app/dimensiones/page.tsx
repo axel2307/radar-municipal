@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ScoringCategory, ScoringDimension, SCORING_CATEGORIES } from "@radar-municipal/core";
 import { SCORING_DIMENSION_LABELS } from "@radar-municipal/core";
+import { CATEGORY_BADGE } from "@/lib/colors";
 
 export const metadata: Metadata = {
   title: "Dimensiones de análisis",
@@ -64,13 +65,7 @@ const CATEGORY_ORDER: ScoringCategory[] = [
   ScoringCategory.INFRAESTRUCTURA_MOVILIDAD,
 ];
 
-/** Tailwind badge colors per category */
-const CATEGORY_BADGE_COLORS: Record<ScoringCategory, { bg: string; text: string }> = {
-  [ScoringCategory.GOBIERNO_ABIERTO]: { bg: "bg-blue-100", text: "text-blue-700" },
-  [ScoringCategory.ECONOMIA_FINANZAS]: { bg: "bg-amber-100", text: "text-amber-700" },
-  [ScoringCategory.CALIDAD_DE_VIDA]: { bg: "bg-green-100", text: "text-green-700" },
-  [ScoringCategory.INFRAESTRUCTURA_MOVILIDAD]: { bg: "bg-violet-100", text: "text-violet-700" },
-};
+// Sprint 41D — colores movidos a `@/lib/colors` (source of truth única).
 
 export default function DimensionesPage() {
   return (
@@ -115,7 +110,7 @@ export default function DimensionesPage() {
       <div className="mt-12 space-y-12">
         {CATEGORY_ORDER.map((cat) => {
           const config = SCORING_CATEGORIES[cat];
-          const badge = CATEGORY_BADGE_COLORS[cat];
+          const badge = CATEGORY_BADGE[cat];
 
           return (
             <section key={cat}>

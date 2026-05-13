@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* ─── Color system (Sprint 41D) ──────────────────────────────────────────
+ *
+ * Significados:
+ *   - Score 0-100 (divergente): `--color-score-high|mid|low` abajo. Usar
+ *     via `text-score-high` etc. SOLO para valores 0-100.
+ *   - Categorías de scoring (4): blue/amber/green/violet, source of truth
+ *     en `@/lib/colors`. Importar `CATEGORY_BADGE`. NUNCA hardcodear
+ *     bg-X-100/text-X-700 con esos colores en otros archivos.
+ *   - Pilar 5 (cross-dimensional): mismo violeta que INFRAESTRUCTURA. Usar
+ *     `CROSS_DIMENSIONAL_BADGE` desde `@/lib/colors`.
+ *   - Status decorativo (OK/warn/err): green/amber/red 100/700 inline. OK
+ *     no centralizar — uso local, semáforo universal.
+ *   - Heatmaps no-score: paletas dedicadas (YlOrBr, PuRd) hardcodeadas en
+ *     `ProvinceMap.tsx`. NO confundir con los colores de categoría.
+ * ─────────────────────────────────────────────────────────────────────── */
+
 @theme inline {
   --color-primary: #1e3a5f;
   --color-primary-light: #2a5080;
