@@ -12,6 +12,7 @@ import {
 } from "@/lib/scoring-data";
 import { ScoreBadge } from "@/components/ScoreBadge";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { DeudaTimeSeries } from "@/components/DeudaTimeSeries";
 import { SpendingBreakdown } from "@/components/SpendingBreakdown";
 import { formatNumber, cn } from "@/lib/utils";
 
@@ -396,13 +397,18 @@ export default async function EconomiaPage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Histórico de snapshots — Sprint 22 */}
+              {/* Histórico de snapshots — Sprint 22 (tabla) + Sprint 45B (chart) */}
               {deudaSeries.length >= 2 && (
                 <div className="mb-4 rounded-lg border border-border bg-card p-4">
                   <h3 className="mb-3 text-sm font-semibold">
                     Histórico ({deudaSeries.length}{" "}
                     {deudaSeries.length === 1 ? "snapshot" : "snapshots"})
                   </h3>
+                  {/* Sprint 45B — line chart visual antes de la tabla detalle.
+                      El punto naranja highlightea el snapshot más reciente. */}
+                  <div className="mb-4 -ml-2">
+                    <DeudaTimeSeries series={deudaSeries} />
+                  </div>
                   <table className="w-full text-sm">
                     <thead className="text-left text-xs uppercase tracking-wide text-muted-foreground">
                       <tr>
