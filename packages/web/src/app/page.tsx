@@ -224,9 +224,10 @@ export default function HomePage() {
             <p className="mt-2 mb-4 text-muted-foreground">
               Click en cualquier partido para abrir su ficha completa.
             </p>
-            <div className="rounded-lg border border-border bg-card p-3">
-              <HomeMapPreview entries={mapEntries} />
-            </div>
+            {/* Sprint 47F — sin outer card. El ProvinceMap ya tiene su propio
+                chrome; HomeMapPreview renderea legend + atribución afuera del
+                card. Ganamos ~120px de área útil para el SVG. */}
+            <HomeMapPreview entries={mapEntries} />
             <p className="mt-3 text-xs text-muted-foreground">
               Coloreado por score total · 13 piloto con datos completos · 122
               sin datos (gris).{" "}

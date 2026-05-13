@@ -50,6 +50,18 @@ interface ProvinceMapProps {
    * 520px deja dead-space alrededor del SVG (que escala por width).
    */
   mapHeight?: number;
+  /**
+   * Sprint 47F — ocultar la leyenda de colores dentro del card. El caller
+   * puede renderearla afuera del card para aprovechar más espacio para el
+   * SVG. Útil en home preview donde el card ya es compacto.
+   */
+  hideLegend?: boolean;
+  /**
+   * Sprint 47F — ocultar atribución (link a Datos Abiertos PBA / ARBA).
+   * El caller debe garantizar atribución visible en algún lado de la
+   * página (licencia ODbL/CC-BY 4.0 lo requiere).
+   */
+  hideAttribution?: boolean;
 }
 
 interface PartidoProps {
@@ -248,6 +260,8 @@ export function ProvinceMap({
   compact = false,
   metricKind = "score",
   mapHeight,
+  hideLegend = false,
+  hideAttribution = false,
 }: ProvinceMapProps) {
   const { colorFn, formatValue, legendItems, legendLabel } =
     METRIC_KIND_CONFIGS[metricKind];
@@ -599,45 +613,59 @@ export function ProvinceMap({
         )}
       </div>
 
-      {/* Legend */}
-      <div
-        className={cn(
-          "mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground",
-          compact && "mt-2",
-        )}
-      >
-        <span>{legendLabel}</span>
-        {legendItems.map((item) => (
-          <span key={item.label} className="inline-flex items-center gap-1">
-            <span
-              className="inline-block h-3 w-3 rounded-sm"
-              style={{ backgroundColor: item.color }}
-            />
-            {item.label}
-          </span>
-        ))}
-        {!compact && (
-          <span className="inline-flex items-center gap-1">
-            <span
-              className="inline-block h-3 w-5 rounded-sm bg-gray-200"
-              style={{ outline: "1.5px solid rgb(99 102 241 / 0.95)" }}
-            />
-            Piloto
-          </span>
-        )}
-        <span className="ml-auto text-[11px]">
-          Geometría:{" "}
-          <a
-            href="https://catalogo.datos.gba.gob.ar/dataset/partidos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground"
-          >
-            Datos Abiertos PBA / ARBA
-          </a>{" "}
-          · CC-BY 4.0
-        </span>
-      </div>
+      {/* Legend + Atribución — Sprint 47F: cada uno opcional via prop.
+          Si ambos están hidden, el caller los renderea afuera del card. */}
+      {(!hideLegend || !hideAttribution) && (
+        <div
+          className={cn(
+            "mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground",
+            compact && "mt-2",
+          )}
+        >
+          {!hideLegend && (
+            <>
+              <span>{legendLabel}</span>
+              {legendItems.map((item) => (
+                <span
+                  key={item.label}
+                  className="inline-flex items-center gap-1"
+                >
+                  <span
+                    className="inline-block h-3 w-3 rounded-sm"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  {item.label}
+                </span>
+              ))}
+              {!compact && (
+                <span className="inline-flex items-center gap-1">
+                  <span
+                    className="inline-block h-3 w-5 rounded-sm bg-gray-200"
+                    style={{
+                      outline: "1.5px solid rgb(99 102 241 / 0.95)",
+                    }}
+                  />
+                  Piloto
+                </span>
+              )}
+            </>
+          )}
+          {!hideAttribution && (
+            <span className="ml-auto text-[11px]">
+              Geometría:{" "}
+              <a
+                href="https://catalogo.datos.gba.gob.ar/dataset/partidos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                Datos Abiertos PBA / ARBA
+              </a>{" "}
+              · CC-BY 4.0
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 }
