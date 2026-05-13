@@ -9,7 +9,8 @@
     "lint": "eslint",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build:partidos-topojson": "tsx scripts/partidos-to-topojson.ts"
   },
   "dependencies": {
     "@radar-municipal/core": "workspace:*",
@@ -32,11 +33,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/topojson-server": "^3.0.4",
+    "@types/topojson-specification": "^1.0.5",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "jsdom": "^26.0.0",
     "tailwindcss": "^4",
+    "topojson-server": "^3.0.1",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }

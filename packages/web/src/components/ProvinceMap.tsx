@@ -3,8 +3,15 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { geoMercator, geoPath } from "d3-geo";
+import { feature } from "topojson-client";
+import type { Topology, GeometryCollection } from "topojson-specification";
 import { cn, formatScore } from "@/lib/utils";
-import partidosRaw from "../data/partidos.json";
+// Sprint 42B — partidos.topo.json (267 KB) reemplaza partidos.json (2.7 MB).
+// 90% reducción del JSON shipped al cliente con cero pérdida visible
+// (cuantización 1e5 ≈ 1m precisión, invisible al ojo en mapa de provincia).
+// El runtime decodifica con topojson-client.feature() — shape final es
+// idéntica al GeoJSON FeatureCollection original.
+import partidosTopo from "../data/partidos.topo.json";
 
 interface MapEntry {
   id: string;
@@ -50,7 +57,15 @@ interface PartidoProps {
   nombre: string;
 }
 
-const partidos = partidosRaw as unknown as GeoJSON.FeatureCollection<
+// Decode TopoJSON → GeoJSON una sola vez al cargar el módulo. El cast a
+// `Topology` es seguro porque el archivo lo generamos nosotros con el
+// schema esperado (scripts/partidos-to-topojson.ts).
+const partidos = feature(
+  partidosTopo as unknown as Topology<{
+    partidos: GeometryCollection<PartidoProps>;
+  }>,
+  "partidos",
+) as unknown as GeoJSON.FeatureCollection<
   GeoJSON.MultiPolygon | GeoJSON.Polygon,
   PartidoProps
 >;
