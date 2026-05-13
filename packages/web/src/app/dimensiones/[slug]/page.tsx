@@ -5,6 +5,7 @@ import { getDimensionSlugs, getDimensionBySlug } from "@/lib/scoring-data";
 import { DimensionBarChart } from "@/components/DimensionBarChart";
 import { ScoreBadge } from "@/components/ScoreBadge";
 import { ShareButton } from "@/components/ShareButton";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -38,14 +39,14 @@ export default async function DimensionDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      {/* Breadcrumb */}
-      <nav className="mb-6 text-sm text-muted-foreground">
-        <Link href="/dimensiones" className="hover:text-primary transition-colors">
-          Dimensiones
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-foreground font-medium">{label}</span>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "Inicio" },
+          { href: "/dimensiones", label: "Dimensiones" },
+          { label },
+        ]}
+        className="mb-6"
+      />
 
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-3xl font-bold tracking-tight">{label}</h1>

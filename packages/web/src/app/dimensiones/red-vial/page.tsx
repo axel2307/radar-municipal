@@ -7,6 +7,7 @@ import {
   getAllMunicipiosForPesosPorKm,
 } from "@/lib/scoring-data";
 import { PesosPorKmHeatmap } from "./PesosPorKmHeatmap";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -60,17 +61,14 @@ export default function RedVialDimensionPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      {/* Breadcrumb */}
-      <nav className="mb-6 text-sm text-muted-foreground">
-        <Link
-          href="/dimensiones"
-          className="hover:text-primary transition-colors"
-        >
-          Dimensiones
-        </Link>
-        <span className="mx-2">/</span>
-        <span className="text-foreground font-medium">Red vial</span>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "Inicio" },
+          { href: "/dimensiones", label: "Dimensiones" },
+          { label: "Red vial" },
+        ]}
+        className="mb-6"
+      />
 
       <div className="mb-2 flex items-center gap-3">
         <h1 className="text-3xl font-bold tracking-tight">

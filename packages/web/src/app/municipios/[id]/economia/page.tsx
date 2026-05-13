@@ -11,6 +11,7 @@ import {
   getVialCrossMetrics,
 } from "@/lib/scoring-data";
 import { ScoreBadge } from "@/components/ScoreBadge";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SpendingBreakdown } from "@/components/SpendingBreakdown";
 import { formatNumber, cn } from "@/lib/utils";
 
@@ -86,11 +87,17 @@ export default async function EconomiaPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <Link href={`/municipios/${id}`} className="text-sm text-muted-foreground hover:text-primary">
-        &larr; Volver a {municipio.nombre}
-      </Link>
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "Inicio" },
+          { href: "/municipios", label: "Municipios" },
+          { href: `/municipios/${id}`, label: municipio.nombre },
+          { label: "Economía" },
+        ]}
+        className="mb-6"
+      />
 
-      <div className="mt-4 mb-8">
+      <div className="mb-8">
         <h1 className="text-2xl font-bold">{municipio.nombre} — Detalle económico</h1>
         <p className="mt-1 text-muted-foreground">
           Análisis fiscal, composición del gasto y economía local

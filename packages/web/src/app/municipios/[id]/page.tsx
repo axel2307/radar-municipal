@@ -10,6 +10,7 @@ import { SpendingBreakdown } from "@/components/SpendingBreakdown";
 import { ShareButton } from "@/components/ShareButton";
 import { DetailSectionNav } from "@/components/DetailSectionNav";
 import { DimensionCard } from "@/components/DimensionCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { formatNumber, cn } from "@/lib/utils";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -120,11 +121,16 @@ export default async function MunicipioPage({ params }: PageProps) {
           { "@type": "ListItem", "position": 3, "name": municipio.nombre },
         ],
       }} />
-      <Link href="/municipios" className="text-sm text-muted-foreground hover:text-primary">
-        &larr; Volver a municipios
-      </Link>
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "Inicio" },
+          { href: "/municipios", label: "Municipios" },
+          { label: municipio.nombre },
+        ]}
+        className="mb-6"
+      />
 
-      <div className="mt-4 mb-8">
+      <div className="mb-8">
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-bold">{municipio.nombre}</h1>
           {municipio.esPiloto && (
