@@ -131,7 +131,9 @@ export default async function MunicipioPage({ params }: PageProps) {
       />
 
       <div className="mb-8">
-        <div className="flex items-center gap-3">
+        {/* Sprint 43A — flex-wrap evita que el ShareButton rompe layout en
+            mobile angosto con nombres largos (e.g. General Pueyrredón). */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <h1 className="text-2xl font-bold">{municipio.nombre}</h1>
           {municipio.esPiloto && (
             <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">

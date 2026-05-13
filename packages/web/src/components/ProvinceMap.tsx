@@ -458,8 +458,16 @@ export function ProvinceMap({
           </>
         ) : (
           <span className="text-muted-foreground">
-            Pasá el mouse sobre un partido para ver su detalle. Click para abrir
-            su ficha. {zoomEnabled ? "Ctrl+rueda para zoom, arrastre para mover." : ""}
+            {/* Sprint 43A — copy responsive: mobile no tiene mouse ni rueda */}
+            <span className="hidden sm:inline">
+              Pasá el mouse sobre un partido para ver su detalle. Click para
+              abrir su ficha.
+              {zoomEnabled && " Ctrl+rueda para zoom, arrastre para mover."}
+            </span>
+            <span className="sm:hidden">
+              Tocá un partido para abrir su ficha.
+              {zoomEnabled && " Usá los botones +/− para zoom."}
+            </span>
           </span>
         )}
       </div>

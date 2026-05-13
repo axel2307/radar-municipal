@@ -125,12 +125,16 @@ export function RankingTable({ ranking }: RankingTableProps) {
 
   return (
     <div className="overflow-x-auto rounded-lg border border-border">
+      {/* Sprint 43A — Mobile: solo Municipio + Total visibles. Las 4 categorías
+          se ocultan con `hidden sm:table-cell` para evitar la tabla saturada
+          de 6-7 columnas en pantalla angosta. El usuario que quiere ver
+          breakdown por categoría clickea el municipio → ficha completa. */}
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-border bg-muted/50">
             <th className="px-3 py-3 text-left font-semibold text-muted-foreground w-10">#</th>
             <th className="px-3 py-3 text-left font-semibold text-muted-foreground">Municipio</th>
-            <th className="px-3 py-3 text-left font-semibold text-muted-foreground hidden sm:table-cell">Población</th>
+            <th className="px-3 py-3 text-left font-semibold text-muted-foreground hidden md:table-cell">Población</th>
 
             {CATEGORIES.map((cat) => {
               const isExpanded = expanded.has(cat.key);
@@ -138,7 +142,7 @@ export function RankingTable({ ranking }: RankingTableProps) {
                 cat.columns.map((col) => (
                   <th
                     key={`${cat.key}-${col.field}`}
-                    className={`px-2 py-3 text-center font-semibold text-xs ${cat.textColor} cursor-pointer hover:underline`}
+                    className={`px-2 py-3 text-center font-semibold text-xs hidden sm:table-cell ${cat.textColor} cursor-pointer hover:underline`}
                     onClick={() => toggleCategory(cat.key)}
                     title={`Click para colapsar ${cat.label}`}
                   >
@@ -148,7 +152,7 @@ export function RankingTable({ ranking }: RankingTableProps) {
               ) : (
                 <th
                   key={cat.key}
-                  className={`px-2 py-3 text-center font-semibold text-xs ${cat.textColor} cursor-pointer hover:underline`}
+                  className={`px-2 py-3 text-center font-semibold text-xs hidden sm:table-cell ${cat.textColor} cursor-pointer hover:underline`}
                   onClick={() => toggleCategory(cat.key)}
                   title={`Click para expandir ${cat.label}`}
                 >
@@ -183,7 +187,7 @@ export function RankingTable({ ranking }: RankingTableProps) {
                   {entry.municipio.partido}
                 </span>
               </td>
-              <td className="px-3 py-3 text-muted-foreground hidden sm:table-cell">
+              <td className="px-3 py-3 text-muted-foreground hidden md:table-cell">
                 {formatNumber(entry.municipio.poblacion)}
               </td>
 
@@ -191,14 +195,20 @@ export function RankingTable({ ranking }: RankingTableProps) {
                 const isExpanded = expanded.has(cat.key);
                 if (isExpanded) {
                   return cat.columns.map((col) => (
-                    <td key={`${cat.key}-${col.field}`} className="px-2 py-3 text-center">
+                    <td
+                      key={`${cat.key}-${col.field}`}
+                      className="px-2 py-3 text-center hidden sm:table-cell"
+                    >
                       <ScoreBadge score={entry[col.field] as number | null} size="sm" />
                     </td>
                   ));
                 } else {
                   const catScore = entry.categoryScores[cat.scoringCategory];
                   return (
-                    <td key={cat.key} className="px-2 py-3 text-center">
+                    <td
+                      key={cat.key}
+                      className="px-2 py-3 text-center hidden sm:table-cell"
+                    >
                       <ScoreBadge score={catScore} size="sm" />
                     </td>
                   );
