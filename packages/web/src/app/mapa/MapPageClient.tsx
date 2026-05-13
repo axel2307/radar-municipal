@@ -32,48 +32,25 @@ const ProvinceMap = dynamic(
   },
 );
 
-// Sprint 34/35 — opciones que NO son scores normalizados 0-100, sino
-// indicadores en su unidad natural. Se tratan como kinds aparte para que
-// ProvinceMap elija paleta + tooltip + leyenda apropiados.
-const VIAL_DENSITY_KEY = "vialDensity";
-const PESOS_POR_KM_KEY = "pesosPorKm";
+// Sprint 42A — defaults + métricas movidos a `./constants` (pure module)
+// para que el server-side (canonicalize) y los tests los importen sin
+// arrastrar el árbol "use client". Re-export para back-compat.
+import {
+  DEFAULT_METRIC_A,
+  DEFAULT_METRIC_B,
+  VIAL_DENSITY_KEY,
+  PESOS_POR_KM_KEY,
+  METRIC_OPTIONS,
+  VALID_METRIC_KEYS,
+} from "./constants";
+
+export {
+  DEFAULT_METRIC_A,
+  DEFAULT_METRIC_B,
+  VALID_METRIC_KEYS,
+};
 
 type MetricKind = "score" | "vialDensity" | "pesosPorKm";
-
-type MetricOption = { key: string; label: string };
-
-/**
- * Sprint 38 — defaults usados como source of truth para construir URLs
- * limpias. Si el state coincide con el default, NO se serializa al URL
- * (i.e. /mapa stays /mapa, no /mapa?a=scoreTotal&b=scoreFiscal&compare=0).
- *
- * Sprint 40 — exportados para que la canonicalización + redirect en
- * `page.tsx` (server) use exactamente los mismos defaults que el sync
- * client. Garantiza coherencia entre lo que el server redirige y lo que
- * el client serializa al URL.
- */
-export const DEFAULT_METRIC_A = "scoreTotal";
-export const DEFAULT_METRIC_B = "scoreFiscal";
-
-const METRIC_OPTIONS: MetricOption[] = [
-  { key: "scoreTotal", label: "Score total" },
-  { key: "scoreTransparencia", label: "Transparencia" },
-  { key: "scoreFiscal", label: "Fiscal" },
-  { key: "scoreNormativa", label: "Normativa" },
-  { key: "scoreParticipacion", label: "Participación" },
-  { key: "scoreGastoFuncion", label: "Gasto por función" },
-  { key: "scoreEconomiaLocal", label: "Economía local" },
-  { key: "scorePresionImpositiva", label: "Presión impositiva" },
-  { key: "scoreServiciosBasicos", label: "Servicios básicos" },
-  { key: "scoreEducacionSalud", label: "Educación y salud" },
-  { key: "scoreConectividad", label: "Conectividad" },
-  { key: "scoreEspacioPublico", label: "Espacio público" },
-  { key: "scoreSeguridadVial", label: "Seguridad vial" },
-  { key: VIAL_DENSITY_KEY, label: "Densidad vial rural (km/km²)" },
-  { key: PESOS_POR_KM_KEY, label: "Pesos por km de red vial ($/km)" },
-];
-
-export const VALID_METRIC_KEYS = new Set(METRIC_OPTIONS.map((m) => m.key));
 
 type MapEntry = {
   id: string;
