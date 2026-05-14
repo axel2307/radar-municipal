@@ -8,7 +8,12 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { buildManifest, type FuenteResult } from "../cli/refresh-pilar4";
+import {
+  buildManifest,
+  refreshCkanLicitaciones,
+  CKAN_SOURCES,
+  type FuenteResult,
+} from "../cli/refresh-pilar4";
 import type { Contratacion } from "@radar-municipal/core";
 
 const mkContratacion = (id: string, municipioId: string, anio = 2026): Contratacion => ({
@@ -107,5 +112,165 @@ describe("buildManifest", () => {
     const m1 = JSON.stringify(buildManifest(fuentes, "fixed", 1));
     const m2 = JSON.stringify(buildManifest(fuentes, "fixed", 1));
     expect(m1).toBe(m2);
+  });
+});
+
+// ─────────────────────────────────────────
+// Sprint 53 — refreshCkanLicitaciones (parser genérico)
+// ─────────────────────────────────────────
+
+const QUILMES_HEADER =
+  "id;ano;estado;objeto;presupuesto_cifra;presupuesto_cifra_texto;fecha_retiro;hora_retiro;fecha_recepcion;hora_recepcion;fecha_apertura;hora_apertura;lugar_apertura;lugarApertura;valor";
+
+const QUILMES_CSV = [
+  QUILMES_HEADER,
+  '1200;2025;finalizado;servicio de sepelios;5705000;cinco;5/3/2025;10:00;9/3/2025;10:00;9/3/2025;10:00;salon;Alberdi 500;0',
+  '2200;2025;finalizado;servicio de comida;14342520;catorce;26/2/2025;12:00;28/2/2025;12:00;28/2/2025;12:00;salon;Alberdi 500;0',
+].join("\n");
+
+const CKAN_PACKAGE_SEARCH_RESPONSE = JSON.stringify({
+  success: true,
+  result: {
+    results: [
+      {
+        title: "Licitaciones públicas 2025",
+        resources: [
+          { format: "CSV", url: "http://datos.example.com/lic-2025.csv" },
+          { format: "PDF", url: "http://datos.example.com/lic-2025.pdf" },
+        ],
+      },
+    ],
+  },
+});
+
+/**
+ * Crea un `fetcher` mock que devuelve respuestas distintas según la URL.
+ * Util para testear sin red.
+ */
+function makeMockFetcher(routes: Record<string, string>): (url: string) => Promise<string> {
+  return async (url: string) => {
+    if (url in routes) return routes[url];
+    // Match por prefijo (ej. cualquier .../api/3/action/...).
+    for (const k of Object.keys(routes)) {
+      if (url.startsWith(k)) return routes[k];
+    }
+    throw new Error(`Mock fetcher: URL desconocida ${url}`);
+  };
+}
+
+describe("refreshCkanLicitaciones", () => {
+  it("parsea un CKAN search response + un CSV Quilmes-style", async () => {
+    const fetcher = makeMockFetcher({
+      "http://datos.example.com/api/3/action/package_search": CKAN_PACKAGE_SEARCH_RESPONSE,
+      "http://datos.example.com/lic-2025.csv": QUILMES_CSV,
+    });
+    const result = await refreshCkanLicitaciones(
+      {
+        label: "Example (CKAN)",
+        municipioId: "060001",
+        baseUrl: "http://datos.example.com",
+      },
+      fetcher,
+    );
+    expect(result.label).toBe("Example (CKAN)");
+    expect(result.municipioId).toBe("060001");
+    expect(result.datasetsParseados).toBe(1);
+    expect(result.contrataciones.length).toBe(2);
+    // Verifica que los IDs vinieron del CSV (parser prefixea
+    // municipioId-anio-IDoriginal por unicidad cross-municipio).
+    const rawIds = result.contrataciones.map((c) => c.id).sort();
+    expect(rawIds).toEqual(["060001-2025-1200", "060001-2025-2200"]);
+  });
+
+  it("falla si CKAN reporta success:false", async () => {
+    const fetcher = makeMockFetcher({
+      "http://datos.example.com/api/3/action/package_search": JSON.stringify({
+        success: false,
+        error: { message: "boom" },
+      }),
+    });
+    await expect(
+      refreshCkanLicitaciones(
+        { label: "X", municipioId: "060001", baseUrl: "http://datos.example.com" },
+        fetcher,
+      ),
+    ).rejects.toThrow(/CKAN action failed/);
+  });
+
+  it("salta datasets sin recurso CSV sin tirar el run completo", async () => {
+    const response = JSON.stringify({
+      success: true,
+      result: {
+        results: [
+          { title: "Sin CSV 2025", resources: [{ format: "PDF", url: "x.pdf" }] },
+          {
+            title: "Con CSV 2025",
+            resources: [
+              { format: "CSV", url: "http://datos.example.com/ok.csv" },
+            ],
+          },
+        ],
+      },
+    });
+    const fetcher = makeMockFetcher({
+      "http://datos.example.com/api/3/action/package_search": response,
+      "http://datos.example.com/ok.csv": QUILMES_CSV,
+    });
+    const result = await refreshCkanLicitaciones(
+      { label: "X", municipioId: "060001", baseUrl: "http://datos.example.com" },
+      fetcher,
+    );
+    expect(result.datasetsParseados).toBe(1);
+    expect(result.contrataciones.length).toBe(2);
+  });
+
+  it("CSV upstream caído no rompe la fuente — sigue con los demás", async () => {
+    const response = JSON.stringify({
+      success: true,
+      result: {
+        results: [
+          {
+            title: "Caido 2025",
+            resources: [
+              { format: "CSV", url: "http://datos.example.com/down.csv" },
+            ],
+          },
+          {
+            title: "OK 2025",
+            resources: [
+              { format: "CSV", url: "http://datos.example.com/ok.csv" },
+            ],
+          },
+        ],
+      },
+    });
+    const fetcher = async (url: string): Promise<string> => {
+      if (url.includes("package_search")) return response;
+      if (url.endsWith("/down.csv")) throw new Error("HTTP 503");
+      if (url.endsWith("/ok.csv")) return QUILMES_CSV;
+      throw new Error("unexpected " + url);
+    };
+    const result = await refreshCkanLicitaciones(
+      { label: "X", municipioId: "060001", baseUrl: "http://datos.example.com" },
+      fetcher,
+    );
+    expect(result.datasetsParseados).toBe(1);
+    expect(result.contrataciones.length).toBe(2);
+  });
+});
+
+describe("CKAN_SOURCES catálogo", () => {
+  it("incluye Quilmes (Sprint 17) y Tandil (Sprint 53)", () => {
+    const ids = CKAN_SOURCES.map((s) => s.municipioId);
+    expect(ids).toContain("060638"); // Quilmes
+    expect(ids).toContain("060791"); // Tandil
+  });
+
+  it("todas las entries declaran label + municipioId + baseUrl", () => {
+    for (const src of CKAN_SOURCES) {
+      expect(src.label).toBeTruthy();
+      expect(src.municipioId).toMatch(/^06\d{4}$/); // INDEC PBA 6 digitos
+      expect(src.baseUrl).toMatch(/^https?:\/\//);
+    }
   });
 });

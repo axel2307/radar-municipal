@@ -114,16 +114,45 @@ async function fetchText(url: string): Promise<string> {
 // Adapters: una función por fuente (CKAN, gobabierto, ...)
 // ─────────────────────────────────────────
 
-const QUILMES_BASE = "http://datos.quilmes.gov.ar";
-// INDEC PBA: Quilmes = 060638. Confirmado Sprint 17 (060658 era Roque Pérez).
-const QUILMES_MUNICIPIO_ID = "060638";
-
 interface CkanResource { format: string | null; url: string | null; }
 interface CkanDataset { title: string; resources: CkanResource[]; }
 
-async function refreshQuilmes(): Promise<FuenteResult> {
-  const url = `${QUILMES_BASE}/api/3/action/package_search?q=contrataciones&rows=20`;
-  const j = JSON.parse(await fetchText(url)) as {
+/**
+ * Sprint 53 — Refresher genérico para municipios con portal CKAN.
+ *
+ * Patrón inferido del Sprint 15 (Quilmes): API CKAN expone
+ * `package_search?q=...` con datasets, cada uno con resources CSV. El
+ * parser Quilmes-style sirve para portales que usan el mismo schema
+ * semicolon-delimited de contrataciones públicas (común en PBA porque
+ * varios usan la misma plantilla CKAN).
+ *
+ * Para agregar una nueva fuente CKAN, basta agregar una entry a
+ * `CKAN_SOURCES` con `baseUrl + municipioId + label`. Si el schema CSV
+ * difiere, escribir un parser nuevo siguiendo el patrón gobabierto.
+ *
+ * `fetcher` se inyecta para que los tests puedan mockearlo sin red real.
+ */
+export interface CkanSource {
+  /** Etiqueta UI-friendly (ej. "Quilmes (CKAN)"). */
+  label: string;
+  /** INDEC PBA id del municipio. */
+  municipioId: string;
+  /** Base URL del portal (sin trailing slash). Ej. "http://datos.quilmes.gov.ar". */
+  baseUrl: string;
+  /** Query string del CKAN search. */
+  searchQuery?: string;
+  /** Máximo de datasets a pedir. */
+  maxDatasets?: number;
+}
+
+export async function refreshCkanLicitaciones(
+  src: CkanSource,
+  fetcher: (url: string) => Promise<string> = fetchText,
+): Promise<FuenteResult> {
+  const q = src.searchQuery ?? "contrataciones";
+  const rows = src.maxDatasets ?? 20;
+  const url = `${src.baseUrl}/api/3/action/package_search?q=${encodeURIComponent(q)}&rows=${rows}`;
+  const j = JSON.parse(await fetcher(url)) as {
     success: boolean;
     result: { results: CkanDataset[] };
   };
@@ -131,7 +160,7 @@ async function refreshQuilmes(): Promise<FuenteResult> {
 
   const all: Contratacion[] = [];
   let datasetsParseados = 0;
-  console.log(`📡 Quilmes (CKAN) — ${j.result.results.length} datasets`);
+  console.log(`📡 ${src.label} — ${j.result.results.length} datasets`);
   for (const d of j.result.results) {
     const csvRes = d.resources.find(
       (r) => (r.format ?? "").toUpperCase() === "CSV" && r.url,
@@ -142,13 +171,13 @@ async function refreshQuilmes(): Promise<FuenteResult> {
     console.log(`   ↓ "${d.title}" (anio=${anioFallback})`);
     let csv: string;
     try {
-      csv = await fetchText(csvRes.url);
+      csv = await fetcher(csvRes.url);
     } catch (e) {
       console.log(`     ✗ ${e instanceof Error ? e.message : String(e)}`);
       continue;
     }
     const r = parseQuilmesContratacionesCsv(csv, {
-      municipioId: QUILMES_MUNICIPIO_ID,
+      municipioId: src.municipioId,
       fuenteUrl: csvRes.url,
       anioFallback,
     });
@@ -157,12 +186,34 @@ async function refreshQuilmes(): Promise<FuenteResult> {
     datasetsParseados++;
   }
   return {
-    label: "Quilmes (CKAN)",
-    municipioId: QUILMES_MUNICIPIO_ID,
+    label: src.label,
+    municipioId: src.municipioId,
     datasetsParseados,
     contrataciones: all,
   };
 }
+
+// ─────────────────────────────────────────
+// Catálogo de fuentes CKAN
+// ─────────────────────────────────────────
+
+export const CKAN_SOURCES: CkanSource[] = [
+  {
+    label: "Quilmes (CKAN)",
+    municipioId: "060638", // INDEC PBA. Confirmado Sprint 17.
+    baseUrl: "http://datos.quilmes.gov.ar",
+  },
+  {
+    // Sprint 53 — Especulativo. `pilot-normativa.json:69` documenta
+    // "datos.tandil.gov.ar" como portal CKAN; si la URL responde como
+    // CKAN estandar el parser Quilmes-style debería funcionar. Si la
+    // primera corrida del cron falla, ajustar baseUrl o escribir parser
+    // específico.
+    label: "Tandil (CKAN)",
+    municipioId: "060791",
+    baseUrl: "http://datos.tandil.gov.ar",
+  },
+];
 
 const CARLOS_CASARES_MUNICIPIO_ID = "060140";
 const CARLOS_CASARES_DATASETS = [
@@ -226,9 +277,15 @@ async function main() {
   console.log(`📊 Sprint 18 — Refresh Pilar 4 (Compras públicas)\n`);
 
   // Las fuentes corren independientes; un fallo en una NO mata las otras.
+  // Sprint 53 — el catálogo CKAN se expande declarando entries en
+  // `CKAN_SOURCES`. El resto (gobabierto, portales custom) sigue siendo
+  // función por función.
   const fuentes: FuenteResult[] = [];
   const tareas: { label: string; fn: () => Promise<FuenteResult> }[] = [
-    { label: "Quilmes", fn: refreshQuilmes },
+    ...CKAN_SOURCES.map((src) => ({
+      label: src.label,
+      fn: () => refreshCkanLicitaciones(src),
+    })),
     { label: "Carlos Casares", fn: refreshCarlosCasares },
   ];
   for (const t of tareas) {
