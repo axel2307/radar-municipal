@@ -1,0 +1,93 @@
+name: Visual regression
+
+# Sprint 50 — Camino B. Corre el spec `visual.spec.ts` (project=visual)
+# y compara screenshots contra las baselines committeadas en
+# `tests/e2e/visual.spec.ts-snapshots/`.
+#
+# Importante: las baselines son platform-specific. La fuente de verdad es
+# Linux/CI (este workflow). Si querés actualizar baselines:
+#   1. `gh workflow run visual-regression.yml -f update_snapshots=true`
+#   2. Descargar el artifact `visual-snapshots`
+#   3. Copiar el contenido a `tests/e2e/visual.spec.ts-snapshots/`
+#   4. Committear + push
+# Workflow detallado en tests/e2e/README.md.
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      update_snapshots:
+        description: "Regenerar baselines (sube artifact con nuevos PNGs)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  visual:
+    name: Screenshots vs baseline
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build web
+        run: pnpm --filter @radar-municipal/web build
+        env:
+          NEXT_PUBLIC_API_URL: https://api.radarmunicipal.ar
+          NEXT_PUBLIC_SITE_URL: https://radarmunicipal.ar
+
+      - name: Run visual regression
+        # `continue-on-error: true` para el primer run (no hay baselines):
+        # el job termina "neutral" y queda el artifact con los PNGs
+        # iniciales para que el dev los committee. Cuando ya hay baselines,
+        # cualquier diff hace fail real porque el step `assert-no-diff` corre.
+        continue-on-error: true
+        id: visual
+        run: |
+          if [ "${{ inputs.update_snapshots }}" = "true" ]; then
+            pnpm exec playwright test --project=visual --update-snapshots
+          else
+            pnpm exec playwright test --project=visual
+          fi
+
+      - name: Upload Playwright report + snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-snapshots
+          path: |
+            tests/e2e/visual.spec.ts-snapshots/
+            test-results/
+            playwright-report/
+          retention-days: 14
+
+      - name: Assert no visual diff
+        # Espejo del exit code real (saltea el continue-on-error). Solo
+        # falla si el modo es validación, no si estamos regenerando.
+        if: inputs.update_snapshots != true
+        run: |
+          if [ "${{ steps.visual.outcome }}" != "success" ]; then
+            echo "::error::Visual regression detected. Bajá el artifact 'visual-snapshots' para ver el diff."
+            exit 1
+          fi

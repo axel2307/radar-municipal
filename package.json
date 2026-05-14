@@ -19,10 +19,12 @@
     "ingest:national": "pnpm --filter @radar-municipal/ingestion ingest:national",
     "ingest:crawl": "pnpm --filter @radar-municipal/ingestion crawl:db",
     "verify:migration": "tsx scripts/verify-migration.ts",
-    "test:e2e": "pnpm --filter @radar-municipal/web build && playwright test",
+    "test:e2e": "pnpm --filter @radar-municipal/web build && playwright test --project=chromium --project=mobile",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",
-    "test:e2e:install": "playwright install --with-deps chromium"
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "test:visual": "pnpm --filter @radar-municipal/web build && playwright test --project=visual",
+    "test:visual:update": "pnpm --filter @radar-municipal/web build && playwright test --project=visual --update-snapshots"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",

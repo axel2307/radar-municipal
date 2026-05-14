@@ -1,0 +1,75 @@
+name: Lighthouse CI
+
+# Sprint 50 — Camino B. Corre Lighthouse contra una build de producción y
+# falla si alguna ruta clave cae bajo los thresholds de lighthouserc.json.
+# Solo en PRs porque cada run gasta ~3 min de runner; el merge a main no
+# necesita re-validar (ya pasó en el PR).
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        # Sin `version:` — pnpm/action-setup lee `packageManager` del package.json.
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build web (production)
+        run: pnpm --filter @radar-municipal/web build
+        env:
+          NEXT_PUBLIC_API_URL: https://api.radarmunicipal.ar
+          NEXT_PUBLIC_SITE_URL: https://radarmunicipal.ar
+
+      - name: Start Next server
+        # Mismo patrón que playwright.config.ts: bin local, port 3100. Run
+        # en background con nohup para que el siguiente step pueda apuntar.
+        run: |
+          nohup node packages/web/node_modules/next/dist/bin/next start packages/web --port 3100 --hostname 127.0.0.1 > next-server.log 2>&1 &
+          # Espera readiness con polling rápido (~30s max). Si no responde,
+          # fail loud con los logs para debug.
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3100/ > /dev/null 2>&1; then
+              echo "Server ready after ${i}s"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Server did not become ready in 30s. Logs:"
+          cat next-server.log
+          exit 1
+
+      - name: Run Lighthouse CI
+        # @lhci/cli@0.14 corre `collect` + `assert` + `upload` según lighthouserc.json.
+        # Usamos npx para no agregar la dep al monorepo (solo CI lo necesita).
+        run: npx --yes @lhci/cli@0.14 autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/
+          retention-days: 7

@@ -47,6 +47,11 @@ jobs:
           NEXT_PUBLIC_API_URL: https://api.radarmunicipal.ar
           NEXT_PUBLIC_SITE_URL: https://radarmunicipal.ar
 
+      - name: Check bundle size budget
+        # Sprint 50 — Camino B. Falla si los chunks JS estáticos superan
+        # el budget definido en scripts/check-bundle-budget.ts.
+        run: npx --yes tsx@4 scripts/check-bundle-budget.ts
+
   e2e:
     name: E2E (Playwright)
     runs-on: ubuntu-latest

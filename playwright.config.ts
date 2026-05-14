@@ -39,12 +39,21 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-      testIgnore: /.*\.mobile\.spec\.ts$/,
+      // Sprint 50 — el spec de visual regression vive en un project propio
+      // (`visual`) porque (a) sus baselines son platform-specific y tienen
+      // que regenerarse en Linux/CI, (b) no queremos que la e2e job lo
+      // corra automáticamente hasta tener baselines committeadas.
+      testIgnore: [/.*\.mobile\.spec\.ts$/, /visual\.spec\.ts$/],
     },
     {
       name: "mobile",
       use: { ...devices["Pixel 5"] },
       testMatch: /.*\.mobile\.spec\.ts$/,
+    },
+    {
+      name: "visual",
+      use: { ...devices["Desktop Chrome"] },
+      testMatch: /visual\.spec\.ts$/,
     },
   ],
 
