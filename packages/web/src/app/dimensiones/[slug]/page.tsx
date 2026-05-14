@@ -25,6 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+// Cuando el ranking tiene más de TOP_CHART_LIMIT entradas, el bar chart
+// se limita a los top N para que no crezca a miles de pixeles de alto
+// (cada entrada ocupa ~50px). La tabla debajo sigue mostrando todos.
+const TOP_CHART_LIMIT = 30;
+
 export default async function DimensionDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const data = getDimensionBySlug(slug);
@@ -36,6 +41,18 @@ export default async function DimensionDetailPage({ params }: PageProps) {
   const withScores = ranking.filter((r) => r.score != null);
   const best = withScores[0];
   const worst = withScores[withScores.length - 1];
+
+  // Sprint 52 — para transparencia el ranking abarca 122 municipios
+  // (13 piloto + 109 auto-detectados). Para el resto siguen siendo 13.
+  const piloto = ranking.filter((r) => r.esPiloto !== false);
+  const auto = ranking.filter((r) => r.esPiloto === false);
+  const isExpandedDimension = auto.length > 0;
+
+  // Recortar bar chart si es grande. Si es chico (piloto = 13), mostrar todo.
+  const chartData =
+    ranking.length > TOP_CHART_LIMIT
+      ? ranking.slice(0, TOP_CHART_LIMIT)
+      : ranking;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -53,12 +70,41 @@ export default async function DimensionDetailPage({ params }: PageProps) {
         <ShareButton title={`${label} - Radar Municipal`} />
       </div>
       <p className="mt-2 text-muted-foreground">
-        Ranking de los municipios piloto en la dimensión {label}.
+        {isExpandedDimension ? (
+          <>
+            Ranking de los <strong>{ranking.length}</strong> municipios con
+            datos en la dimensión {label}.
+          </>
+        ) : (
+          <>
+            Ranking de los {ranking.length} municipios piloto en la dimensión
+            {" "}
+            {label}.
+          </>
+        )}
       </p>
 
-      {/* Bar chart */}
+      {/* Sprint 52 — banner explicando la mezcla de fuentes cuando aplica */}
+      {isExpandedDimension && (
+        <div
+          role="note"
+          className="mt-4 rounded-md border border-blue-200 bg-blue-50/50 p-3 text-sm text-blue-900"
+        >
+          <strong>{piloto.length}</strong> auditados manualmente (piloto, datos
+          profundos) ·{" "}
+          <strong>{auto.length}</strong> detectados automáticamente por crawler
+          (existencia de documentos clave, sin validación humana profunda).
+        </div>
+      )}
+
+      {/* Bar chart — recortado a top N cuando el ranking es grande */}
       <div className="mt-8 rounded-lg border border-border bg-card p-4">
-        <DimensionBarChart data={ranking} />
+        <DimensionBarChart data={chartData} />
+        {ranking.length > TOP_CHART_LIMIT && (
+          <p className="mt-2 text-center text-xs text-muted-foreground">
+            Top {TOP_CHART_LIMIT} de {ranking.length}. Tabla completa abajo.
+          </p>
+        )}
       </div>
 
       {/* Comparator shortcut */}
@@ -94,6 +140,16 @@ export default async function DimensionDetailPage({ params }: PageProps) {
                   >
                     {r.nombre}
                   </Link>
+                  {/* Sprint 52 — chip "auto" para entries no-piloto. Solo
+                      aparece cuando la dimensión esta expandida (transparencia). */}
+                  {r.esPiloto === false && (
+                    <span
+                      title="Detectado automáticamente por crawler — sin auditoría manual profunda"
+                      className="ml-2 inline-flex items-center rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-amber-800"
+                    >
+                      auto
+                    </span>
+                  )}
                 </td>
                 <td className="py-3 text-right">
                   <ScoreBadge score={r.score} size="sm" />

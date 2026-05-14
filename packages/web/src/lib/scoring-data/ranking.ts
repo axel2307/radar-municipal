@@ -2,6 +2,7 @@ import {
   MUNICIPIOS,
   MUNICIPIOS_PILOTO,
   computeWeightedTotal,
+  getMunicipioById,
 } from "@radar-municipal/core";
 
 import type { RankingEntry, DataGapDetail, FiscalFieldProvenance } from "./types";
@@ -93,6 +94,43 @@ export function getRanking(): RankingEntry[] {
 
 export function getAuditDate(): string {
   return auditData[0]?.fechaAuditoria ?? "desconocida";
+}
+
+/**
+ * Sprint 52 — Surface auto-audit coverage para el ranking de Transparencia.
+ *
+ * `getRanking()` itera sobre los 13 piloto porque el score TOTAL exige data
+ * en todas las 12 dimensiones. Pero la dimensión Transparencia ya está
+ * calculada para 122 municipios (13 piloto + 109 detectados por crawler
+ * que viven en `auto-audit.json`).
+ *
+ * Esta función expone esos 122 entries ordenados por score de transparencia
+ * descendente, con flag `esPiloto` para que la UI pueda diferenciar
+ * "auditado manualmente" vs "detectado por crawler".
+ */
+export interface TransparenciaRankingEntry {
+  municipioId: string;
+  nombre: string;
+  region: string;
+  score: number | null;
+  esPiloto: boolean;
+}
+
+export function getTransparenciaRankingExpanded(): TransparenciaRankingEntry[] {
+  const items: TransparenciaRankingEntry[] = [];
+  for (const audit of auditData) {
+    const municipio = getMunicipioById(audit.municipioId);
+    if (!municipio) continue;
+    const tScore = allTransparencyScores.get(audit.municipioId);
+    items.push({
+      municipioId: audit.municipioId,
+      nombre: municipio.nombre,
+      region: municipio.region,
+      score: tScore?.scoreTotal ?? null,
+      esPiloto: municipio.esPiloto,
+    });
+  }
+  return items.sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
 }
 
 /** Get score distribution in buckets of 20 points */

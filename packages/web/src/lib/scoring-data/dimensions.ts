@@ -4,7 +4,7 @@ import {
 } from "@radar-municipal/core";
 
 import type { RankingEntry } from "./types";
-import { getRanking } from "./ranking";
+import { getRanking, getTransparenciaRankingExpanded } from "./ranking";
 
 /** Dimension slug to score field mapping */
 const DIMENSION_SLUG_MAP: Record<string, { dimension: ScoringDimension; scoreField: keyof RankingEntry }> = {
@@ -26,13 +26,45 @@ export function getDimensionSlugs(): string[] {
   return Object.keys(DIMENSION_SLUG_MAP);
 }
 
+export interface DimensionRankingItem {
+  municipioId: string;
+  nombre: string;
+  score: number | null;
+  posicion: number;
+  /**
+   * Sprint 52 — true para municipios con auditoria humana profunda,
+   * false/undefined para los detectados por crawler auto-audit.
+   * Solo se popula para la dimension transparencia (el resto sigue
+   * limitado al piloto, donde todos son `true` implícitamente).
+   */
+  esPiloto?: boolean;
+}
+
 export function getDimensionBySlug(slug: string): {
   dimension: ScoringDimension;
   label: string;
-  ranking: { municipioId: string; nombre: string; score: number | null; posicion: number }[];
+  ranking: DimensionRankingItem[];
 } | null {
   const entry = DIMENSION_SLUG_MAP[slug];
   if (!entry) return null;
+
+  // Sprint 52 — transparencia se expande a 122 municipios usando el
+  // dataset combinado piloto + auto-audit. Las otras dimensiones siguen
+  // limitadas a los 13 piloto (no hay auto-data para ellas todavia).
+  if (slug === "transparencia") {
+    const expanded = getTransparenciaRankingExpanded();
+    return {
+      dimension: entry.dimension,
+      label: SCORING_DIMENSION_LABELS[entry.dimension],
+      ranking: expanded.map((r, i) => ({
+        municipioId: r.municipioId,
+        nombre: r.nombre,
+        score: r.score,
+        posicion: i + 1,
+        esPiloto: r.esPiloto,
+      })),
+    };
+  }
 
   const allRanking = getRanking();
   const ranked = allRanking
