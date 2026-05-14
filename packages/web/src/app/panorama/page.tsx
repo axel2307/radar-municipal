@@ -7,6 +7,8 @@ import {
   getDataCoverage,
   getVialCrossCoverage,
   getVialCrossMetrics,
+  getComprasStats,
+  getComprasMunicipiosConDatos,
 } from "@/lib/scoring-data";
 import { MUNICIPIOS } from "@radar-municipal/core";
 import { allNormativaData } from "@/lib/scoring-data/loaders";
@@ -61,6 +63,10 @@ export default function PanoramaPage() {
   const normativaConBoletin = normativaRows.filter((r) => r.tieneBoletinSibom).length;
   const normativaConOrdenanza = normativaRows.filter((r) => r.ordenanzaFiscalVigente != null).length;
   const normativaConAdjudicaciones = normativaRows.filter((r) => r.compras.publicaAdjudicaciones).length;
+
+  // Sprint 48 — Pilar 4 (Compras) stats agregados
+  const comprasStats = getComprasStats();
+  const comprasFilas = getComprasMunicipiosConDatos();
 
   const vialRatio =
     vialRows.length >= 2
@@ -298,7 +304,104 @@ export default function PanoramaPage() {
         </section>
       )}
 
-      {/* Section 6: Data Coverage Heatmap */}
+      {/* Section 6: Pilar 4 — Compras públicas (Sprint 48) */}
+      {comprasStats.municipiosConDatos > 0 && (
+        <section className="mb-12">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+            <h2 className="text-lg font-semibold">
+              Pilar 4 — Compras públicas
+            </h2>
+            <Link
+              href="/compras"
+              className="text-sm font-medium text-amber-700 hover:underline"
+            >
+              Ver vista profunda →
+            </Link>
+          </div>
+          <p className="text-sm text-muted-foreground mb-4">
+            Concursos, licitaciones y adjudicaciones en formato parseable.
+            Cuando hay proveedor + monto, calculamos el HHI de concentración.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-4 mb-4">
+            <div className="rounded-lg border-2 border-amber-200 bg-amber-50/40 p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Con datos parseables
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums text-amber-700">
+                {comprasStats.municipiosConDatos}
+                <span className="text-sm text-muted-foreground">
+                  /{comprasStats.totalMunicipios}
+                </span>
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                publican en CSV/API
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Contrataciones
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums">
+                {comprasStats.totalContrataciones.toLocaleString("es-AR")}
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                agregadas del piloto
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                Con HHI calculable
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums">
+                {comprasStats.conHhi}
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                requiere proveedor + monto
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-4">
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                HHI mediano
+              </p>
+              <p className="mt-1 text-2xl font-bold tabular-nums">
+                {comprasStats.hhiMediano ?? "—"}
+              </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                {comprasStats.hhiMediano == null
+                  ? "Sin datos suficientes"
+                  : comprasStats.hhiMediano < 1500
+                    ? "Competitivo"
+                    : comprasStats.hhiMediano <= 2500
+                      ? "Moderadamente concentrado"
+                      : "Altamente concentrado"}
+              </p>
+            </div>
+          </div>
+          {comprasFilas.length > 0 && (
+            <div className="rounded-lg border border-border bg-card p-4">
+              <h3 className="text-sm font-semibold mb-3">
+                Municipios con datos publicados
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {comprasFilas.map((f) => (
+                  <Link
+                    key={f.municipio.id}
+                    href="/compras"
+                    className="inline-flex items-center gap-2 rounded-md border border-amber-200 bg-amber-50/40 px-3 py-1.5 text-xs hover:bg-amber-50 transition-colors"
+                  >
+                    <span className="font-medium">{f.municipio.nombre}</span>
+                    <span className="text-muted-foreground">
+                      {f.totalContrataciones} contrat. · {f.aniosCubiertos.join("/")}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Section 7: Data Coverage Heatmap */}
       <section className="mb-12">
         <h2 className="text-lg font-semibold mb-1">Cobertura de datos</h2>
         <p className="text-sm text-muted-foreground mb-4">

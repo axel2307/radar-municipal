@@ -82,30 +82,55 @@ export default function DimensionesPage() {
       {/* Sprint 41C — Cross-dimensional, vive fuera del sistema de 4 categorías
           porque combina datos fiscales + GIS y no produce score 0-100 sino
           un indicador monetario en pesos/km. */}
-      <section className="mt-10 rounded-xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-pink-50 p-6">
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-xs font-semibold text-violet-700 uppercase tracking-wide">
+      {/* Banners de pilares con vista profunda dedicada. Sprint 41C agregó
+          Pilar 5 (red vial). Sprint 48 agrega Pilar 4 (compras). Ambos viven
+          fuera del sistema de scoring 0-100 estándar — datos monetarios y
+          de concentración (HHI). */}
+      <div className="mt-10 grid gap-4 lg:grid-cols-2">
+        <section className="rounded-xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-pink-50 p-6">
+          <div className="flex flex-col h-full gap-4">
+            <div>
+              <span className="inline-block rounded-full bg-violet-100 px-2.5 py-0.5 text-xs font-semibold text-violet-700 uppercase tracking-wide mb-2">
                 Pilar 5 · Cross-dimensional
               </span>
+              <h2 className="text-xl font-bold">Red vial — Pesos por km</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Cruce de gasto fiscal RAFAM (servicios económicos) × red
+                vial OSM. Indicador en pesos/km que captura cuánto invierte
+                cada municipio por kilómetro de infraestructura mantenida.
+              </p>
             </div>
-            <h2 className="text-xl font-bold">Red vial — Pesos por km</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Cruce de gasto fiscal RAFAM (servicios económicos) × red vial
-              OSM. Indicador en pesos/km que captura cuánto invierte cada
-              municipio por kilómetro de infraestructura mantenida. No es un
-              score 0-100; es un valor monetario comparable.
-            </p>
+            <Link
+              href="/dimensiones/red-vial"
+              className="self-start mt-auto rounded-md bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-700 transition-colors"
+            >
+              Ver ranking →
+            </Link>
           </div>
-          <Link
-            href="/dimensiones/red-vial"
-            className="rounded-md bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-violet-700 transition-colors shrink-0"
-          >
-            Ver ranking →
-          </Link>
-        </div>
-      </section>
+        </section>
+
+        <section className="rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6">
+          <div className="flex flex-col h-full gap-4">
+            <div>
+              <span className="inline-block rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">
+                Pilar 4 · Vista profunda
+              </span>
+              <h2 className="text-xl font-bold">Compras públicas</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Concursos, licitaciones y adjudicaciones en formato
+                parseable. Calculamos HHI de concentración de proveedores
+                cuando los municipios publican adjudicaciones en CSV/API.
+              </p>
+            </div>
+            <Link
+              href="/compras"
+              className="self-start mt-auto rounded-md bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700 transition-colors"
+            >
+              Ver vista profunda →
+            </Link>
+          </div>
+        </section>
+      </div>
 
       <div className="mt-12 space-y-12">
         {CATEGORY_ORDER.map((cat) => {
