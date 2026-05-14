@@ -1,5 +1,21 @@
 import type { NextConfig } from "next";
 
+/**
+ * Sprint 51 — Bundle optimization.
+ *
+ * El script `build` corre `next build --webpack` (no Turbopack) porque
+ * Turbopack en Next 16.2 todavía no extrae shared chunks: nuestras 3
+ * rutas con Cartesian charts (panorama, dimensiones/[slug], economia)
+ * duplicaban ~720 KB de Recharts (3 chunks × 360 KB idénticos). Webpack
+ * extrae correctamente y baja el bundle total de 2830 KB → 2186 KB
+ * (-23%). Trade-off: build dura ~64s vs ~9s de Turbopack — acceptable
+ * para CI/produccion, dev sigue con Turbopack (next dev usa Turbopack
+ * default; HMR rápido).
+ *
+ * Cuando Turbopack soporte shared chunks (probable en Next 17+), volver
+ * a `build`: `next build --turbopack` (o sin flag, se pone default).
+ * Tracking issue: vercel/turbo (no link estable).
+ */
 const nextConfig: NextConfig = {
   transpilePackages: ["@radar-municipal/core", "@radar-municipal/scoring"],
   output: "standalone",

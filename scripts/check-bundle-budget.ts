@@ -31,7 +31,11 @@ const CHUNKS_DIR = join(
   "static",
   "chunks",
 );
-const BUDGET_TOTAL_KB = 4000; // ~4 MB de chunks JS estáticos.
+// Sprint 51 — bajado de 4000 KB. Switch a `next build --webpack`
+// (webpack extrae shared chunks; Turbopack todavia no, ver next.config.ts)
+// baja el bundle de ~2830 KB a ~2186 KB. 2500 KB deja ~15% headroom para
+// nuevas features sin regresion silenciosa.
+const BUDGET_TOTAL_KB = 2500;
 const TOP_N = 10;
 
 function walk(dir: string): string[] {
