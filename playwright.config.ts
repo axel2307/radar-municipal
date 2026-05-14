@@ -65,6 +65,16 @@ export default defineConfig({
         // only needs to boot the prebuilt server. We invoke `next` via the
         // web package's local binary to stay PATH-independent (works in both
         // pnpm/npm/yarn shells and on CI).
+        //
+        // Sobre el warning "`next start` does not work with output: standalone":
+        // benigno. Vercel deploys NO usan `output: standalone` (Vercel tiene
+        // su propio bundler), pero lo dejamos en next.config.ts por si alguna
+        // vez se hace deploy con Docker/self-hosted. `next start` sigue
+        // sirviendo OK contra `.next/` regular; el standalone bundle (en
+        // `.next/standalone/`) queda sin uso en tests. Cambiar a
+        // `node .next/standalone/packages/web/server.js` exigiría copiar
+        // manualmente `.next/static` y `public/` al standalone (gotcha
+        // conocido de Next en monorepos pnpm) — no vale el costo para tests.
         command: `node packages/web/node_modules/next/dist/bin/next start packages/web --port ${PORT} --hostname 127.0.0.1`,
         url: BASE_URL,
         reuseExistingServer: !isCI,

@@ -10,6 +10,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Sprint 50 — opt-in a Node 24 para las actions JS (forzado a partir
+# de junio 2026; este flag silencia el deprecation warning de Node 20).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   ci:
     name: Lint, Type-check, Test, Build

@@ -44,8 +44,19 @@ test.describe("Visual regression (desktop viewport)", () => {
       // `domcontentloaded` no alcanza para páginas con client-islands
       // (mapa, charts). `networkidle` evita screenshots a media hidratación.
       await page.waitForLoadState("networkidle");
-      // Pequeño settle extra para Recharts/dynamic imports.
-      await page.waitForTimeout(500);
+
+      // Componentes dynamic (ProvinceMap, EmbedMap, PesosPorKmHeatmap, etc.)
+      // marcan `aria-busy="true"` mientras cargan. Cuando todos
+      // desaparecen, el contenido real ya está mounted. Esto reemplaza al
+      // viejo `waitForTimeout(500)` que era muy frágil en CI lento.
+      await page.waitForFunction(
+        () => !document.querySelector('[aria-busy="true"]'),
+        undefined,
+        { timeout: 10_000 },
+      );
+
+      // Settle final para transitions/charts que no usan aria-busy.
+      await page.waitForTimeout(300);
 
       await expect(page).toHaveScreenshot(`${name}.png`, {
         animations: "disabled",
