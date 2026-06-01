@@ -1,11 +1,11 @@
 {
-  "refreshedAt": "2026-05-07T16:52:22.184Z",
+  "refreshedAt": "2026-06-01T09:56:31.129Z",
   "runs": [
     {
       "target": "compras",
       "script": "refresh:pilar4",
       "status": "success",
-      "durationMs": 3711,
+      "durationMs": 5237,
       "municipiosConDatos": 2,
       "error": "",
       "sourceManifestPath": "auto-contrataciones-manifest.json"
@@ -14,10 +14,19 @@
       "target": "deuda",
       "script": "refresh:deuda",
       "status": "success",
-      "durationMs": 7795,
+      "durationMs": 9565,
       "municipiosConDatos": 5,
       "error": "",
       "sourceManifestPath": "auto-deuda-manifest.json"
+    },
+    {
+      "target": "vial",
+      "script": "refresh:vial",
+      "status": "failed",
+      "durationMs": 0,
+      "municipiosConDatos": 105,
+      "error": "",
+      "sourceManifestPath": "auto-vial-manifest.json"
     }
   ],
   "totalMunicipiosCubiertos": 7
