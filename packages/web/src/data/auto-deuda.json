@@ -43,7 +43,7 @@
       }
     ],
     "fuenteUrl": "https://berisso.gob.ar/storage/pdfs/34803f0b-dfb6-495b-9c97-9e1bdf55b257.xlsx",
-    "parsedAt": "2026-05-06T18:51:10.264Z"
+    "parsedAt": "2026-06-01T09:26:06.346Z"
   },
   {
     "municipioId": "060154",
@@ -64,7 +64,7 @@
       }
     ],
     "fuenteUrl": "http://carmendeareco.gob.ar/wp-content/uploads/2025/10/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-30-09-2025-.xlsx",
-    "parsedAt": "2026-05-06T18:51:10.975Z"
+    "parsedAt": "2026-06-01T09:26:08.009Z"
   },
   {
     "municipioId": "060154",
@@ -85,7 +85,7 @@
       }
     ],
     "fuenteUrl": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-31-12-2024.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.263Z"
+    "parsedAt": "2026-06-01T09:26:08.385Z"
   },
   {
     "municipioId": "060154",
@@ -106,7 +106,7 @@
       }
     ],
     "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.400Z"
+    "parsedAt": "2026-06-01T09:26:08.612Z"
   },
   {
     "municipioId": "060154",
@@ -127,7 +127,7 @@
       }
     ],
     "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2024.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.529Z"
+    "parsedAt": "2026-06-01T09:26:08.835Z"
   },
   {
     "municipioId": "060154",
@@ -148,7 +148,7 @@
       }
     ],
     "fuenteUrl": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2020.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.659Z"
+    "parsedAt": "2026-06-01T09:26:09.054Z"
   },
   {
     "municipioId": "060274",
@@ -179,7 +179,7 @@
       }
     ],
     "fuenteUrl": "https://ameghino.gob.ar/wp-content/uploads/2025/10/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-09-2025.xlsx",
-    "parsedAt": "2026-05-06T18:51:12.235Z"
+    "parsedAt": "2026-06-01T09:26:13.312Z"
   },
   {
     "municipioId": "060274",
@@ -210,7 +210,7 @@
       }
     ],
     "fuenteUrl": "https://ameghino.gob.ar/wp-content/uploads/2025/08/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-06-2025.xlsx",
-    "parsedAt": "2026-05-06T18:51:12.411Z"
+    "parsedAt": "2026-06-01T09:26:13.871Z"
   },
   {
     "municipioId": "060308",
@@ -231,7 +231,7 @@
       }
     ],
     "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/stock_deuda_30-06-22.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.740Z"
+    "parsedAt": "2026-06-01T09:26:10.255Z"
   },
   {
     "municipioId": "060308",
@@ -252,7 +252,7 @@
       }
     ],
     "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/stock_deuda_31-03-2022.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.771Z"
+    "parsedAt": "2026-06-01T09:26:10.440Z"
   },
   {
     "municipioId": "060308",
@@ -268,7 +268,7 @@
       }
     ],
     "fuenteUrl": "https://www.madariaga.gob.ar/uploads_archivos/rendicion_de_cuentas/registro_endeudamiento_30-09-2021a.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.803Z"
+    "parsedAt": "2026-06-01T09:26:10.631Z"
   },
   {
     "municipioId": "060462",
@@ -314,7 +314,7 @@
       }
     ],
     "fuenteUrl": "https://www.lincoln.gob.ar/sites/default/files/stock_de_deuda_y_p_de_vtos_06-2022.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.879Z"
+    "parsedAt": "2026-06-01T09:26:12.236Z"
   },
   {
     "municipioId": "060462",
@@ -360,6 +360,6 @@
       }
     ],
     "fuenteUrl": "https://www.lincoln.gob.ar/sites/default/files/stock_de_deuda_y_p_de_vtos_12-2021.xlsx",
-    "parsedAt": "2026-05-06T18:51:11.937Z"
+    "parsedAt": "2026-06-01T09:26:12.541Z"
   }
 ]
