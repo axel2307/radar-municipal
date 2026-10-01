@@ -1,20 +1,14 @@
 {
-  "refreshedAt": "2026-05-07T16:51:50.841Z",
-  "totalContrataciones": 243,
-  "municipiosConDatos": 2,
-  "aggregates": 5,
+  "refreshedAt": "2026-10-01T10:43:40.727Z",
+  "totalContrataciones": 66,
+  "municipiosConDatos": 1,
+  "aggregates": 2,
   "fuentes": [
     {
       "label": "Carlos Casares (gobabierto.ar)",
       "municipioId": "060140",
       "datasetsParseados": 2,
       "contrataciones": 66
-    },
-    {
-      "label": "Quilmes (CKAN)",
-      "municipioId": "060638",
-      "datasetsParseados": 3,
-      "contrataciones": 177
     }
   ]
 }
