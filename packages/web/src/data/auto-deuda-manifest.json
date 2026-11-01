@@ -1,8 +1,8 @@
 {
-  "refreshedAt": "2026-05-06T18:51:12.412Z",
-  "totalContrataciones": 13,
+  "refreshedAt": "2026-11-01T11:01:36.221Z",
+  "totalContrataciones": 11,
   "municipiosConDatos": 5,
-  "aggregates": 13,
+  "aggregates": 11,
   "fuentes": [
     {
       "label": "Berisso",
@@ -31,8 +31,8 @@
     {
       "label": "Lincoln",
       "municipioId": "060462",
-      "datasetsParseados": 2,
-      "contrataciones": 2
+      "datasetsParseados": 0,
+      "contrataciones": 0
     }
   ]
 }
